@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrolinx - Aliados del campo, socios del futuro</title>
+    <meta name="description" content="Empresa familiar venezolana comprometida con el futuro del sector pecuario. Innovación, acompañamiento y resultados reales.">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Iconos de Lucide (CDN) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- ========================================
+         HEADER - Navegación principal sticky
+    ======================================== -->
+    <header class="header" id="header">
+        <div class="container">
+            <!-- Logo y nombre de la empresa -->
+            <div class="header__logo">
+                <i data-lucide="leaf" class="header__logo-icon"></i>
+                <span class="header__logo-text">Agrolinx</span>
+            </div>
+            
+            <!-- Navegación principal (desktop) -->
+            <nav class="header__nav" id="nav">
+                <a href="#inicio" class="header__nav-link">Inicio</a>
+                <a href="#nosotros" class="header__nav-link">Nosotros</a>
+                <a href="#impacto" class="header__nav-link">Impacto</a>
+                <a href="#aliados" class="header__nav-link">Aliados</a>
+                <a href="#contacto" class="header__nav-link">Contacto</a>
+            </nav>
+            
+            <!-- Botón de contacto principal -->
+            <a href="#contacto" class="btn btn--primary">Contáctanos</a>
+            
+            <!-- Botón hamburguesa para móvil -->
+            <button class="header__toggle" id="nav-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================================
+             HERO SECTION - Sección principal de bienvenida
+        ======================================== -->
+        <section id="inicio" class="hero">
+            <!-- Patrón de fondo decorativo -->
+            <div class="hero__bg-pattern"></div>
+            
+            <div class="container">
+                <div class="hero__content">
+                    <!-- Contenido textual del hero -->
+                    <div class="hero__text">
+                        <!-- Badge identificativo de empresa venezolana -->
+                        <div class="badge badge--primary animate-pulse">
+                            🇻🇪 Empresa familiar venezolana
+                        </div>
+                        
+                        <!-- Título principal con animación de entrada -->
+                        <h1 class="hero__title fade-in">
+                            <span class="text-accent">Aliados del campo,</span><br>
+                            socios del futuro
+                        </h1>
+                        
+                        <!-- Descripción principal -->
+                        <p class="hero__description">
+                            Transformamos la producción pecuaria venezolana con 
+                            <strong>ciencia, nutrición y resultados reales</strong>. 
+                            Más que proveedores, somos tus compañeros de crecimiento.
+                        </p>
+                        
+                        <!-- Frase destacada con ícono -->
+                        <div class="hero__highlight">
+                            <i data-lucide="check-circle" class="hero__highlight-icon"></i>
+                            <span>"Cerca del campo, cerca de ti"</span>
+                        </div>
+                        
+                        <!-- Botones de acción -->
+                        <div class="hero__actions">
+                            <a href="#impacto" class="btn btn--primary btn--large">
+                                Ver nuestro impacto
+                                <i data-lucide="arrow-right" class="btn__icon"></i>
+                            </a>
+                            <a href="#contacto" class="btn btn--outline btn--large">
+                                Hablemos de tu proyecto
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenido visual del hero -->
+                    <div class="hero__visual slide-in-right">
+                        <!-- Imagen principal -->
+                        <div class="hero__image-container">
+                            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=500&q=80" 
+                                 alt="Granja avícola moderna en Venezuela - Tecnología Agrolinx" 
+                                 class="hero__image">
+                            <!-- Overlay con información -->
+                            <div class="hero__image-overlay">
+                                <p>Granja avícola tecnificada - Zulia, Venezuela</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Estadística flotante 1 -->
+                        <div class="floating-stat floating-stat--top bounce">
+                            <div class="floating-stat__icon floating-stat__icon--success">
+                                <i data-lucide="trending-up"></i>
+                            </div>
+                            <div class="floating-stat__content">
+                                <p class="floating-stat__number">+25%</p>
+                                <p class="floating-stat__label">Mejora promedio</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Estadística flotante 2 -->
+                        <div class="floating-stat floating-stat--bottom">
+                            <div class="floating-stat__icon floating-stat__icon--primary">
+                                <i data-lucide="award"></i>
+                            </div>
+                            <div class="floating-stat__content">
+                                <p class="floating-stat__title">Resultados comprobados</p>
+                                <p class="floating-stat__subtitle">En granjas venezolanas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             STATS SECTION - Estadísticas principales
+        ======================================== -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats__grid">
+                    <!-- Estadística 1: Granjas atendidas -->
+                    <div class="stats__item">
+                        <div class="stats__number">500+</div>
+                        <div class="stats__label">Granjas atendidas</div>
+                    </div>
+                    <!-- Estadística 2: Reducción mortalidad -->
+                    <div class="stats__item">
+                        <div class="stats__number">15%</div>
+                        <div class="stats__label">Reducción mortalidad</div>
+                    </div>
+                    <!-- Estadística 3: Mejora conversión -->
+                    <div class="stats__item">
+                        <div class="stats__number">20%</div>
+                        <div class="stats__label">Mejora conversión</div>
+                    </div>
+                    <!-- Estadística 4: Años de experiencia -->
+                    <div class="stats__item">
+                        <div class="stats__number">10+</div>
+                        <div class="stats__label">Años de experiencia</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             ABOUT SECTION - Quiénes somos
+        ======================================== -->
+        <section id="nosotros" class="about">
+            <div class="container">
+                <div class="about__content">
+                    <!-- Contenido textual -->
+                    <div class="about__text">
+                        <!-- Badge y título de sección -->
+                        <div class="section-header">
+                            <div class="badge badge--secondary">Nuestra historia</div>
+                            <h2 class="section-title">
+                                Una familia comprometida con el 
+                                <span class="text-accent">agro venezolano</span>
+                            </h2>
+                            <div class="section-divider"></div>
+                        </div>
+                        
+                        <!-- Párrafos descriptivos -->
+                        <div class="about__description">
+                            <p>
+                                Somos <strong>Agrolinx</strong>, una empresa familiar que nació del amor por el campo venezolano y
+                                la convicción de que la industria pecuaria es fundamental para el desarrollo de nuestro país.
+                            </p>
+                            
+                            <!-- Cita destacada -->
+                            <div class="quote-box">
+                                <i data-lucide="quote" class="quote-box__icon"></i>
+                                <p class="quote-box__text">
+                                    "Creemos que cada granja tiene el potencial de ser extraordinaria. 
+                                    Nuestro trabajo es ayudarla a llegar ahí."
+                                </p>
+                                <p class="quote-box__author">- Equipo fundador Agrolinx</p>
+                            </div>
+                            
+                            <p>
+                                Trabajamos de la mano con empresas líderes globales, integrando 
+                                <strong>tecnología, innovación y conocimiento</strong>
+                                para construir el agro del futuro, siempre con el acompañamiento cercano que caracteriza a las
+                                empresas familiares.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenido visual -->
+                    <div class="about__visual">
+                        <!-- Imagen principal -->
+                        <div class="about__image-container">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400&q=80" 
+                                 alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico" 
+                                 class="about__image">
+                            <div class="about__image-overlay">
+                                <p>Acompañamiento técnico en granja porcina - Carabobo</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Grid de características -->
+                        <div class="feature-grid">
+                            <!-- Característica 1: Empresa familiar -->
+                            <div class="feature-card feature-card--blue">
+                                <i data-lucide="users-2" class="feature-card__icon"></i>
+                                <p class="feature-card__title">Empresa familiar</p>
+                                <p class="feature-card__subtitle">Valores sólidos</p>
+                            </div>
+                            <!-- Característica 2: Innovación -->
+                            <div class="feature-card feature-card--green">
+                                <i data-lucide="zap" class="feature-card__icon"></i>
+                                <p class="feature-card__title">Innovación</p>
+                                <p class="feature-card__subtitle">Tecnología global</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             IMPACT SECTION - Historias de impacto
+        ======================================== -->
+        <section id="impacto" class="impact">
+            <div class="container">
+                <!-- Header de la sección -->
+                <div class="section-header section-header--center">
+                    <div class="badge badge--success">Casos de éxito</div>
+                    <h2 class="section-title">
+                        Historias que <span class="text-accent">transforman</span> el campo
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">
+                        Cada granja tiene una historia. Estas son algunas de las transformaciones que hemos logrado juntos.
+                    </p>
+                </div>
+                
+                <!-- Grid de casos de éxito -->
+                <div class="impact__grid">
+                    <!-- Caso 1: Granja avícola -->
+                    <div class="impact-card">
+                        <div class="impact-card__image-container">
+                            <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" 
+                                 alt="Granja avícola Zulia - Caso de éxito Agrolinx" 
+                                 class="impact-card__image">
+                            <div class="badge badge--blue impact-card__badge">Avícola</div>
+                        </div>
+                        <div class="impact-card__content">
+                            <h3 class="impact-card__title">Granja San Rafael - Zulia</h3>
+                            <p class="impact-card__description">
+                                Reducción del <strong class="text-success">18% en mortalidad</strong> y mejora del
+                                <strong class="text-primary"> 22% en conversión alimenticia</strong> en solo 6 meses.
+                            </p>
+                            <div class="impact-card__footer">
+                                <div class="impact-card__tag">
+                                    <i data-lucide="trending-up"></i>
+                                    <span>Mejora continua</span>
+                                </div>
+                                <i data-lucide="arrow-right" class="impact-card__arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Caso 2: Granja porcina -->
+                    <div class="impact-card">
+                        <div class="impact-card__image-container">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" 
+                                 alt="Granja porcina Carabobo - Transformación Agrolinx" 
+                                 class="impact-card__image">
+                            <div class="badge badge--purple impact-card__badge">Porcina</div>
+                        </div>
+                        <div class="impact-card__content">
+                            <h3 class="impact-card__title">Complejo Los Llanos - Carabobo</h3>
+                            <p class="impact-card__description">
+                                Implementación de <strong class="text-purple">bioseguridad integral</strong> que resultó en
+                                <strong class="text-success"> cero brotes</strong> en 12 meses.
+                            </p>
+                            <div class="impact-card__footer">
+                                <div class="impact-card__tag">
+                                    <i data-lucide="shield"></i>
+                                    <span>Bioseguridad total</span>
+                                </div>
+                                <i data-lucide="arrow-right" class="impact-card__arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Caso 3: Planta de alimentos -->
+                    <div class="impact-card">
+                        <div class="impact-card__image-container">
+                            <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" 
+                                 alt="Planta de alimentos Aragua - Optimización Agrolinx" 
+                                 class="impact-card__image">
+                            <div class="badge badge--amber impact-card__badge">Alimentos</div>
+                        </div>
+                        <div class="impact-card__content">
+                            <h3 class="impact-card__title">Planta Industrial - Aragua</h3>
+                            <p class="impact-card__description">
+                                Optimización nutricional que aumentó la 
+                                <strong class="text-amber">producción diaria en 30%</strong>
+                                manteniendo la calidad premium.
+                            </p>
+                            <div class="impact-card__footer">
+                                <div class="impact-card__tag">
+                                    <i data-lucide="bar-chart-3"></i>
+                                    <span>Máxima eficiencia</span>
+                                </div>
+                                <i data-lucide="arrow-right" class="impact-card__arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio destacado -->
+                <div class="testimonial">
+                    <div class="testimonial__content">
+                        <!-- Contenido del testimonio -->
+                        <div class="testimonial__text">
+                            <!-- Estrellas de calificación -->
+                            <div class="testimonial__rating">
+                                <div class="stars">
+                                    <i data-lucide="star" class="star star--filled"></i>
+                                    <i data-lucide="star" class="star star--filled"></i>
+                                    <i data-lucide="star" class="star star--filled"></i>
+                                    <i data-lucide="star" class="star star--filled"></i>
+                                    <i data-lucide="star" class="star star--filled"></i>
+                                </div>
+                                <div class="badge badge--success">Testimonio destacado</div>
+                            </div>
+                            
+                            <!-- Ícono de cita -->
+                            <i data-lucide="quote" class="testimonial__quote-icon"></i>
+                            
+                            <!-- Texto del testimonio -->
+                            <blockquote class="testimonial__quote">
+                                "Agrolinx no solo nos vendió productos, nos acompañó en cada paso de la transformación. 
+                                Hoy nuestra granja es 40% más eficiente y nuestros animales están más sanos que nunca."
+                            </blockquote>
+                            
+                            <!-- Información del autor -->
+                            <div class="testimonial__author">
+                                <div class="testimonial__author-avatar">JR</div>
+                                <div class="testimonial__author-info">
+                                    <p class="testimonial__author-name">José Rodríguez</p>
+                                    <p class="testimonial__author-title">Gerente General, Avícola El Progreso</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Imagen del testimonio -->
+                        <div class="testimonial__image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" 
+                                 alt="José Rodríguez - Testimonio Agrolinx" 
+                                 class="testimonial__photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             PILLARS SECTION - Nuestros pilares
+        ======================================== -->
+        <section id="pilares" class="pillars">
+            <div class="container">
+                <!-- Header de la sección -->
+                <div class="section-header section-header--center">
+                    <div class="badge badge--secondary">Nuestros valores</div>
+                    <h2 class="section-title">
+                        Los pilares que nos <span class="text-accent">definen</span>
+                    </h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <!-- Grid de pilares -->
+                <div class="pillars__grid">
+                    <!-- Pilar 1: Innovación y tecnología -->
+                    <div class="pillar-card pillar-card--blue">
+                        <div class="pillar-card__header">
+                            <div class="pillar-card__icon pillar-card__icon--blue">
+                                <i data-lucide="target"></i>
+                            </div>
+                            <h3 class="pillar-card__title">Innovación y tecnología</h3>
+                        </div>
+                        <div class="pillar-card__content">
+                            <p class="pillar-card__description">
+                                Integramos las últimas tecnologías globales adaptadas a la realidad venezolana.
+                            </p>
+                            <div class="pillar-card__quote">
+                                <p>"El agro evoluciona, nosotros vamos contigo"</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pilar 2: Acompañamiento cercano -->
+                    <div class="pillar-card pillar-card--green">
+                        <div class="pillar-card__header">
+                            <div class="pillar-card__icon pillar-card__icon--green">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <h3 class="pillar-card__title">Acompañamiento cercano</h3>
+                        </div>
+                        <div class="pillar-card__content">
+                            <p class="pillar-card__description">
+                                Soporte técnico personalizado y seguimiento continuo en cada proyecto.
+                            </p>
+                            <div class="pillar-card__quote">
+                                <p>"En el campo contigo, en el futuro también"</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pilar 3: Compromiso y responsabilidad -->
+                    <div class="pillar-card pillar-card--amber">
+                        <div class="pillar-card__header">
+                            <div class="pillar-card__icon pillar-card__icon--amber">
+                                <i data-lucide="heart"></i>
+                            </div>
+                            <h3 class="pillar-card__title">Compromiso y responsabilidad</h3>
+                        </div>
+                        <div class="pillar-card__content">
+                            <p class="pillar-card__description">
+                                Resultados concretos y sostenibles para cada cliente y el país.
+                            </p>
+                            <div class="pillar-card__quote">
+                                <p>"Comprometidos con el agro, conectados con el futuro"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Frase inspiradora -->
+                <div class="inspiration-banner">
+                    <h3 class="inspiration-banner__title">"Creciendo con el campo, avanzando con el país"</h3>
+                    <p class="inspiration-banner__text">
+                        Cada día trabajamos para que el sector pecuario venezolano sea más fuerte, más eficiente y más sostenible.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             PARTNERS SECTION - Aliados estratégicos
+        ======================================== -->
+        <section id="aliados" class="partners">
+            <div class="container">
+                <!-- Header de la sección -->
+                <div class="section-header section-header--center">
+                    <div class="badge badge--purple">Alianzas globales</div>
+                    <h2 class="section-title">
+                        Aliados que <span class="text-accent">transforman</span> la industria
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">
+                        Trabajamos con las empresas más innovadoras del mundo para traer soluciones de clase mundial al campo venezolano.
+                    </p>
+                </div>
+                
+                <!-- Grid de aliados -->
+                <div class="partners__grid">
+                    <!-- Aliado 1: Premex -->
+                    <div class="partner-card partner-card--blue">
+                        <div class="partner-card__header">
+                            <div class="partner-card__logo partner-card__logo--blue">P</div>
+                            <h3 class="partner-card__name">Premex</h3>
+                            <div class="badge badge--blue">Nutrición Animal</div>
+                        </div>
+                        <div class="partner-card__content">
+                            <p class="partner-card__description">
+                                Nutrición animal innovadora que potencia la productividad y el bienestar en sistemas pecuarios industrializados.
+                            </p>
+                            <div class="partner-card__specialties">
+                                <p class="partner-card__specialties-title">Especialidades:</p>
+                                <div class="partner-card__tags">
+                                    <span class="tag tag--blue">Aditivos</span>
+                                    <span class="tag tag--blue">Premezclas</span>
+                                    <span class="tag tag--blue">Enzimas</span>
+                                </div>
+                            </div>
+                            <a href="https://premex.co/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--blue">
+                                Conocer más
+                                <i data-lucide="arrow-right" class="btn__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Aliado 2: Okuo -->
+                    <div class="partner-card partner-card--green">
+                        <div class="partner-card__header">
+                            <div class="partner-card__logo partner-card__logo--green">
+                                <i data-lucide="shield"></i>
+                            </div>
+                            <h3 class="partner-card__name">Okuo</h3>
+                            <div class="badge badge--success">Bioseguridad</div>
+                        </div>
+                        <div class="partner-card__content">
+                            <p class="partner-card__description">
+                                Soluciones de inocuidad y bioseguridad basadas en ciencia y tecnología para garantizar calidad y seguridad.
+                            </p>
+                            <div class="partner-card__specialties">
+                                <p class="partner-card__specialties-title">Especialidades:</p>
+                                <div class="partner-card__tags">
+                                    <span class="tag tag--green">Desinfección</span>
+                                    <span class="tag tag--green">Limpieza</span>
+                                    <span class="tag tag--green">Protocolos</span>
+                                </div>
+                            </div>
+                            <a href="https://okuo.bio/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--green">
+                                Conocer más
+                                <i data-lucide="arrow-right" class="btn__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Aliado 3: Alura -->
+                    <div class="partner-card partner-card--purple">
+                        <div class="partner-card__header">
+                            <div class="partner-card__logo partner-card__logo--purple">
+                                <i data-lucide="heart"></i>
+                            </div>
+                            <h3 class="partner-card__name">Alura</h3>
+                            <div class="badge badge--purple">Salud Animal</div>
+                        </div>
+                        <div class="partner-card__content">
+                            <p class="partner-card__description">
+                                Soluciones de salud animal que promueven una producción más rentable, saludable y sostenible.
+                            </p>
+                            <div class="partner-card__specialties">
+                                <p class="partner-card__specialties-title">Especialidades:</p>
+                                <div class="partner-card__tags">
+                                    <span class="tag tag--purple">Probióticos</span>
+                                    <span class="tag tag--purple">Inmunidad</span>
+                                    <span class="tag tag--purple">Bienestar</span>
+                                </div>
+                            </div>
+                            <a href="https://latam.alura.bio/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--purple">
+                                Conocer más
+                                <i data-lucide="arrow-right" class="btn__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Frase sobre alianzas -->
+                <div class="alliance-quote">
+                    <i data-lucide="quote" class="alliance-quote__icon"></i>
+                    <p class="alliance-quote__text">
+                        "Nutrición, bioseguridad y salud animal, en un solo aliado"
+                    </p>
+                    <p class="alliance-quote__subtitle">
+                        La combinación perfecta de tecnologías globales con conocimiento local
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CONTACT SECTION - Sección de contacto
+        ======================================== -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <!-- Header de la sección -->
+                <div class="section-header section-header--center section-header--white">
+                    <div class="badge badge--success">Conversemos</div>
+                    <h2 class="section-title section-title--white">
+                        Estamos aquí para <span class="text-accent-light">impulsar tu operación</span>
+                    </h2>
+                    <div class="section-divider section-divider--light"></div>
+                    <p class="section-description section-description--white">
+                        Cada conversación es el inicio de una transformación. Cuéntanos sobre tu operación y descubre cómo podemos ayudarte a alcanzar tus objetivos.
+                    </p>
+                </div>
+                
+                <div class="contact__content">
+                    <!-- Información de contacto -->
+                    <div class="contact__info">
+                        <h3 class="contact__info-title">Conecta con nosotros</h3>
+                        
+                        <!-- Métodos de contacto -->
+                        <div class="contact__methods">
+                            <!-- Teléfono -->
+                            <div class="contact-method">
+                                <div class="contact-method__icon contact-method__icon--primary">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div class="contact-method__content">
+                                    <p class="contact-method__title">Teléfono directo</p>
+                                    <p class="contact-method__value">+58 (XXX) XXX-XXXX</p>
+                                    <p class="contact-method__note">Lun - Vie: 8:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="contact-method">
+                                <div class="contact-method__icon contact-method__icon--primary">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-method__content">
+                                    <p class="contact-method__title">Email corporativo</p>
+                                    <p class="contact-method__value">contacto@agrolinx.com.ve</p>
+                                    <p class="contact-method__note">Respuesta en 24 horas</p>
+                                </div>
+                            </div>
+                            
+                            <!-- WhatsApp -->
+                            <div class="contact-method contact-method--whatsapp">
+                                <div class="contact-method__icon contact-method__icon--whatsapp">
+                                    <i data-lucide="message-circle"></i>
+                                </div>
+                                <div class="contact-method__content">
+                                    <p class="contact-method__title">WhatsApp Business</p>
+                                    <p class="contact-method__note">Atención inmediata</p>
+                                    <a href="https://wa.me/58XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--small">
+                                        Escribir ahora
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Línea de emergencia -->
+                        <div class="emergency-contact">
+                            <h4 class="emergency-contact__title">¿Tienes una emergencia en tu granja?</h4>
+                            <p class="emergency-contact__description">
+                                Nuestro equipo técnico está disponible para situaciones urgentes que requieran atención inmediata.
+                            </p>
+                            <a href="tel:+58XXXXXXXXX" class="btn btn--emergency">
+                                Línea de emergencia: +58 (XXX) XXX-XXXX
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulario de contacto -->
+                    <div class="contact__form-container">
+                        <h3 class="contact__form-title">Cuéntanos sobre tu proyecto</h3>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <!-- Nombre y cargo -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Nombre completo *</label>
+                                    <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre completo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="position" class="form-label">Cargo</label>
+                                    <input type="text" id="position" name="position" class="form-input" placeholder="Ej: Gerente de Producción">
+                                </div>
+                            </div>
+                            
+                            <!-- Empresa -->
+                            <div class="form-group">
+                                <label for="company" class="form-label">Empresa/Granja *</label>
+                                <input type="text" id="company" name="company" class="form-input" placeholder="Nombre de tu empresa o granja" required>
+                            </div>
+                            
+                            <!-- Email y teléfono -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Teléfono *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="+58 XXX XXX-XXXX" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Tipo de operación -->
+                            <div class="form-group">
+                                <label for="operation" class="form-label">Tipo de operación</label>
+                                <select id="operation" name="operation" class="form-select">
+                                    <option value="">Selecciona tu tipo de operación</option>
+                                    <option value="avicola-engorde">Avícola - Pollos de engorde</option>
+                                    <option value="avicola-ponedoras">Avícola - Ponedoras</option>
+                                    <option value="porcina">Porcina - Cría y engorde</option>
+                                    <option value="planta-alimentos">Planta de alimentos</option>
+                                    <option value="planta-beneficio">Planta de beneficio</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Mensaje -->
+                            <div class="form-group">
+                                <label for="message" class="form-label">Cuéntanos tu desafío</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="4" 
+                                          placeholder="Describe tu operación actual, los desafíos que enfrentas y cómo podemos ayudarte a mejorar tus resultados..."></textarea>
+                            </div>
+                            
+                            <!-- Botón de envío -->
+                            <button type="submit" class="btn btn--primary btn--full">Enviar consulta</button>
+                            
+                            <!-- Nota legal -->
+                            <p class="form-note">
+                                * Campos obligatorios. Nos pondremos en contacto contigo en las próximas 24 horas.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================
+         FOOTER - Pie de página mejorado
+    ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Contenido principal del footer -->
+            <div class="footer__content">
+                <!-- Información de la empresa -->
+                <div class="footer__section">
+                    <!-- Logo y descripción -->
+                    <div class="footer__brand">
+                        <div class="footer__logo">
+                            <i data-lucide="leaf" class="footer__logo-icon"></i>
+                            <span class="footer__logo-text">Agrolinx</span>
+                        </div>
+                        <p class="footer__description">
+                            Empresa familiar comprometida con el futuro del sector pecuario en Venezuela.
+                        </p>
+                        <!-- Slogan destacado -->
+                        <div class="footer__slogan">
+                            <p>"Creemos en el agro. Creamos futuro."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Información de contacto rápido -->
+                    <div class="footer__quick-contact">
+                        <h4 class="footer__subtitle">Contacto rápido</h4>
+                        <div class="footer__contact-items">
+                            <div class="footer__contact-item">
+                                <i data-lucide="phone" class="footer__contact-icon"></i>
+                                <span>+58 (XXX) XXX-XXXX</span>
+                            </div>
+                            <div class="footer__contact-item">
+                                <i data-lucide="mail" class="footer__contact-icon"></i>
+                                <span>contacto@agrolinx.com.ve</span>
+                            </div>
+                            <div class="footer__contact-item">
+                                <i data-lucide="message-circle" class="footer__contact-icon footer__contact-icon--whatsapp"></i>
+                                <span>WhatsApp disponible</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navegación -->
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Navegación</h4>
+                    <nav class="footer__nav">
+                        <a href="#nosotros" class="footer__nav-link">Nosotros</a>
+                        <a href="#impacto" class="footer__nav-link">Historias de impacto</a>
+                        <a href="#pilares" class="footer__nav-link">Nuestros pilares</a>
+                        <a href="#aliados" class="footer__nav-link">Aliados estratégicos</a>
+                        <a href="#contacto" class="footer__nav-link">Contacto</a>
+                    </nav>
+                </div>
+                
+                <!-- Aliados -->
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Nuestros aliados</h4>
+                    <div class="footer__partners">
+                        <a href="https://premex.co/" target="_blank" rel="noopener noreferrer" class="footer__partner-link">
+                            <span class="footer__partner-dot footer__partner-dot--blue"></span>
+                            Premex - Nutrición Animal
+                        </a>
+                        <a href="https://okuo.bio/" target="_blank" rel="noopener noreferrer" class="footer__partner-link">
+                            <span class="footer__partner-dot footer__partner-dot--green"></span>
+                            Okuo - Bioseguridad
+                        </a>
+                        <a href="https://latam.alura.bio/" target="_blank" rel="noopener noreferrer" class="footer__partner-link">
+                            <span class="footer__partner-dot footer__partner-dot--purple"></span>
+                            Alura - Salud Animal
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Servicios -->
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Nuestros servicios</h4>
+                    <div class="footer__services">
+                        <div class="footer__service">
+                            <i data-lucide="target" class="footer__service-icon"></i>
+                            <span>Consultoría técnica</span>
+                        </div>
+                        <div class="footer__service">
+                            <i data-lucide="users" class="footer__service-icon"></i>
+                            <span>Acompañamiento integral</span>
+                        </div>
+                        <div class="footer__service">
+                            <i data-lucide="trending-up" class="footer__service-icon"></i>
+                            <span>Optimización de procesos</span>
+                        </div>
+                        <div class="footer__service">
+                            <i data-lucide="shield" class="footer__service-icon"></i>
+                            <span>Bioseguridad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Línea divisoria -->
+            <div class="footer__divider"></div>
+            
+            <!-- Pie del footer -->
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p>© <span id="currentYear"></span> Agrolinx. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer__tagline">
+                    <span class="footer__flag">🇻🇪</span>
+                    <span>Hecho en Venezuela</span>
+                    <span class="footer__separator">•</span>
+                    <span>Impulsando el agro con visión global</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de scroll hacia arriba -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="/scripts/script.js"></script>
+</body>
+</html>
