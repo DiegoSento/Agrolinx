@@ -6,42 +6,42 @@
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80",
+    src: "imag/ima1.webp",
     alt: "Granja avícola moderna",
     title: "Granja Avícola Moderna",
     category: "avicola"
   },
   {
     id: 2,
-    src: "imag/ima1.jpg",
+    src: "imag/ima3.webp",
     alt: "Acompañamiento técnico",
     title: "Acompañamiento Técnico",
     category: "servicios"
   },
   {
     id: 3,
-    src: "imag/ima3.jpg",
+    src: "imag/ima4.webp",
     alt: "Granja porcina",
     title: "Instalaciones Porcinas",
     category: "porcina"
   },
   {
     id: 4,
-    src: "imag/ima4.jpg",
+    src: "imag/ima5.webp",
     alt: "Planta de alimentos",
     title: "Planta de Alimentos",
     category: "procesamiento"
   },
   {
     id: 5,
-    src: "imag/ima5.jpg",
+    src: "imag/ima6.webp",
     alt: "Laboratorio de calidad",
     title: "Control de Calidad",
     category: "laboratorio"
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80",
+    src: "imag/ima7.webp",
     alt: "Equipo veterinario",
     title: "Equipo Veterinario",
     category: "servicios"
@@ -587,7 +587,7 @@ function initLazyLoading() {
 function initPerformanceOptimizations() {
   // Precargar imágenes críticas
   const criticalImages = [
-    'https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=500&q=80'
+    'imag/ima1.webp'
   ];
 
   criticalImages.forEach(src => {
