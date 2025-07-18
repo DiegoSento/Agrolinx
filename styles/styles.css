@@ -310,7 +310,7 @@ img {
 }
 
 .animate-pulse {
-  animation: pulse 2s infinite;
+  animation: pulse 2s ;
 }
 
 /* Estados de visibilidad para animaciones controladas por JS */
@@ -835,6 +835,7 @@ img {
 
 .hero__text {
   display: flex;
+  padding: 30px;
   flex-direction: column;
   gap: var(--spacing-8);
 }
@@ -5531,6 +5532,7 @@ img {
 
 .footer__column {
   display: flex;
+
   flex-direction: column;
   gap: var(--spacing-4);
 }
@@ -5811,8 +5813,7 @@ img {
   }
 
   .footer__logo-img {
-    width: 3rem;
-    height: 3rem;
+    
   }
 
   .footer__social {
@@ -5832,8 +5833,7 @@ img {
   }
 
   .footer__logo-img {
-    width: 2.5rem;
-    height: 2.5rem;
+   
   }
 
   .footer__social {
@@ -5865,8 +5865,7 @@ img {
 
 @media (max-width: 360px) {
   .footer__logo-img {
-    width: 2rem;
-    height: 2rem;
+   
   }
 
   .footer__social-link {
