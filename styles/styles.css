@@ -475,22 +475,27 @@ img {
 }
 
 .header__logo-text {
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
-  color: var(--color-secondary);
-  line-height: 1;
-  letter-spacing: -0.025em;
-  white-space: nowrap;
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  color: var(--color-secondary) !important;
+  line-height: 0.9 !important;
+  letter-spacing: -0.02em !important;
+  white-space: nowrap !important;
+  text-transform: lowercase !important;
+  font-family: 'Quicksand', sans-serif!important ;
 }
 
 .header__logo-subtitle {
   font-size: var(--font-size-xs);
-  font-weight: 500;
+  
+  padding-left:60px;
   color: var(--color-accent);
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.05em;
-  line-height: 1;
+  line-height: 0;
   white-space: nowrap;
+  position: relative;
+  top: -6px;
 }
 
 /* ========================================
@@ -4194,7 +4199,7 @@ img {
   font-size: var(--font-size-xs);
   font-weight: 500;
   color: var(--color-accent);
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.05em;
   line-height: 1;
   white-space: nowrap;
