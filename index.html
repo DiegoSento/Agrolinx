@@ -12,7 +12,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-        
+
     <!-- Iconos de Lucide (CDN) -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
@@ -27,7 +27,7 @@
                     <img src="imag/icon.webp" alt="Agrolinx Logo" class="header__logo-img">
                 </div>
                 <div class="header__logo-text-container">
-                    <span class="header__logo-text" >agrolinx</span>
+                    <span class="header__logo-text">agrolinx</span>
                     <span class="header__logo-subtitle">Nutrición Avanzada</span>
                 </div>
             </div>
@@ -258,7 +258,7 @@
                 <div class="section-header section-header--center animate-slide-up">
                     <div class="badge badge--success">Casos de éxito</div>
                     <h2 class="section-title">
-                        CHistorias que <span class="text-accent">transforman</span> el campo
+                        Historias que <span class="text-accent">transforman</span> el campo
                     </h2>
                     <div class="section-divider"></div>
                     <p class="section-description">
@@ -514,7 +514,7 @@
                 <div class="inspiration-banner animate-fade-in">
                     <h3 class="inspiration-banner__title">¿Necesitas asesoría técnica especializada?</h3>
                     <p class="inspiration-banner__text">
-                        <p class="inspiration-banner__text">
+                    <p class="inspiration-banner__text">
                         Cada día trabajamos para que el sector pecuario venezolano sea más fuerte, más eficiente y más
                         sostenible.
                     </p>
@@ -604,7 +604,7 @@
                     <!-- Aliado 3: Alura -->
                     <div class="partner-card partner-card--purple animate-slide-right">
                         <div class="partner-card__header">
-                            <div class="partner-card__logo partner-card__logo--purple">
+                            <div class="partner-card__logo ">
                                 <img src="/imag/partner3.webp" alt="">
                             </div>
                             <h3 class="partner-card__name">Alura</h3>
@@ -652,9 +652,9 @@
                 <div class="section-header section-header--center section-header--white animate-slide-up">
                     <div class="badge badge--success">Conversemos</div>
                     <h2 class="section-title section-title--white">
-                        Estamos aquí para <span class="text-accent-light">impulsar tu operación</span>
+                        Estamos aquí para <span class="text-accent">impulsar tu operación</span>
                     </h2>
-                    <div class="section-divider section-divider--light"></div>
+                    <div class="section-divider"></div>
                     <p class="section-description section-description--white">
                         Cada conversación es el inicio de una transformación. Cuéntanos sobre tu operación y descubre
                         cómo podemos ayudarte a alcanzar tus objetivos.
@@ -803,108 +803,115 @@
 
 
 
-    <!-- FOOTER - Pie de página -->
+    <!-- FOOTER - Pie de página estructurado -->
     <footer class="footer">
         <div class="container">
             <!-- Contenido principal del footer -->
-            <div class="footer__content">
-                <!-- Información de la empresa -->
-                <div class="footer__section">
-                    <!-- Logo y descripción -->
+            <div class="footer__main">
+
+                <!-- COLUMNA 1: Información de la empresa -->
+                <div class="footer__column footer__column--brand">
                     <div class="footer__brand">
                         <div class="footer__logo">
-                            <img src="/imag/logo.webp" alt="">
-
+                            <img src="imag/logodar.webp" alt="Agrolinx Logo" class="footer__logo-img">
                         </div>
                         <p class="footer__description">
                             Empresa familiar comprometida con el futuro del sector pecuario en Venezuela.
                         </p>
-                        <!-- Slogan destacado -->
                         <div class="footer__slogan">
                             <p>"Creemos en el agro. Creamos futuro."</p>
                         </div>
-                    </div>
-
-                    <!-- Información de contacto rápido -->
-                    <div class="footer__quick-contact">
-                        <h4 class="footer__subtitle">Contacto rápido</h4>
-                        <div class="footer__contact-items">
-                            <div class="footer__contact-item">
-                                <i data-lucide="map-pin" class="footer__contact-icon"></i>
-                                <span>Av. Las Delicias, Urb. La Floresta, C.E. Europa, Piso 1 Ofic. 1-32 Maracay -
-                                    Venezuela</span>
-                            </div>
-                            <div class="footer__contact-item">
-                                <i data-lucide="phone" class="footer__contact-icon"></i>
-                                <span>+57 (304) 345-0989</span>
-                            </div>
-                            <div class="footer__contact-item">
-                                <i data-lucide="mail" class="footer__contact-icon"></i>
-                                <span>gsuarez@agrolinxve.com</span>
-                            </div>
-                            <div class="footer__contact-item">
-                                <i data-lucide="message-circle"
-                                    class="footer__contact-icon footer__contact-icon--whatsapp"></i>
-                                <span>WhatsApp disponible</span>
-                            </div>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-link" aria-label="WhatsApp">
+                                <i data-lucide="message-circle"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Email">
+                                <i data-lucide="mail"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Teléfono">
+                                <i data-lucide="phone"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Navegación -->
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Navegación</h4>
+                <!-- COLUMNA 2: Enlaces rápidos -->
+                <div class="footer__column">
+                    <h4 class="footer__title">Enlaces rápidos</h4>
                     <nav class="footer__nav">
-                        <a href="#nosotros" class="footer__nav-link">Nosotros</a>
-                        <a href="#impacto" class="footer__nav-link">Historias de impacto</a>
-                        <a href="#galeria" class="footer__nav-link">Galería</a>
-                        <a href="#pilares" class="footer__nav-link">Nuestros pilares</a>
-                        <a href="#aliados" class="footer__nav-link">Aliados estratégicos</a>
-                        <a href="#contacto" class="footer__nav-link">Contacto</a>
+                        <a href="#nosotros" class="footer__link">Nosotros</a>
+                        <a href="#impacto" class="footer__link">Casos de éxito</a>
+                        <a href="#galeria" class="footer__link">Galería</a>
+                        <a href="#pilares" class="footer__link">Servicios</a>
+                        <a href="#aliados" class="footer__link">Socios comerciales</a>
+                        <a href="#contacto" class="footer__link">Contacto</a>
                     </nav>
                 </div>
 
-                <!-- Aliados -->
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Nuestros aliados</h4>
-                    <div class="footer__partners">
-                        <a href="https://premex.co/" target="_blank" rel="noopener noreferrer"
-                            class="footer__partner-link">
-                            <span class="footer__partner-dot footer__partner-dot--blue"></span>
-                            Premex - Nutrición Animal
-                        </a>
-                        <a href="https://okuo.bio/" target="_blank" rel="noopener noreferrer"
-                            class="footer__partner-link">
-                            <span class="footer__partner-dot footer__partner-dot--green"></span>
-                            Okuo - Bioseguridad
-                        </a>
-                        <a href="https://latam.alura.bio/" target="_blank" rel="noopener noreferrer"
-                            class="footer__partner-link">
-                            <span class="footer__partner-dot footer__partner-dot--purple"></span>
-                            Alura - Salud Animal
-                        </a>
+                <!-- COLUMNA 3: Nuestros productos -->
+                <div class="footer__column">
+                    <h4 class="footer__title">Nuestros productos</h4>
+                    <div class="footer__products">
+                        <div class="footer__product">
+                            <i data-lucide="package" class="footer__product-icon"></i>
+                            <div class="footer__product-info">
+                                <span class="footer__product-name">Premex</span>
+                                <span class="footer__product-desc">Nutrición Animal</span>
+                            </div>
+                        </div>
+                        <div class="footer__product">
+                            <i data-lucide="shield-check" class="footer__product-icon"></i>
+                            <div class="footer__product-info">
+                                <span class="footer__product-name">Okuo</span>
+                                <span class="footer__product-desc">Bioseguridad</span>
+                            </div>
+                        </div>
+                        <div class="footer__product">
+                            <i data-lucide="heart" class="footer__product-icon"></i>
+                            <div class="footer__product-info">
+                                <span class="footer__product-name">Alura</span>
+                                <span class="footer__product-desc">Salud Animal</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Servicios -->
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Nuestros servicios</h4>
-                    <div class="footer__services">
-                        <div class="footer__service">
-                            <i data-lucide="target" class="footer__service-icon"></i>
-                            <span>Consultoría técnica</span>
+                <!-- COLUMNA 4: Información de contacto -->
+                <div class="footer__column">
+                    <h4 class="footer__title">Contacto</h4>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <i data-lucide="map-pin" class="footer__contact-icon"></i>
+                            <div class="footer__contact-info">
+                                <span class="footer__contact-label">Dirección</span>
+                                <span class="footer__contact-text">Av. Las Delicias, Urb. La Floresta, C.E. Europa, Piso
+                                    1 Ofic. 1-32</span>
+                                <span class="footer__contact-text">Maracay, Venezuela</span>
+                            </div>
                         </div>
-                        <div class="footer__service">
-                            <i data-lucide="users" class="footer__service-icon"></i>
-                            <span>Acompañamiento integral</span>
+
+                        <div class="footer__contact-item">
+                            <i data-lucide="phone" class="footer__contact-icon"></i>
+                            <div class="footer__contact-info">
+                                <span class="footer__contact-label">Teléfono</span>
+                                <span class="footer__contact-text">+58 (243) 555-0123</span>
+                            </div>
                         </div>
-                        <div class="footer__service">
-                            <i data-lucide="trending-up" class="footer__service-icon"></i>
-                            <span>Optimización de procesos</span>
+
+                        <div class="footer__contact-item">
+                            <i data-lucide="mail" class="footer__contact-icon"></i>
+                            <div class="footer__contact-info">
+                                <span class="footer__contact-label">Email</span>
+                                <span class="footer__contact-text">info@agrolinx.com.ve</span>
+                            </div>
                         </div>
-                        <div class="footer__service">
-                            <i data-lucide="shield" class="footer__service-icon"></i>
-                            <span>Bioseguridad</span>
+
+                        <div class="footer__contact-item">
+                            <i data-lucide="clock" class="footer__contact-icon"></i>
+                            <div class="footer__contact-info">
+                                <span class="footer__contact-label">Horario</span>
+                                <span class="footer__contact-text">Lun - Vie: 8:00 AM - 6:00 PM</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -915,14 +922,25 @@
 
             <!-- Pie del footer -->
             <div class="footer__bottom">
-                <div class="footer__copyright">
-                    <p>© <span id="currentYear">2025</span> Agrolinx. Todos los derechos reservados.</p>
+                <div class="footer__bottom-left">
+                    <p class="footer__copyright">
+                        © <span id="currentYear">2025</span> Agrolinx. Todos los derechos reservados.
+                    </p>
+                    <div class="footer__legal">
+                        <a href="#" class="footer__legal-link">Política de Privacidad</a>
+                        <span class="footer__separator">•</span>
+                        <a href="#" class="footer__legal-link">Términos de Servicio</a>
+                    </div>
                 </div>
-                <div class="footer__tagline">
-                    <span class="footer__flag">🇻🇪</span>
-                    <span>Hecho en Venezuela</span>
-                    <span class="footer__separator">•</span>
-                    <span>Impulsando el agro con visión global</span>
+
+                <div class="footer__bottom-right">
+                    <div class="footer__badge">
+                        <span class="footer__flag">🇻🇪</span>
+                        <span class="footer__badge-text">Empresa Venezolana</span>
+                    </div>
+                    <div class="footer__tagline">
+                        <span>6 años mejorando la productividad pecuaria</span>
+                    </div>
                 </div>
             </div>
         </div>
