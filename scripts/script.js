@@ -1064,6 +1064,8 @@ const utils = {
     if (width <= 1536) return 'xl';
     return '2xl';
   }
+
+  
 };
 
 // Exportar utils para uso global
