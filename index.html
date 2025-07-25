@@ -4,720 +4,1187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrolinx - Especialistas en Nutrición Animal desde 2018</title>
-    <meta name="description"
-        content="Distribuimos productos nutricionales especializados para avicultura y porcicultura en Venezuela. Representantes oficiales de Premex, Alura y Okuo con cobertura en 8 estados.">
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Agrolinx - Especialistas en Nutrición Animal </title>
+    <meta name="description" content="Header y Footer optimizados para Agrolinx - Especialistas en Nutrición Animal">
+    <link rel="icon" href="/imag/icon.ico" type="image/x-icon">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        as="style">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles/header-footer-styles.css">
+    <link rel="stylesheet" href="styles/sections-styles.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
 
-    <!-- Iconos de Lucide (CDN) -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 
 <body>
-    <!-- HEADER - Navegación principal sticky -->
-    <header class="header" id="header">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- HEADER OPTIMIZADO -->
+    <header class="header" id="header" role="banner">
         <div class="container">
-            <!-- Logo y nombre de la empresa -->
-            <div class="header__logo">
+            <!-- Logo y marca -->
+            <a href="#inicio" class="header__logo" aria-label="Agrolinx - Ir al inicio">
                 <div class="header__logo-container">
-                    <img src="imag/logodar.webp" alt="Agrolinx - Especialistas en Nutrición Animal"
+                    <img src="/imag/logodar.webp" alt="Agrolinx - Especialistas en Nutrición Animal"
                         class="header__logo-img">
                 </div>
-            </div>
 
-            <!-- Navegación principal (desktop) -->
-            <nav class="header__nav" id="nav">
-                <a href="#inicio" class="header__nav-link">Inicio</a>
-                <a href="#nosotros" class="header__nav-link">Nosotros</a>
-                <a href="#pilares" class="header__nav-link">Pilares</a>
-                <a href="#aliados" class="header__nav-link">Aliados</a>
-                <a href="#galeria" class="header__nav-link">Galería</a>
-                
+            </a>
+
+            <!-- Navegación principal -->
+            <nav class="header__nav" id="nav" role="navigation" aria-label="Navegación principal">
+                <a href="#inicio" class="header__nav-link" data-section="inicio">
+                    <i data-lucide="home" class="header__nav-icon"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="#nosotros" class="header__nav-link" data-section="nosotros">
+                    <i data-lucide="users" class="header__nav-icon"></i>
+                    <span>Nosotros</span>
+                </a>
+                <a href="#pilares" class="header__nav-link" data-section="pilares">
+                    <i data-lucide="target" class="header__nav-icon"></i>
+                    <span>Pilares</span>
+                </a>
+                <a href="#aliados" class="header__nav-link" data-section="aliados">
+                    <i data-lucide="handshake" class="header__nav-icon"></i>
+                    <span>Aliados</span>
+                </a>
+                <a href="#galeria" class="header__nav-link" data-section="galeria">
+                    <i data-lucide="image" class="header__nav-icon"></i>
+                    <span>Galería</span>
+                </a>
             </nav>
 
-            <!-- Botón de contacto principal -->
-            <a href="#contacto" class="btn btn--primary">Contáctanos</a>
+            <!-- Botón de contacto -->
+            <a href="#contacto" class="btn btn--primary header__cta">
+                <i data-lucide="phone" class="btn__icon btn__icon--left"></i>
+                Contáctanos
+            </a>
 
             <!-- Botón hamburguesa para móvil -->
-            <button class="header__toggle" id="nav-toggle">
-                <i data-lucide="menu"></i>
+            <button class="header__toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false"
+                aria-controls="nav">
+                <span class="header__toggle-line"></span>
+                <span class="header__toggle-line"></span>
+                <span class="header__toggle-line"></span>
             </button>
         </div>
+
+        <!-- Overlay para móvil -->
+        <div class="header__overlay" id="nav-overlay"></div>
     </header>
 
-    <main>
-        <!-- HERO SECTION - Sección principal de bienvenida -->
-        <section id="inici0" class="hero">
-            <div class="hero__bg-pattern"></div>
-            <!-- Partículas flotantes animadas -->
-            <div class="hero__particles">
-                <div class="particle particle--1"></div>
-                <div class="particle particle--2"></div>
-                <div class="particle particle--3"></div>
-                <div class="particle particle--4"></div>
-                <div class="particle particle--5"></div>
-                <div class="particle particle--6"></div>
-            </div>
+    <!-- SECCIÓN INICIO (HERO) -->
+    <section id="inicio" class="hero">
+        <!-- Elementos de fondo animados -->
+        <div class="hero__bg-pattern" aria-hidden="true"></div>
+        <div class="hero__particles" aria-hidden="true">
+            <div class="particle particle--1"></div>
+            <div class="particle particle--2"></div>
+            <div class="particle particle--3"></div>
+            <div class="particle particle--4"></div>
+            <div class="particle particle--5"></div>
+            <div class="particle particle--6"></div>
+        </div>
 
-            <div class="container">
-                <div class="hero__content">
-                    <!-- Contenido textual del hero -->
-                    <div class="hero__text animate-slide-left">
-                        <!-- Badge identificativo de empresa venezolana -->
+        <div class="container">
+            <div class="hero__content">
+                <!-- Contenido de texto -->
+                <div class="hero__text animate-slide-from-left">
 
-                        <br><br>
-                        <!-- Título principal con animación de entrada -->
-                        <h1 class="hero__title">
-                            <span class="text-accent">Soluciones especializadas para la </span><br>
-                            industría pecuaria en venezuela
-                        </h1>
 
-                        <!-- Descripción principal -->
-                        <p class="hero__description"><br>
-                            Llevamos la innovación de nuestros aliados internacionales al terreno venezolano
-                            <strong>con especialistas que conocen tus desafíos diarios</strong>
-                            en nutrición y salud animal e inocuidad en procesos agroindustriales.
-                        </p><br><br><br>
+                    <h1 class="hero__title">
+                        <span class="text-accent">Soluciones especializadas para la</span><br>
+                        <span class="hero__title-highlight">industria pecuaria</span> en Venezuela
+                    </h1>
 
-                        <!-- Frase destacada con ícono 
-                        <div class="hero__highlight">
-                            <i data-lucide="check-circle" class="hero__highlight-icon"></i>
-                            <span>"6 años mejorando la productividad pecuaria venezolana"</span>
-                        </div>-->
-
-                        <!-- Botones de acción -->
-                        <div class="hero__actions">
-                            <a href="#impacto" class="btn btn--primary btn--large">
-                                Conoce nuestros casos de éxito
-                                <i data-lucide="arrow-right" class="btn__icon"></i>
-                            </a>
-                            <a href="#contacto" class="btn btn--outline btn--large">
-                                Hablemos de tu proyecto
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Contenido visual del hero -->
-                    <div class="hero__visual animate-slide-right">
-                        <!-- Imagen principal -->
-                        <div class="hero__image-container">
-                            <img src="/imag/ima2.webp" alt="Granja avícola moderna en Venezuela - Tecnología Agrolinx"
-                                class="hero__image">
-                            <!-- Overlay con información -->
-                            <div class="hero__image-overlay">
-                                <p>Granja avícola tecnificada - Zulia, Venezuela</p>
-                            </div>
-                        </div>
-
-                        <!-- Estadística flotante 1 -->
-                        <div class="floating-stat floating-stat--top animate-bounce-in">
-                            <div class="floating-stat__icon floating-stat__icon--success">
-                                <i data-lucide="trending-up"></i>
-                            </div>
-                            <div class="floating-stat__content">
-                                <p class="floating-stat__number">60+</p>
-                                <p class="floating-stat__label">Países con presencia</p>
-                                <p class="floating-stat__subtitle">de nuestras marcas</p>
-                            </div>
-                        </div>
-
-                        <!-- Estadística flotante 2 -->
-                        <div class="floating-stat floating-stat--bottom animate-bounce-in">
-                            <div class="floating-stat__icon floating-stat__icon--primary">
-                                <i data-lucide="award"></i>
-                            </div>
-                            <div class="floating-stat__content">
-                                <p class="floating-stat__number">Desde 1978</p>
-                                <p class="floating-stat__label">Diseñando productos </p>
-                                <p class="floating-stat__subtitle">para el sector pecuario</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- STATS SECTION - Estadísticas principales -->
-        <section class="stats">
-            <div class="container">
-                <div class="stats__grid">
-                    <!-- Estadística 1: Clientes activos -->
-                    <div class="stats__item animate-fade-in">
-                        <div class="stats__number">60+</div>
-                        <div class="stats__label">Paises en los que nuestros marcas tienen presencia</div>
-                    </div>
-                    <!-- Estadística 2: Estados de cobertura -->
-                    <div class="stats__item animate-fade-in" style="animation-delay: 0.2s;">
-                        <div class="stats__number">8</div>
-                        <div class="stats__label">Estados de cobertura</div>
-                    </div>
-                    <!-- Estadística 3: Productos distribuidos -->
-                    <div class="stats__item animate-fade-in" style="animation-delay: 0.4s;">
-                        <div class="stats__number">150+</div>
-                        <div class="stats__label">Productos especializados</div>
-                    </div>
-                    <!-- Estadística 4: Años de experiencia -->
-                    <div class="stats__item animate-fade-in" style="animation-delay: 0.6s;">
-                        <div class="stats__number">6</div>
-                        <div class="stats__label">Años de experiencia</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT SECTION - Quiénes somos -->
-        <section id="nosotros" class="about">
-            <div class="container">
-                <div class="about__content">
-                    <!-- Contenido textual -->
-                    <div class="about__text animate-slide-left">
-                        <!-- Badge y título de sección -->
-                        <div class="section-header">
-                            <div class="badge badge--secondary">Nuestra historia</div>
-                            <h2 class="section-title">
-                                Una familia comprometida con el
-                                <span class="text-accent">agro venezolano</span>
-                            </h2>
-                            <div class="section-divider"></div>
-                        </div>
-
-                        <!-- Párrafos descriptivos -->
-                        <div class="about__description">
-                            <p>
-                                <strong>Venezuela.</strong>A través de productos innovadores, alianzas estratégicas
-                                internacionales y un acompañamiento técnico especializado, ayudamos a nuestros clientes
-                                a mejorar la productividad, eficiencia y rentabilidad de sus operaciones.
-                                <br><br>Creemos que la industria pecuaria es un pilar esencial para el desarrollo del
-                                país. Por eso, trabajamos de la mano con empresas líderes a nivel global, integrando
-                                tecnología, innovación y conocimiento para construir el agro del futuro.
-                            </p>
-
-                            <!-- Cita destacada -->
-                            <div class="quote-box">
-                                <i data-lucide="quote" class="quote-box__icon"></i>
-                                <p class="quote-box__text">
-                                    "Nuestro compromiso es ofrecer productos de calidad internacional con el servicio
-                                    personalizado y cercano orientado en resultados tangibles".
-                                </p>
-                                <p class="quote-box__author">- Andres Suárez G., Gerente General </p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Contenido visual -->
-                    <div class="about__visual animate-slide-right">
-                        <!-- Imagen principal -->
-                        <div class="about__image-container">
-                            <img src="/imag/ima9.webp" alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico"
-                                class="about__image">
-                            <div class="about__image-overlay">
-                                <p>Acompañamiento técnico en granja porcina - Carabobo</p>
-                            </div>
-                        </div>
-
-                        <!-- Grid de características -->
-                        <div class="feature-grid">
-                            <!-- Característica 1: Empresa familiar -->
-                            <div class="feature-card feature-card--blue">
-                                <i data-lucide="users-2" class="feature-card__icon"></i>
-                                <p class="feature-card__title">Empresa familiar</p>
-                                <p class="feature-card__subtitle">Valores sólidos</p>
-                            </div>
-                            <!-- Característica 2: Innovación -->
-                            <div class="feature-card feature-card--green">
-                                <i data-lucide="zap" class="feature-card__icon"></i>
-                                <p class="feature-card__title">Innovación</p>
-                                <p class="feature-card__subtitle">Marcas internacionales</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PILLARS SECTION - Nuestros pilares -->
-        <section id="pilares" class="pillars">
-            <div class="container">
-                <!-- Header de la sección -->
-                <div class="section-header section-header--center animate-slide-up">
-                    <div class="badge badge--secondary">Nuestros valores</div>
-                    <h2 class="section-title">
-                        Nuestros <span class="text-accent">servicios principales</span>
-                    </h2>
-                    <div class="section-divider"></div>
-                    <p><strong>En Agrolinx,</strong> nuestro propósito es impulsar la producción pecuaria a través de
-                        procesos más rentables, eficientes y seguros, garantizando siempre el bienestar animal.</p>
-                </div>
-
-                <!-- Grid de pilares -->
-                <div class="pillars__grid">
-                    <!-- Pilar 1: Innovación y tecnología -->
-                    <div class="pillar-card pillar-card--blue animate-slide-left">
-                        <div class="pillar-card__header">
-                            <div class="pillar-card__icon pillar-card__icon--blue">
-                                <i data-lucide="target"></i>
-                            </div>
-                            <h3 class="pillar-card__title">Innovación y tecnología</h3>
-                        </div>
-                        <div class="pillar-card__content">
-                            <p class="pillar-card__description">
-                                Trabajamos con productos de marcas reconocidas internacionalmente,
-                                adaptando las formulaciones a las condiciones climáticas venezolanas.
-                            </p>
-                            <div class="pillar-card__quote">
-                                <p>"Productos internacionales, servicio local"</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pilar 2: Acompañamiento cercano -->
-                    <div class="pillar-card pillar-card--green animate-slide-up">
-                        <div class="pillar-card__header">
-                            <div class="pillar-card__icon pillar-card__icon--green">
-                                <i data-lucide="users"></i>
-                            </div>
-                            <h3 class="pillar-card__title">Acompañamiento cercano</h3>
-                        </div>
-                        <div class="pillar-card__content">
-                            <p class="pillar-card__description">
-                                Nuestro equipo técnico brinda asesoría directa en granjas y plantas de alimento
-                                para optimizar el uso de productos nutricionales.
-                            </p>
-                            <div class="pillar-card__quote">
-                                <p>"Visitas técnicas regulares incluidas"</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pilar 3: Compromiso y responsabilidad -->
-                    <div class="pillar-card pillar-card--amber animate-slide-right">
-                        <div class="pillar-card__header">
-                            <div class="pillar-card__icon pillar-card__icon--amber">
-                                <i data-lucide="heart"></i>
-                            </div>
-                            <h3 class="pillar-card__title">Compromiso y responsabilidad</h3>
-                        </div>
-                        <div class="pillar-card__content">
-                            <p class="pillar-card__description">
-                                Garantizamos la calidad de nuestros productos y el cumplimiento
-                                de los tiempos de entrega acordados con cada cliente.
-                            </p>
-                            <div class="pillar-card__quote">
-                                <p>"Entrega puntual garantizada"</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Información de contacto -->
-                <div class="inspiration-banner animate-fade-in">
-                    <h3 class="inspiration-banner__title">¿Necesitas asesoría técnica especializada?</h3>
-                    <p class="inspiration-banner__text">
-                        Cada día trabajamos para que el sector pecuario venezolano sea más fuerte, más eficiente y más
-                        sostenible.
+                    <p class="hero__description">
+                        Llevamos la innovación de nuestros aliados internacionales al terreno venezolano,
+                        <strong>con especialistas que conocen tus desafíos diarios</strong>
+                        en nutrición, salud animal e inocuidad en procesos agroindustriales.
                     </p>
+
+                    <div class="hero__stats">
+                        <div class="hero__stat animate-bounce-in" style="animation-delay: 0.2s;">
+                            <div class="hero__stat-number">Aliados </div>
+                            <div class="hero__stat-label">globales</div>
+                        </div>
+                        <div class="hero__stat animate-bounce-in" style="animation-delay: 0.4s;">
+                            <div class="hero__stat-number">Acompañamiento</div>
+                            <div class="hero__stat-label"> técnico local
+                            </div>
+                        </div>
+                        <div class="hero__stat animate-bounce-in" style="animation-delay: 0.6s;">
+                            <div class="hero__stat-number">Productos</div>
+                            <div class="hero__stat-label"> innovadores</div>
+                        </div>
+                    </div>
+
+                    <div class="hero__actions">
+                      
+                        <a href="#contacto" class="btn btn--primary btn--large animate-slide-up"
+                            style="animation-delay: 1s;">
+                            <i data-lucide="phone" class="btn__icon btn__icon--left"></i>
+                            Hablemos de tu proyecto
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Visual principal -->
+                <div class="hero__visual animate-slide-from-right">
+                    <div class="hero__image-container">
+                        <img src="/imag/ima2.webp" alt="Granja avícola moderna en Venezuela - Tecnología Agrolinx"
+                            class="hero__image" loading="eager">
+                        <div class="hero__image-overlay">
+                            <div class="hero__image-info">
+                                <i data-lucide="map-pin" class="hero__image-icon"></i>
+                                <p>Agrolinx</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estadísticas flotantes -->
+                    <div class="floating-stat floating-stat--top animate-bounce-in" style="animation-delay: 1.2s;">
+                        <div class="floating-stat__icon floating-stat__icon--success">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <div class="floating-stat__content">
+                            <p class="floating-stat__number">60+</p>
+                            <p class="floating-stat__label">Países con presencia</p>
+                            <p class="floating-stat__subtitle">de nuestras marcas</p>
+                        </div>
+                    </div>
+
+                    <div class="floating-stat floating-stat--bottom animate-bounce-in" style="animation-delay: 1.4s;">
+                        <div class="floating-stat__icon floating-stat__icon--primary">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <div class="floating-stat__content">
+                            <p class="floating-stat__number">Desde 1978</p>
+                            <p class="floating-stat__label">Diseñando productos</p>
+                            <p class="floating-stat__subtitle">para el sector pecuario</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- PARTNERS SECTION - Aliados estratégicos -->
-        <section id="aliados" class="partners">
-            <div class="container">
-                <!-- Header de la sección -->
-                <div class="section-header section-header--center animate-slide-up">
-                    <div class="badge badge--purple">Alianzas globales</div>
-                    <h2 class="section-title">
-                        Nuestros <span class="text-accent">socios estrategicos</span>
-                    </h2>
-                    <div class="section-divider"></div>
-                    <p class="section-description">
-                        En alianza con empresas que están transformando la industria globalmente, impulsamos la
-                        producción animal en Venezuela:
-                    </p>
-                </div>
+        <!-- Scroll indicator -->
+        <div class="hero__scroll-indicator animate-bounce" aria-hidden="true">
+            <div class="scroll-indicator">
+                <span class="scroll-indicator__text">Descubre más</span>
+                <i data-lucide="chevron-down" class="scroll-indicator__icon"></i>
+            </div>
+        </div>
+    </section>
 
-                <!-- Grid de aliados -->
-                <div class="partners__grid">
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="about__content">
+                <!-- Contenido de texto -->
+                <div class="about__text animate-slide-from-left">
+                    <div class="section-header">
+                        <div class="badge badge--secondary animate-fade-in">
+                            <i data-lucide="heart" class="badge__icon"></i>
+                            Nuestra historia
 
-                    <!-- Aliado 1: Premex -->
-                    <div class="partner-card partner-card--blue animate-slide-left">
-                        <div class="partner-card__header">
-                            <div class="partner-card__logo partner-card__logo--blue">
-                                <img src="/imag/partner2.webp" alt="">
-                            </div>
-
-                            <div class="badge badge--blue">Nutrición Animal</div>
                         </div>
-                        <div class="partner-card__content">
-                            <p class="partner-card__description">
-                                Nutrición animal innovadora que potencia la productividad y el bienestar en sistemas
-                                pecuarios industrializados.
-                            </p>
-                            <div class="partner-card__specialties">
-                                <p class="partner-card__specialties-title">Especialidades:</p>
-                                <div class="partner-card__tags">
-                                    <span class="tag tag--blue">Aditivos</span>
-                                    <span class="tag tag--blue">Premezclas</span>
-                                    <span class="tag tag--blue">Enzimas</span>
+                        <h2 class="section-title animate-slide-up">
+                            <br> Una familia comprometida con el
+                            <span class="text-accent">agro venezolano</span>
+                        </h2>
+                        <div class="section-divider animate-scale-in"></div>
+                    </div>
+
+                    <div class="about__description">
+                        <p class="animate-slide-up" style="animation-delay: 0.2s;">
+                            <strong>A través de productos innovadores,  </strong>  alianzas estratégicas internacionales y un acompañamiento técnico especializado, ayudamos a nuestros clientes a mejorar la productividad, eficiencia y rentabilidad de sus operaciones.
+                        </p>
+                        <p class="animate-slide-up" style="animation-delay: 0.4s;">
+                            <strong>Creemos que la industria pecuaria es un pilar esencial para el desarrollo del país.</strong> Por eso, trabajamos de la mano con empresas líderes a nivel global,
+                            integrando tecnología, innovación y conocimiento para construir el agro del futuro.
+                        </p>
+
+                        <!-- Valores clave -->
+                        <div class="about__values animate-slide-up" style="animation-delay: 0.6s;">
+                            <div class="value-item">
+                                <i data-lucide="target" class="value-item__icon"></i>
+                                <div class="value-item__content">
+                                    <h4>Misión</h4>
+                                    <p>Impulsar la producción pecuaria con soluciones innovadoras y sostenibles</p>
                                 </div>
                             </div>
-                            <a href="https://premex.co/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn--outline btn--blue">
+                            <div class="value-item">
+                                <i data-lucide="eye" class="value-item__icon"></i>
+                                <div class="value-item__content">
+                                    <h4>Visión</h4>
+                                    <p>Ser líderes en nutrición animal y bioseguridad en Venezuela</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quote destacado -->
+                        <div class="quote-box animate-slide-up" style="animation-delay: 0.8s;">
+                            <i data-lucide="quote" class="quote-box__icon"></i>
+                            <blockquote class="quote-box__text">
+                                "Nuestro compromiso es ofrecer productos de calidad internacional con el servicio
+                                personalizado y cercano orientado en resultados tangibles"
+                            </blockquote>
+                            <cite class="quote-box__author">- Andrés Suárez G., Gerente General</cite>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual de la sección -->
+                <div class="about__visual animate-slide-from-right">
+                    <div class="about__image-container">
+                        <img src="/imag/ima9.gif" alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico"
+                            class="about__image" loading="lazy">
+                        <div class="about__image-overlay">
+                            <div class="about__image-badge">
+                                <i data-lucide="users-2" class="about__image-badge-icon"></i>
+                                <span>Equipo Agrolinx</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid de características -->
+                    <div class="feature-grid">
+                        <div class="feature-card feature-card--blue animate-slide-from-bottom"
+                            style="animation-delay: 0.2s;">
+                            <div class="feature-card__icon">
+                                <i data-lucide="users-2"></i>
+                            </div>
+                            <div class="feature-card__content">
+                                <h4 class="feature-card__title">Empresa familiar</h4>
+                                <p class="feature-card__subtitle">Valores sólidos y compromiso generacional</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card feature-card--green animate-slide-from-bottom"
+                            style="animation-delay: 0.4s;">
+                            <div class="feature-card__icon">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <div class="feature-card__content">
+                                <h4 class="feature-card__title">Innovación</h4>
+                                <p class="feature-card__subtitle">Marcas internacionales de vanguardia</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PILARES -->
+    <section id="pilares" class="pillars">
+        <div class="container">
+            <!-- Header de la sección -->
+            <div class="section-header section-header--center animate-fade-in">
+                <!--<div class="badge badge--primary">
+                    <i data-lucide="compass" class="badge__icon"></i>
+                    Nuestros valores
+                </div>-->
+                <h2 class="section-title animate-slide-up">
+                    <br> Los pilares  <span class="text-accent">que nos diferencia</span>
+                </h2>
+                <div class="section-divider animate-scale-in"></div>
+              
+            </div>
+
+            <!-- Grid de pilares -->
+            <div class="pillars__grid">
+                <!-- Pilar 1: Innovación y tecnología -->
+                <div class="pillar-card pillar-card--blue animate-slide-from-left" style="animation-delay: 0.2s;">
+                    <div class="pillar-card__header">
+                        <div class="pillar-card__icon pillar-card__icon--blue">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <h3 class="pillar-card__title">Innovación y tecnología</h3>
+                        <div class="pillar-card__badge">
+                            <i data-lucide="trending-up"></i>
+                            <span>Vanguardia</span>
+                        </div>
+                    </div>
+                    <div class="pillar-card__content">
+                        <p class="pillar-card__description">
+                            Trabajamos con productos de marcas reconocidas internacionalmente,
+                            adaptando las formulaciones a las condiciones climáticas venezolanas.
+                        </p>
+
+                        <div class="pillar-card__features">
+                            <div class="feature-item">
+                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <span>Productos de última generación</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <span>Formulaciones adaptadas al clima tropical</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <span>Investigación y desarrollo continuo</span>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card__quote">
+                            <i data-lucide="quote" class="pillar-card__quote-icon"></i>
+                            <p>"Productos internacionales, servicio local"</p>
+                        </div>
+
+                        <div class="pillar-card__action">
+                            <a href="#contacto" class="btn btn--outline btn--blue">
+                                <i data-lucide="arrow-right" class="btn__icon btn__icon--left"></i>
                                 Conocer más
-                                <i data-lucide="arrow-right" class="btn__icon"></i>
                             </a>
                         </div>
                     </div>
-                    <!-- Aliado 2: Okuo -->
-                    <div class="partner-card partner-card--green animate-slide-up">
-                        <div class="partner-card__header">
-                            <div class="partner-card__logo partner-card__logo--green">
-                                <img src="/imag/partner1.webp" alt="">
+                </div>
 
-                            </div>
-
-                            <div class="badge badge--success">Bioseguridad</div>
+                <!-- Pilar 2: Acompañamiento cercano -->
+                <div class="pillar-card pillar-card--green animate-slide-from-bottom" style="animation-delay: 0.4s;">
+                    <div class="pillar-card__header">
+                        <div class="pillar-card__icon pillar-card__icon--green">
+                            <i data-lucide="users"></i>
                         </div>
-                        <div class="partner-card__content">
-                            <p class="partner-card__description">
-                                Soluciones de inocuidad y bioseguridad basadas en ciencia y tecnología para garantizar
-                                calidad y seguridad.
-                            </p>
-                            <div class="partner-card__specialties">
-                                <p class="partner-card__specialties-title">Especialidades:</p>
-                                <div class="partner-card__tags">
-                                    <span class="tag tag--green">Inhibidores</span>
-                                    <span class="tag tag--green">Aditivos</span>
-                                    <span class="tag tag--green">Calidad</span>
-                                </div>
+                        <h3 class="pillar-card__title">Acompañamiento cercano</h3>
+                        <div class="pillar-card__badge">
+                            <i data-lucide="heart"></i>
+                            <span>Personalizado</span>
+                        </div>
+                    </div>
+                    <div class="pillar-card__content">
+                        <p class="pillar-card__description">
+                            Nuestro equipo técnico brinda asesoría directa en granjas y plantas de alimento
+                            para optimizar el uso de productos nutricionales.
+                        </p>
+
+                        <div class="pillar-card__features">
+                            <div class="feature-item">
+                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <span>Visitas técnicas programadas</span>
                             </div>
+                            <div class="feature-item">
+                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <span>Asesoría nutricional especializada</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <span>Monitoreo de resultados</span>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card__quote">
+                            <i data-lucide="quote" class="pillar-card__quote-icon"></i>
+                            <p>"Visitas técnicas regulares incluidas"</p>
+                        </div>
+
+                        <div class="pillar-card__action">
+                            <a href="#contacto" class="btn btn--outline btn--green">
+                                <i data-lucide="phone" class="btn__icon btn__icon--left"></i>
+                                Solicitar visita
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pilar 3: Compromiso y responsabilidad -->
+                <div class="pillar-card pillar-card--amber animate-slide-from-right" style="animation-delay: 0.6s;">
+                    <div class="pillar-card__header">
+                        <div class="pillar-card__icon pillar-card__icon--amber">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3 class="pillar-card__title">Compromiso y responsabilidad</h3>
+                        <div class="pillar-card__badge">
+                            <i data-lucide="award"></i>
+                            <span>Garantizado</span>
+                        </div>
+                    </div>
+                    <div class="pillar-card__content">
+                        <p class="pillar-card__description">
+                            Garantizamos la calidad de nuestros productos y el cumplimiento
+                            de los tiempos de entrega acordados con cada cliente.
+                        </p>
+
+                        <div class="pillar-card__features">
+                            <div class="feature-item">
+                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <span>Garantía de calidad certificada</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <span>Entregas puntuales garantizadas</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <span>Seguimiento post-venta</span>
+                            </div>
+                        </div>
+
+
+                        <div class="pillar-card__quote">
+                            <i data-lucide="quote" class="pillar-card__quote-icon"></i>
+                            <p>"Entrega puntual garantizada"</p>
+                        </div>
+
+                        <div class="pillar-card__action">
+                            <a href="#contacto" class="btn btn--outline btn--amber">
+                                <i data-lucide="file-text" class="btn__icon btn__icon--left"></i>
+                                Ver garantías
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner de inspiración -->
+            <div class="inspiration-banner animate-slide-up" style="animation-delay: 0.8s;">
+                <div class="inspiration-banner__content">
+                    <div class="inspiration-banner__icon">
+                        <i data-lucide="lightbulb"></i>
+                    </div>
+                    <div class="inspiration-banner__text">
+                        <h3 class="inspiration-banner__title animate-fade-in"" >¿Necesitas asesoría técnica especializada?</h3>
+                        <p class=" inspiration-banner__description">
+                            Cada día trabajamos para que el sector pecuario venezolano sea más fuerte, más eficiente y
+                            más
+                            sostenible. Nuestro equipo está listo para ayudarte.
+                            </p>
+                    </div>
+                    <div class="inspiration-banner__action">
+                        <a href="#contacto" class="btn btn--primary btn--large">
+                            <i data-lucide="phone" class="btn__icon btn__icon--left"></i>
+                            Solicitar asesoría
+                            <i data-lucide="arrow-right" class="btn__icon btn__icon--right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ALIADOS -->
+    <section id="aliados" class="partners">
+        <div class="container">
+            <!-- Header de la sección -->
+            <div class="section-header section-header--center animate-fade-in">
+                <div class="badge badge--blue">
+                    <i data-lucide="handshake" class="badge__icon"></i>
+                    Alianzas globales
+                </div>
+                <h2 class="section-title animate-slide-up">
+                    <br> Nuestros <span class="text-accent">socios estratégicos</span>
+                </h2>
+                <div class="section-divider animate-scale-in"></div>
+                <p class="section-description animate-slide-up" style="animation-delay: 0.2s;">
+                    En alianza con empresas que están transformando la industria globalmente, impulsamos la producción animal en Venezuela con tecnología de vanguardia:
+                </p>
+            </div>
+
+            <!-- Grid de socios -->
+            <div class="partners__grid">
+                <!-- Socio 1: Premex -->
+                <div class="partner-card partner-card--orange animate-slide-from-left" style="animation-delay: 0.2s;">
+                    <div class="partner-card__header">
+                        <div class="partner-card__logo partner-card__logo--orange " >
+                            <img src="/imag/partner2.webp" alt="Premex - Nutrición Animal"
+                                class="partner-card__logo-img">
+                        </div>
+                        <div class="partner-card__badges">
+                            <div class="badge badge--orange">Nutrición Animal</div>
+                            <div class="partner-card__since">Desde 1978</div>
+                        </div>
+                    </div>
+
+                    <div class="partner-card__content">
+                        <p class="partner-card__description">
+                            Nutrición animal innovadora que potencia la productividad y el bienestar en sistemas
+                            pecuarios industrializados con más de 45 años de experiencia global.
+                        </p>
+
+                        <div class="partner-card__specialties">
+                            <h4 class="partner-card__specialties-title">
+                                <i data-lucide="star" class="partner-card__specialties-icon"></i>
+                                Especialidades:
+                            </h4>
+                            <div class="partner-card__tags">
+                                <span class="tag tag--orange">
+                                    <i data-lucide="package"></i>
+                                    Aditivos
+                                </span>
+                                <span class="tag tag--orange">
+                                    <i data-lucide="layers"></i>
+                                    Premezclas
+                                </span>
+                                <span class="tag tag--orange">
+                                    <i data-lucide="zap"></i>
+                                    Enzimas
+                                </span>
+                                <span class="tag tag--orange">
+                                    <i data-lucide="shield"></i>
+                                    Antioxidantes
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="partner-card__stats">
+                            <div class="partner-stat">
+                                <div class="partner-stat__number">60+</div>
+                                <div class="partner-stat__label">Países</div>
+                            </div>
+                            <div class="partner-stat">
+                                <div class="partner-stat__number">500+</div>
+                                <div class="partner-stat__label">Productos</div>
+                            </div>
+                        </div>
+
+                        <div class="partner-card__quote">
+                            <i data-lucide="quote" class="partner-card__quote-icon"></i>
+                            <p>"Líderes mundiales en nutrición animal especializada"</p>
+                        </div>
+
+                        <div class="partner-card__actions">
+                            <a href="https://premex.co/" target="_blank" rel="noopener noreferrer"
+                                class="btn btn--outline btn--orange">
+                                <i data-lucide="external-link" class="btn__icon btn__icon--left"></i>
+                                Visitar sitio web
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Socio 2: Okuo -->
+                <div class="partner-card partner-card--green animate-slide-from-bottom" style="animation-delay: 0.4s;">
+                    <div class="partner-card__header">
+                        <div class="partner-card__logo partner-card__logo--green">
+                            <img src="/imag/partner1.webp" alt="Okuo - Bioseguridad" class="partner-card__logo-img">
+                        </div>
+                        <div class="partner-card__badges">
+                            <div class="badge badge--success">Bioseguridad</div>
+                            <div class="partner-card__since">Innovación continua</div>
+                        </div>
+                    </div>
+
+                    <div class="partner-card__content">
+                        <p class="partner-card__description">
+                            Soluciones de inocuidad y bioseguridad basadas en ciencia y tecnología para garantizar calidad y seguridad en toda la cadena productiva.
+                        </p>
+
+                        <div class="partner-card__specialties">
+                            <h4 class="partner-card__specialties-title">
+                                <i data-lucide="star" class="partner-card__specialties-icon"></i>
+                                Especialidades:
+                            </h4>
+                            <div class="partner-card__tags">
+                                <span class="tag tag--green">
+                                    <i data-lucide="shield-check"></i>
+                                    Inhibidores
+                                </span>
+                                <span class="tag tag--green">
+                                    <i data-lucide="plus"></i>
+                                    Aditivos
+                                </span>
+                                <span class="tag tag--green">
+                                    <i data-lucide="award"></i>
+                                    Calidad
+                                </span>
+                                <span class="tag tag--green">
+                                    <i data-lucide="microscope"></i>
+                                    Análisis
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="partner-card__features">
+                            <div class="feature-highlight">
+                                <i data-lucide="check-circle" class="feature-highlight__icon"></i>
+                                <span>Certificación HACCP</span>
+                            </div>
+                            <div class="feature-highlight">
+                                <i data-lucide="check-circle" class="feature-highlight__icon"></i>
+                                <span>Laboratorio propio</span>
+                            </div>
+                            <div class="feature-highlight">
+                                <i data-lucide="check-circle" class="feature-highlight__icon"></i>
+                                <span>Soporte técnico 24/7</span>
+                            </div>
+                        </div>
+
+                        <div class="partner-card__quote">
+                            <i data-lucide="quote" class="partner-card__quote-icon"></i>
+                            <p>"Bioseguridad integral para la industria alimentaria"</p>
+                        </div>
+
+                        <div class="partner-card__actions">
                             <a href="https://okuo.bio/" target="_blank" rel="noopener noreferrer"
                                 class="btn btn--outline btn--green">
-                                Conocer más
-                                <i data-lucide="arrow-right" class="btn__icon"></i>
+                                <i data-lucide="external-link" class="btn__icon btn__icon--left"></i>
+                                Visitar sitio web
                             </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Socio 3: Alura -->
+                <div class="partner-card partner-card--blue animate-slide-from-right" style="animation-delay: 0.6s;">
+                    <div class="partner-card__header">
+                        <div class="partner-card__logo partner-card__logo--blue">
+                            <img src="/imag/partner3.webp" alt="Alura - Salud Animal" class="partner-card__logo-img">
+                        </div>
+                        <div class="partner-card__badges partner-card--blue">
+                            <div class="badge badge--blue">Salud Animal</div>
+                            <div class="partner-card__since">Bienestar integral</div>
                         </div>
                     </div>
 
-                    <!-- Aliado 3: Alura -->
-                    <div class="partner-card partner-card--purple animate-slide-right">
-                        <div class="partner-card__header">
-                            <div class="partner-card__logo ">
-                                <img src="/imag/partner3.webp" alt="">
-                            </div>
+                    <div class="partner-card__content">
 
-                            <div class="badge badge--purple">Salud Animal</div>
+                        <p class="partner-card__description">
+                            Soluciones de salud animal que promueven una producción más rentable, saludable y
+                            sostenible a través de probióticos y tecnología avanzada.
+                        </p>
+
+                        <div class="partner-card__specialties ">
+                            <h4 class="partner-card__specialties-title">
+                                <i data-lucide="star" class="partner-card__specialties-icon"></i>
+                                Especialidades:
+                            </h4>
+                            <div class="partner-card__tags">
+                                <span class="tag tag--blue">
+                                    <i data-lucide="heart"></i>
+                                    Probióticos
+                                </span>
+                                <span class="tag tag--blue">
+                                    <i data-lucide="shield"></i>
+                                    Inmunidad
+                                </span>
+                                <span class="tag tag--blue">
+                                    <i data-lucide="smile"></i>
+                                    Bienestar
+                                </span>
+                                <span class="tag tag--blue">
+                                    <i data-lucide="leaf"></i>
+                                    Sostenibilidad
+                                </span>
+                            </div>
                         </div>
-                        <div class="partner-card__content">
-                            <p class="partner-card__description">
-                                Soluciones de salud animal que promueven una producción más rentable, saludable y
-                                sostenible.
-                            </p>
-                            <div class="partner-card__specialties">
-                                <p class="partner-card__specialties-title">Especialidades:</p>
-                                <div class="partner-card__tags">
-                                    <span class="tag tag--purple">Probióticos</span>
-                                    <span class="tag tag--purple">Inmunidad</span>
-                                    <span class="tag tag--purple">Bienestar</span>
+
+                        <div class="partner-card__innovation ">
+                            <div class="innovation-badge">
+                                <i data-lucide="lightbulb" class="innovation-badge__icon"></i>
+                                <div class="innovation-badge__content">
+                                    <span class="innovation-badge__title">Innovación</span>
+                                    <span class="innovation-badge__desc">Investigación continua</span>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="partner-card__quote">
+                            <i data-lucide="quote" class="partner-card__quote-icon"></i>
+                            <p>"El futuro de la salud animal es probiótico"</p>
+                        </div>
+
+                        <div class="partner-card__actions">
                             <a href="https://latam.alura.bio/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn--outline btn--purple">
-                                Conocer más
-                                <i data-lucide="arrow-right" class="btn__icon"></i>
+                                class="btn btn--outline btn--blue">
+                                <i data-lucide="external-link" class="btn__icon btn__icon--left"></i>
+                                Visitar sitio web
                             </a>
+
                         </div>
                     </div>
-                </div>
-
-
-                <!-- GALLERY SECTION - Galería -->
-                <section id="galeria" class="gallery">
-                    <div class="container">
-                        <div class="section-header section-header--center animate-slide-up">
-                            <div class="badge badge--accent">📸 Galería</div>
-                            <h2 class="section-title">
-                                Nuestro trabajo en <span class="text-accent">imágenes</span>
-                            </h2>
-                            <div class="section-divider"></div>
-                            <p class="section-description">
-                                Conoce nuestras instalaciones y los proyectos que hemos desarrollado
-                                junto a nuestros clientes en diferentes estados de Venezuela.
-                            </p>
-                        </div>
-
-
-                    </div>
-
-                    <!-- Gallery Grid -->
-                    <div class="gallery__grid" id="galleryGrid">
-                        <!-- Gallery items will be populated by JavaScript -->
-                    </div>
-
-                    <!-- Lightbox -->
-                    <div class="lightbox" id="lightbox">
-                        <div class="lightbox__backdrop"></div>
-                        <div class="lightbox__container">
-                            <button class="lightbox__close" id="lightboxClose">
-                                <i data-lucide="x"></i>
-                            </button>
-                            <button class="lightbox__nav lightbox__prev" id="lightboxPrev">
-                                <i data-lucide="chevron-left"></i>
-                            </button>
-                            <button class="lightbox__nav lightbox__next" id="lightboxNext">
-                                <i data-lucide="chevron-right"></i>
-                            </button>
-                            <img class="lightbox__image" id="lightboxImage" src="" alt="">
-                            <div class="lightbox__caption" id="lightboxCaption"></div>
-                        </div>
-                    </div>
-            </div>
-            <div class="container">
-                
-
-                <!-- Frase sobre alianzas -->
-                <div class="alliance-quote animate-fade-in">
-                    <i data-lucide="quote" class="alliance-quote__icon"></i>
-                    <p class="alliance-quote__text">
-                        "Nutrición, bioseguridad y salud animal, en un solo aliado"
-                    </p>
-                    <p class="alliance-quote__subtitle">
-                        La combinación perfecta de tecnologías globales con conocimiento local
-                    </p>
                 </div>
             </div>
 
-        </section>
+            <!-- Banner de alianza -->
+            <div class="alliance-banner animate-slide-up" style="animation-delay: 0.8s;">
+                <div class="alliance-banner__content">
+                    <div class="alliance-banner__icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <div class="alliance-banner__text">
+                        <h3 class="alliance-banner__title">Nutrición, bioseguridad y salud animal, en un solo aliado
+                        </h3>
+                        <p class="alliance-banner__description">
+                            La combinación perfecta de tecnologías globales con conocimiento local
+                        </p>
+                    </div>
+                    <div class="alliance-banner__stats">
+                        <div class="alliance-stat">
+                            <div class="alliance-stat__number">3</div>
+                            <div class="alliance-stat__label">Socios estratégicos</div>
+                        </div>
+                        <div class="alliance-stat">
+                            <div class="alliance-stat__number">60+</div>
+                            <div class="alliance-stat__label">Países de presencia</div>
+                        </div>
 
-        <!-- CONTACT SECTION -->
-        <section id="contacto" class="contact">
-            <div class="container">
-                <div class="section-header section-header--center section-header--white animate-slide-up">
-                    <div class="badge badge--success">Conversemos</div>
-                    <h2 class="section-title section-title--white">
-                        Estamos aquí para <span class="text-accent">impulsar tu operación</span>
-                    </h2>
-                    <div class="section-divider"></div>
-                    <p class="section-description section-description--white">
-                        Cada conversación es el inicio de una transformación. Cuéntanos sobre tu operación y descubre
-                        cómo podemos ayudarte a alcanzar tus objetivos.
-                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN GALERÍA COMPLETAMENTE NUEVA -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <!-- Header de la sección -->
+            <div class="section-header section-header--center animate-fade-in">
+                <div class="badge badge--accent">
+                    <i data-lucide="camera" class="badge__icon"></i>
+                    Galería
+                </div>
+                <h2 class="section-title animate-slide-up">
+                    <br>Nuestro trabajo en <span class="text-accent">imágenes</span>
+                </h2>
+                <div class="section-divider animate-scale-in"></div>
+                <p><strong>Nuestras soluciones</strong> integran innovación, tecnología y conocimiento a cada proyecto</p>
+            </div>
+
+            <!-- Carrusel Principal -->
+            <div class="gallery-carousel" id="galleryCarousel">
+                <!-- Contenedor de imágenes -->
+                <div class="gallery-carousel__wrapper">
+                    <div class="gallery-carousel__track" id="carouselTrack">
+                        <!-- Las imágenes se cargarán dinámicamente -->
+                    </div>
                 </div>
 
-                <div class="contact__content">
-                    <div class="contact__info animate-slide-left">
-                        <h3 class="contact__info-title">Conecta con nosotros</h3>
+                <!-- Controles de navegación -->
+                <button class="gallery-carousel__btn gallery-carousel__btn--prev" id="prevBtn" aria-label="Imagen anterior">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <button class="gallery-carousel__btn gallery-carousel__btn--next" id="nextBtn" aria-label="Imagen siguiente">
+                    <i data-lucide="chevron-right"></i>
+                </button>
 
-                        <div class="contact__methods">
-                            <div class="contact-method">
-                                <div class="contact-method__icon contact-method__icon--primary">
-                                    <i data-lucide="phone"></i>
-                                </div>
-                                <div class="contact-method__content">
-                                    <p class="contact-method__title">Teléfono directo</p>
-                                    <p class="contact-method__value">+58 (414) 5906535</p>
-                                    <p class="contact-method__note">Lun - Vie: 8:00 AM - 6:00 PM</p>
-                                </div>
+                <!-- Información de la imagen -->
+                <div class="gallery-carousel__info">
+                    <h3 class="gallery-carousel__title" id="imageTitle">Título de la imagen</h3>
+                    <p class="gallery-carousel__description" id="imageDescription">Descripción de la imagen</p>
+                    <div class="gallery-carousel__meta">
+                        <span class="gallery-carousel__category" id="imageCategory">Categoría</span>
+                        <span class="gallery-carousel__counter" id="imageCounter">1 / 8</span>
+                    </div>
+                </div>
+
+                <!-- Indicadores -->
+                <div class="gallery-carousel__indicators" id="carouselIndicators">
+                    <!-- Se generarán dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="gallery-thumbnails" id="galleryThumbnails">
+                <!-- Se generarán dinámicamente -->
+            </div>
+        </div>
+
+        <!-- Modal Lightbox -->
+        <div class="gallery-lightbox" id="galleryLightbox">
+            <div class="gallery-lightbox__backdrop"></div>
+            <div class="gallery-lightbox__container">
+                <button class="gallery-lightbox__close" id="lightboxClose">
+                    <i data-lucide="x"></i>
+                </button>
+                <button class="gallery-lightbox__nav gallery-lightbox__nav--prev" id="lightboxPrev">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <button class="gallery-lightbox__nav gallery-lightbox__nav--next" id="lightboxNext">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+                <div class="gallery-lightbox__content">
+                    <img class="gallery-lightbox__image" id="lightboxImage" src="/imag/agrolinx-logo.svg" alt="">
+                    <div class="gallery-lightbox__info">
+                        <h3 class="gallery-lightbox__title" id="lightboxTitle"></h3>
+                        <p class="gallery-lightbox__description" id="lightboxDescription"></p>
+                        <div class="gallery-lightbox__meta">
+                            <span class="gallery-lightbox__category" id="lightboxCategory"></span>
+                            <span class="gallery-lightbox__counter" id="lightboxCounter">1 / 8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <!-- Header de la sección -->
+            <div class="section-header section-header--center section-header--white animate-fade-in">
+                <div class="badge badge--success">
+                    <i data-lucide="phone" class="badge__icon"></i>
+                    Conversemos
+                </div>
+                <h2 class="section-title section-title--white animate-slide-up">
+                    <br> Estamos aquí para <span class="text-accent">impulsar tu operación</span>
+                </h2>
+                <div class="section-divider animate-scale-in"></div>
+                <p class="section-description section-description--white animate-slide-up"
+                    style="animation-delay: 0.2s;">
+                    Cada conversación es el inicio de una transformación. Cuéntanos sobre tu operación y descubre
+                    cómo podemos ayudarte a alcanzar tus objetivos.
+                </p>
+            </div>
+
+            <div class="contact__content">
+                <!-- Información de contacto -->
+                <div class="contact__info animate-slide-from-left" style="animation-delay: 0.4s;">
+                    <h3 class="contact__info-title">
+                        <i data-lucide="map-pin" class="contact__info-icon"></i>
+                        Conecta con nosotros
+                    </h3>
+
+                    <div class="contact__methods">
+                        <!-- Método 1: Teléfono -->
+                        <div class="contact-method animate-slide-from-left" style="animation-delay: 0.6s;">
+                            <div class="contact-method__icon contact-method__icon--primary">
+                                <i data-lucide="phone"></i>
                             </div>
+                            <div class="contact-method__content">
+                                <h4 class="contact-method__title">Teléfono directo</h4>
+                                <a href="tel:+584145906535" class="contact-method__value">+58 (414) 5906535</a>
+                                <p class="contact-method__note">
+                                    <i data-lucide="clock"></i>
+                                    Lun - Vie: 8:00 AM - 6:00 PM
+                                </p>
+                            </div>
+                        </div>
 
-                            <div class="contact-method">
-                                <div class="contact-method__icon contact-method__icon--primary">
+                        <!-- Método 2: Email -->
+                        <div class="contact-method animate-slide-from-left" style="animation-delay: 0.8s;">
+                            <div class="contact-method__icon contact-method__icon--primary">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-method__content">
+                                <h4 class="contact-method__title">Email corporativo</h4>
+                                <a href="mailto:master@agrolinxve.com"
+                                    class="contact-method__value">master@agrolinxve.com</a>
+                                <p class="contact-method__note">
+                                    <i data-lucide="timer"></i>
+                                    Respuesta en 24 horas
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Método 3: WhatsApp -->
+                        <div class="contact-method contact-method--whatsapp animate-slide-from-left"
+                            style="animation-delay: 1s;">
+                            <div class="contact-method__icon contact-method__icon--whatsapp">
+                                <i data-lucide="message-circle"></i>
+                            </div>
+                            <div class="contact-method__content">
+                                <h4 class="contact-method__title">WhatsApp Business</h4>
+                                <p class="contact-method__note">
+                                    <i data-lucide="zap"></i>
+                                    Atención inmediata
+                                </p>
+                                <a href="https://wa.me/+584145906535" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn--whatsapp btn--small">
+                                    <i data-lucide="message-circle" class="btn__icon btn__icon--left"></i>
+                                    Escribir ahora
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Método 4: Ubicación -->
+                        <div class="contact-method animate-slide-from-left" style="animation-delay: 1.2s;">
+                            <div class="contact-method__icon contact-method__icon--location">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="contact-method__content">
+                                <h4 class="contact-method__title">Nuestra oficina</h4>
+                                <address class="contact-method__address">
+                                    Av. Las Delicias, Urb. La Floresta<br>
+                                    C.E. Europa, Piso 1 Ofic. 1-32<br>
+                                    Maracay, Venezuela
+                                </address>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Formulario de contacto -->
+                <div class="contact__form-container animate-slide-from-right" style="animation-delay: 0.6s;">
+                    <div class="contact__form-header">
+                        <h3 class="contact__form-title">
+                            <i data-lucide="edit-3" class="contact__form-icon"></i>
+                            Cuéntanos sobre tu proyecto
+                        </h3>
+                        <p class="contact__form-subtitle">
+                            Completa el formulario y nos pondremos en contacto contigo en las próximas 24 horas
+                        </p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <!-- Fila 1: Información personal -->
+                        <div class="form-row animate-slide-from-right" style="animation-delay: 0.8s;">
+                            <div class="form-group">
+                                <label for="name" class="form-label">
+                                    <i data-lucide="user"></i>
+                                    Nombre completo *
+                                </label>
+                                <input type="text" id="name" name="name" class="form-input"
+                                    placeholder="Tu nombre completo" required autocomplete="name">
+                                <div class="form-error" id="name-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="position" class="form-label">
+                                    <i data-lucide="briefcase"></i>
+                                    Cargo
+                                </label>
+                                <input type="text" id="position" name="position" class="form-input"
+                                    placeholder="Ej: Gerente de Producción" autocomplete="organization-title">
+                                <div class="form-error" id="position-error"></div>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Empresa -->
+                        <div class="form-group animate-slide-from-right" style="animation-delay: 1s;">
+                            <label for="company" class="form-label">
+                                <i data-lucide="building"></i>
+                                Empresa/Granja *
+                            </label>
+                            <input type="text" id="company" name="company" class="form-input"
+                                placeholder="Nombre de tu empresa o granja" required autocomplete="organization">
+                            <div class="form-error" id="company-error"></div>
+                        </div>
+
+                        <!-- Fila 3: Contacto -->
+                        <div class="form-row animate-slide-from-right" style="animation-delay: 1.2s;">
+                            <div class="form-group">
+                                <label for="email" class="form-label">
                                     <i data-lucide="mail"></i>
-                                </div>
-                                <div class="contact-method__content">
-                                    <p class="contact-method__title">Email corporativo</p>
-                                    <p class="contact-method__value">master@agrolinxve.com</p>
-                                    <p class="contact-method__note">Respuesta en 24 horas</p>
-                                </div>
+                                    Email *
+                                </label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="tu@email.com" required autocomplete="email">
+                                <div class="form-error" id="email-error"></div>
                             </div>
-
-                            <div class="contact-method contact-method--whatsapp">
-                                <div class="contact-method__icon contact-method__icon--whatsapp">
-                                    <i data-lucide="message-circle"></i>
-                                </div>
-                                <div class="contact-method__content">
-                                    <p class="contact-method__title">WhatsApp Business</p>
-                                    <p class="contact-method__note">Atención inmediata</p>
-                                    <a href="https://wa.me/+584145906535" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--small">
-                                        Escribir ahora
-                                    </a>
-                                </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">
+                                    <i data-lucide="phone"></i>
+                                    Teléfono *
+                                </label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+584145906535"
+                                    required autocomplete="tel">
+                                <div class="form-error" id="phone-error"></div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="contact__form-container animate-slide-right">
-                        <h3 class="contact__form-title">Cuéntanos sobre tu proyecto</h3>
+                        <!-- Fila 4: Tipo de operación -->
+                        <div class="form-group animate-slide-from-right" style="animation-delay: 1.4s;">
+                            <label for="operation" class="form-label">
+                                <i data-lucide="factory"></i>
+                                Tipo de operación
+                            </label>
+                            <select id="operation" name="operation" class="form-select">
+                                <option value="">Selecciona tu tipo de operación</option>
+                                <option value="avicola-engorde">🐔 Avícola - Pollos de engorde</option>
+                                <option value="avicola-ponedoras">🥚 Avícola - Ponedoras</option>
+                                <option value="porcina">🐷 Porcina - Cría y engorde</option>
+                                <option value="planta-alimentos">🏭 Planta de alimentos</option>
+                                <option value="planta-beneficio">🏢 Planta de beneficio</option>
+                                <option value="distribuidor">🚚 Distribuidor</option>
+                                <option value="otro">📋 Otro</option>
+                            </select>
+                            <div class="form-error" id="operation-error"></div>
+                        </div>
 
-                        <form class="contact-form" id="contactForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name" class="form-label">Nombre completo *</label>
-                                    <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre completo" required>
+                        <!-- Fila 5: Mensaje -->
+                        <div class="form-group animate-slide-from-right" style="animation-delay: 1.6s;">
+                            <label for="message" class="form-label">
+                                <i data-lucide="message-square"></i>
+                                Cuéntanos tu desafío
+                            </label>
+                            <textarea id="message" name="message" class="form-textarea" rows="4"
+                                placeholder="Describe tu operación actual, los desafíos que enfrentas y cómo podemos ayudarte a mejorar tus resultados..."></textarea>
+                            <div class="form-error" id="message-error"></div>
+                        </div>
+
+                        <!-- Checkbox de términos -->
+                        <div class="form-group form-group--checkbox animate-slide-from-right"
+                            style="animation-delay: 1.8s;">
+                            <label class="form-checkbox">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="form-checkbox__checkmark">
+                                    <i data-lucide="check"></i>
+                                </span>
+                                <span class="form-checkbox__text">
+                                    Acepto los <a href="#" class="form-link">términos y condiciones</a> y
+                                    <a href="#" class="form-link">política de privacidad</a>
+                                </span>
+                            </label>
+                            <div class="form-error" id="terms-error"></div>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <div class="form-group animate-slide-from-right" style="animation-delay: 2s;">
+                            <button type="submit" class="btn btn--primary btn--full btn--large" id="submitBtn">
+                                <i data-lucide="send" class="btn__icon btn__icon--left"></i>
+                                <span id="submitText">Enviar consulta</span>
+                                <div class="btn__loading" id="submitLoading">
+                                    <div class="loading-spinner"></div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="position" class="form-label">Cargo</label>
-                                    <input type="text" id="position" name="position" class="form-input" placeholder="Ej: Gerente de Producción">
-                                </div>
-                            </div>
+                            </button>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="company" class="form-label">Empresa/Granja *</label>
-                                <input type="text" id="company" name="company" class="form-input" placeholder="Nombre de tu empresa o granja" required>
-                            </div>
+                        <!-- Nota informativa -->
+                        <p class="form-note animate-fade-in" style="animation-delay: 2.2s;">
+                            <i data-lucide="info"></i>
+                            * Campos obligatorios. Nos pondremos en contacto contigo en las próximas 24 horas.
+                            Tu información está protegida y no será compartida con terceros.
+                        </p>
+                    </form>
 
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email" class="form-label">Email *</label>
-                                    <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone" class="form-label">Teléfono *</label>
-                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="+584145906535" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="operation" class="form-label">Tipo de operación</label>
-                                <select id="operation" name="operation" class="form-select">
-                                    <option value="">Selecciona tu tipo de operación</option>
-                                    <option value="avicola-engorde">Avícola - Pollos de engorde</option>
-                                    <option value="avicola-ponedoras">Avícola - Ponedoras</option>
-                                    <option value="porcina">Porcina - Cría y engorde</option>
-                                    <option value="planta-alimentos">Planta de alimentos</option>
-                                    <option value="planta-beneficio">Planta de beneficio</option>
-                                    <option value="otro">Otro</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message" class="form-label">Cuéntanos tu desafío</label>
-                                <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Describe tu operación actual, los desafíos que enfrentas y cómo podemos ayudarte a mejorar tus resultados..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn--primary btn--full">Enviar consulta</button>
-
-                            <p class="form-note">
-                                * Campos obligatorios. Nos pondremos en contacto contigo en las próximas 24 horas.
-                            </p>
-                        </form>
+                    <!-- Mensaje de éxito -->
+                    <div class="contact__success" id="contactSuccess" style="display: none;">
+                        <div class="success-animation">
+                            <i data-lucide="check-circle" class="success-icon"></i>
+                        </div>
+                        <h3 class="success-title">¡Mensaje enviado exitosamente!</h3>
+                        <p class="success-message">
+                            Gracias por contactarnos. Hemos recibido tu consulta y nos pondremos en contacto
+                            contigo en las próximas 24 horas para discutir cómo podemos ayudarte.
+                        </p>
+                        <button class="btn btn--outline" id="sendAnotherBtn">
+                            <i data-lucide="plus" class="btn__icon btn__icon--left"></i>
+                            Enviar otra consulta
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Mapa (placeholder) -->
+            <div class="contact__map animate-fade-in" style="animation-delay: 2.4s; display: none;" id="contactMap">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i data-lucide="map-pin" class="map-placeholder__icon"></i>
+                        <h4 class="map-placeholder__title">Nuestra ubicación</h4>
+                        <p class="map-placeholder__address">
+                            Av. Las Delicias, Urb. La Floresta<br>
+                            C.E. Europa, Piso 1 Ofic. 1-32<br>
+                            Maracay, Venezuela
+                        </p>
+                        <button class="btn btn--primary" id="openMapsBtn">
+                            <i data-lucide="external-link" class="btn__icon btn__icon--left"></i>
+                            Abrir en Google Maps
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </main>
-
-    <!-- SCROLL TO TOP BUTTON -->
-    <button id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
-        <i data-lucide="arrow-up"></i>
-    </button>
-
-
-
-    <!-- FOOTER - Pie de página estructurado -->
-    <footer class="footer">
+    <!-- FOOTER OPTIMIZADO -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <!-- Contenido principal del footer -->
             <div class="footer__main">
-
-                <!-- COLUMNA 1: Información de la empresa -->
+                <!-- Columna 1: Información de la empresa -->
                 <div class="footer__column footer__column--brand">
                     <div class="footer__brand">
                         <div class="footer__logo">
-                            <img src="imag/logo.webp" alt="Agrolinx Logo" class="footer__logo-img">
+                            <img src="/imag/logo.webp" alt="Agrolinx Logo" class="footer__logo-img" width="120"
+                                height="60">
                         </div>
+
                         <p class="footer__description">
                             Empresa familiar comprometida con el futuro del sector pecuario en Venezuela.
                         </p>
+
                         <div class="footer__slogan">
+                            <i data-lucide="quote" class="footer__slogan-icon"></i>
                             <p>"Creemos en el agro. Creamos futuro."</p>
                         </div>
-                      
                     </div>
                 </div>
 
-                <!-- COLUMNA 2: Enlaces rápidos -->
+                <!-- Columna 2: Enlaces rápidos -->
                 <div class="footer__column">
-                    <h4 class="footer__title">Enlaces rápidos</h4>
-                    <nav class="footer__nav">
-                        <a href="#nosotros" class="footer__link">Nosotros</a>
-                        <a href="#impacto" class="footer__link">Casos de éxito</a>
-                        <a href="#pilares" class="footer__link">Servicios</a>
-                        <a href="#aliados" class="footer__link">Socios comerciales</a>
-                        <a href="#galeria" class="footer__link">Galería</a>
-                        <a href="#contacto" class="footer__link">Contacto</a>
-                        
+                    <h4 class="footer__title">
+                        <i data-lucide="navigation" class="footer__title-icon"></i>
+                        Enlaces rápidos
+                    </h4>
+                    <nav class="footer__nav" role="navigation" aria-label="Enlaces del footer">
+                        <a href="#inicio" class="footer__link">
+                            <i data-lucide="home" class="footer__link-icon"></i>
+                            Inicio
+                        </a>
+                        <a href="#nosotros" class="footer__link">
+                            <i data-lucide="users" class="footer__link-icon"></i>
+                            Nosotros
+                        </a>
+                        <a href="#pilares" class="footer__link">
+                            <i data-lucide="target" class="footer__link-icon"></i>
+                            Pilares
+                        </a>
+                        <a href="#aliados" class="footer__link">
+                            <i data-lucide="handshake" class="footer__link-icon"></i>
+                            Aliados
+                        </a>
+                        <a href="#galeria" class="footer__link">
+                            <i data-lucide="image" class="footer__link-icon"></i>
+                            Galería
+                        </a>
+                        <a href="#contacto" class="footer__link">
+                            <i data-lucide="phone" class="footer__link-icon"></i>
+                            Contacto
+                        </a>
                     </nav>
                 </div>
 
-                <!-- COLUMNA 3: Nuestros productos -->
+                <!-- Columna 3: Nuestros productos -->
                 <div class="footer__column">
-                    <h4 class="footer__title">Nuestros productos</h4>
+                    <h4 class="footer__title">
+                        <i data-lucide="package" class="footer__title-icon"></i>
+                        Nuestras soluciones
+                    </h4>
                     <div class="footer__products">
                         <div class="footer__product">
-                            <i data-lucide="package" class="footer__product-icon"></i>
+                            <div class="footer__product-icon footer__product-icon--premex">
+                                <i data-lucide="package"></i>
+                            </div>
                             <div class="footer__product-info">
                                 <span class="footer__product-name">Premex</span>
                                 <span class="footer__product-desc">Nutrición Animal</span>
+                                <span class="footer__product-specialty">Aditivos y Premezclas</span>
                             </div>
                         </div>
                         <div class="footer__product">
-                            <i data-lucide="shield-check" class="footer__product-icon"></i>
+                            <div class="footer__product-icon footer__product-icon--okuo">
+                                <i data-lucide="shield-check"></i>
+                            </div>
                             <div class="footer__product-info">
                                 <span class="footer__product-name">Okuo</span>
                                 <span class="footer__product-desc">Bioseguridad</span>
+                                <span class="footer__product-specialty">Inhibidores y Calidad</span>
                             </div>
                         </div>
                         <div class="footer__product">
-                            <i data-lucide="heart" class="footer__product-icon"></i>
+                            <div class="footer__product-icon footer__product-icon--alura">
+                                <i data-lucide="heart"></i>
+                            </div>
                             <div class="footer__product-info">
                                 <span class="footer__product-name">Alura</span>
                                 <span class="footer__product-desc">Salud Animal</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- COLUMNA 4: Información de contacto -->
-                <div class="footer__column">
-                    <h4 class="footer__title">Contacto</h4>
-                    <div class="footer__contact">
-                        <div class="footer__contact-item">
-                            <i data-lucide="map-pin" class="footer__contact-icon"></i>
-                            <div class="footer__contact-info">
-                                <span class="footer__contact-label">Dirección</span>
-                                <span class="footer__contact-text">Av. Las Delicias, Urb. La Floresta, C.E. Europa, Piso
-                                    1 Ofic. 1-32</span>
-                                <span class="footer__contact-text">Maracay, Venezuela</span>
-                            </div>
-                        </div>
-
-                        <div class="footer__contact-item">
-                            <i data-lucide="phone" class="footer__contact-icon"></i>
-                            <div class="footer__contact-info">
-                                <span class="footer__contact-label">Teléfono</span>
-                                <span class="footer__contact-text">+58 (414) 5906535</span>
-                            </div>
-                        </div>
-
-                        <div class="footer__contact-item">
-                            <i data-lucide="mail" class="footer__contact-icon"></i>
-                            <div class="footer__contact-info">
-                                <span class="footer__contact-label">Email</span>
-                                <span class="footer__contact-text">master@agrolinxve.com</span>
-                            </div>
-                        </div>
-
-                        <div class="footer__contact-item">
-                            <i data-lucide="clock" class="footer__contact-icon"></i>
-                            <div class="footer__contact-info">
-                                <span class="footer__contact-label">Horario</span>
-                                <span class="footer__contact-text">Lun - Vie: 8:00 AM - 6:00 PM</span>
+                                <span class="footer__product-specialty">Probióticos y Bienestar</span>
                             </div>
                         </div>
                     </div>
@@ -726,34 +1193,54 @@
 
             <!-- Sección de líderes -->
             <div class="footer__leaders-section">
-                <h3 class="footer__title">Nuestros líderes</h3>
+                <h3 class="footer__leaders-title">
+                    <i data-lucide="users-2" class="footer__leaders-icon"></i>
+                    Nuestros líderes
+                </h3>
                 <div class="footer__leaders-grid">
-                    <div class="footer__leader-card" >
-                        <div class="footer__leader-info" >
+                    <div class="footer__leader-card">
+                        <div class="footer__leader-avatar">
+                            <i data-lucide="user-circle"></i>
+                        </div>
+                        <div class="footer__leader-info">
                             <span class="footer__leader-name">Andrés Suárez</span>
                             <span class="footer__leader-title">Gerente General</span>
-                            <span class="footer__leader-desc">Administrador de empresas con más de 30 años de experiencia en operaciones y liderazgo de empresas en Venezuela</span>
+                            <span class="footer__leader-desc">
+                                Administrador de empresas con más de 30 años de experiencia en operaciones
+                                y liderazgo de empresas en Venezuela
+                            </span>
                         </div>
                     </div>
                     <div class="footer__leader-card">
+                        <div class="footer__leader-avatar">
+                            <i data-lucide="user-circle"></i>
+                        </div>
                         <div class="footer__leader-info">
                             <span class="footer__leader-name">Santiago Suárez</span>
                             <span class="footer__leader-title">Director Técnico</span>
-                            <span class="footer__leader-desc">Ingeniero químico especializado en productos agroquímicos e industriales</span>
+                            <span class="footer__leader-desc">
+                                Ingeniero químico especializado en productos agroquímicos e industriales
+                            </span>
                         </div>
                     </div>
                     <div class="footer__leader-card">
+                        <div class="footer__leader-avatar">
+                            <i data-lucide="user-circle"></i>
+                        </div>
                         <div class="footer__leader-info">
                             <span class="footer__leader-name">Germán Suárez</span>
                             <span class="footer__leader-title">Director de Tecnología</span>
-                            <span class="footer__leader-desc">Ing. en telecomunicaciones experto en sistemas de monitoreo y automatización agroindustrial</span>
+                            <span class="footer__leader-desc">
+                                Ing. en telecomunicaciones experto en sistemas de monitoreo y automatización
+                                agroindustrial
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Línea divisoria -->
-            <div class="footer__divider"></div>
+            <div class="footer__divider" role="separator"></div>
 
             <!-- Pie del footer -->
             <div class="footer__bottom">
@@ -763,39 +1250,35 @@
                     </p>
                     <div class="footer__legal">
                         <a href="#" class="footer__legal-link">Política de Privacidad</a>
-                        <span class="footer__separator">•</span>
+                        <span class="footer__separator" aria-hidden="true">•</span>
                         <a href="#" class="footer__legal-link">Términos de Servicio</a>
                     </div>
                 </div>
 
                 <div class="footer__bottom-right">
                     <div class="footer__badge">
-                        <span class="footer__flag">🇻🇪</span>
+                        <span class="footer__flag" role="img" aria-label="Bandera de Venezuela">🇻🇪</span>
                         <span class="footer__badge-text">Empresa Venezolana</span>
                     </div>
                     <div class="footer__tagline">
+                        <i data-lucide="calendar" class="footer__tagline-icon"></i>
                         <span>6 años mejorando la productividad pecuaria</span>
                     </div>
+
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Botón de scroll hacia arriba -->
-    <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba">
+    <!-- Botón scroll to top -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba" title="Volver arriba">
         <i data-lucide="chevron-up"></i>
     </button>
 
     <!-- Scripts -->
+
     <script src="scripts/script.js"></script>
-    <script>
-        // Initialize Lucide icons after the page loads
-        document.addEventListener('DOMContentLoaded', function () {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        });
-    </script>
+
 </body>
 
 </html>
