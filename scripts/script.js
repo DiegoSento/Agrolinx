@@ -304,10 +304,8 @@ function renderGallery() {
 
   updateGalleryInfo()
 
-  // Inicializar iconos
-  if (window.lucide) {
-    window.lucide.createIcons()
-  }
+  // Restaurar iconos después de renderizar la galería
+  restoreAllIcons()
 }
 
 function initGalleryControls() {
@@ -615,6 +613,8 @@ function initScrollToTop() {
     scrollToTopBtn.className = "scroll-to-top"
     scrollToTopBtn.setAttribute("aria-label", "Volver arriba")
     document.body.appendChild(scrollToTopBtn)
+    // Restaurar iconos después de crear el botón
+    restoreAllIcons()
   }
 
   let isVisible = false
@@ -640,10 +640,15 @@ function initScrollToTop() {
       behavior: "smooth",
     })
   })
+}
 
-  if (window.lucide) {
-    window.lucide.createIcons()
-  }
+// ========================================
+// CONFIGURACIÓN EMAILJS
+// ========================================
+const EMAIL_CONFIG = {
+  serviceId: 'service_h2hvohe', // Reemplazar con tu Service ID real de EmailJS
+  templateId: 'template_t1491kb', // Reemplazar con tu Template ID real de EmailJS
+  publicKey: 'bNqMyJVanAEZPXISP' // Reemplazar con tu Public Key real de EmailJS
 }
 
 // ========================================
@@ -652,6 +657,14 @@ function initScrollToTop() {
 function initContactForm() {
   const contactForm = document.getElementById("contactForm")
   if (!contactForm) return
+
+  // Inicializar EmailJS
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init(EMAIL_CONFIG.publicKey)
+    console.log("✅ EmailJS inicializado correctamente")
+  } else {
+    console.warn("⚠️ EmailJS no está disponible. Verifica que el script esté cargado.")
+  }
 
   const inputs = contactForm.querySelectorAll("input, select, textarea")
   inputs.forEach((input) => {
@@ -663,7 +676,9 @@ function initContactForm() {
     e.preventDefault()
 
     const submitBtn = contactForm.querySelector('button[type="submit"]')
-    const originalText = submitBtn.textContent
+    const submitText = document.getElementById("submitText")
+    const submitLoading = document.getElementById("submitLoading")
+    const originalText = submitText.textContent
 
     let isValid = true
     inputs.forEach((input) => {
@@ -677,20 +692,110 @@ function initContactForm() {
       return
     }
 
-    submitBtn.textContent = "Enviando..."
+    // Mostrar estado de carga
     submitBtn.disabled = true
+    submitText.style.display = "none"
+    submitLoading.style.display = "flex"
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-      showNotification("¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.", "success")
-      contactForm.reset()
+      // Preparar datos del formulario
+      const formData = new FormData(contactForm)
+      const templateParams = {
+        from_name: formData.get('name'),
+        from_email: formData.get('email'),
+        phone: formData.get('phone'),
+        company: formData.get('company'),
+        position: formData.get('position') || 'No especificado',
+        operation: getOperationLabel(formData.get('operation')),
+        message: formData.get('message') || 'Sin mensaje adicional',
+        to_email: 'diego.barrera@sento.tech', // Email de destino
+        reply_to: formData.get('email'), // Para responder directamente al cliente
+        current_date: new Date().toLocaleDateString('es-VE', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        })
+      }
+
+      // Enviar email usando EmailJS
+      if (typeof emailjs !== 'undefined') {
+        console.log("📧 Enviando email con EmailJS...", templateParams)
+
+        const response = await emailjs.send(
+          EMAIL_CONFIG.serviceId,
+          EMAIL_CONFIG.templateId,
+          templateParams
+        )
+
+        console.log("✅ Email enviado exitosamente:", response)
+        showNotification("¡Mensaje enviado exitosamente! Diego se pondrá en contacto contigo en las próximas 24 horas.", "success")
+        showContactSuccess()
+        contactForm.reset()
+      } else {
+        throw new Error('EmailJS no está disponible. Verifica la configuración.')
+      }
+
     } catch (error) {
-      showNotification("Error al enviar el mensaje. Por favor intenta nuevamente.", "error")
+      console.error('❌ Error enviando email:', error)
+
+      let errorMessage = "Error al enviar el mensaje. "
+
+      if (error.text) {
+        // Error específico de EmailJS
+        if (error.text.includes('Invalid service ID')) {
+          errorMessage += "Configuración de servicio incorrecta. "
+        } else if (error.text.includes('Invalid template ID')) {
+          errorMessage += "Template no encontrado. "
+        } else if (error.text.includes('Invalid public key')) {
+          errorMessage += "Clave pública incorrecta. "
+        } else {
+          errorMessage += `Error: ${error.text} `
+        }
+      }
+
+      errorMessage += "Por favor contáctanos directamente a diego.barrera@sento.tech o +58 (414) 5906535"
+
+      showNotification(errorMessage, "error", 8000)
     } finally {
-      submitBtn.textContent = originalText
+      // Restaurar estado del botón
       submitBtn.disabled = false
+      submitText.style.display = "inline"
+      submitLoading.style.display = "none"
     }
   })
+}
+
+function getOperationLabel(operation) {
+  const labels = {
+    'avicola-engorde': 'Avícola - Pollos de engorde',
+    'avicola-ponedoras': 'Avícola - Ponedoras',
+    'porcina': 'Porcina - Cría y engorde',
+    'planta-alimentos': 'Planta de alimentos',
+    'planta-beneficio': 'Planta de beneficio',
+    'distribuidor': 'Distribuidor',
+    'otro': 'Otro'
+  }
+  return labels[operation] || operation || 'No especificado'
+}
+
+function showContactSuccess() {
+  const contactForm = document.getElementById("contactForm")
+  const contactSuccess = document.getElementById("contactSuccess")
+  const sendAnotherBtn = document.getElementById("sendAnotherBtn")
+
+  if (contactForm && contactSuccess) {
+    contactForm.style.display = "none"
+    contactSuccess.style.display = "block"
+
+    if (sendAnotherBtn) {
+      sendAnotherBtn.addEventListener("click", () => {
+        contactForm.style.display = "block"
+        contactSuccess.style.display = "none"
+      })
+    }
+  }
 }
 
 function validateField(field) {
@@ -793,9 +898,8 @@ function showNotification(message, type = "info", duration = 5000) {
 
   document.body.appendChild(notification)
 
-  if (window.lucide) {
-    window.lucide.createIcons()
-  }
+  // Restaurar iconos en la notificación
+  restoreAllIcons()
 
   setTimeout(() => {
     notification.style.transform = "translateX(0)"
@@ -860,11 +964,38 @@ function updateCurrentYear() {
 }
 
 // ========================================
+// RESTAURAR ICONOS
+// ========================================
+function initIcons() {
+  // Función para inicializar iconos de Lucide
+  if (typeof lucide !== 'undefined') {
+    try {
+      lucide.createIcons()
+      console.log("✅ Iconos de Lucide inicializados correctamente")
+    } catch (error) {
+      console.error("❌ Error inicializando iconos:", error)
+    }
+  } else {
+    console.warn("⚠️ Lucide no está disponible")
+  }
+}
+
+function restoreAllIcons() {
+  // Función para restaurar todos los iconos después de cambios dinámicos
+  setTimeout(() => {
+    initIcons()
+  }, 100)
+}
+
+// ========================================
 // INICIALIZACIÓN PRINCIPAL
 // ========================================
 document.addEventListener("DOMContentLoaded", () => {
   try {
     console.log("🚀 Iniciando Agrolinx...")
+
+    // Inicializar iconos primero
+    initIcons()
 
     // Inicializar componentes principales
     initHeader()
@@ -874,6 +1005,11 @@ document.addEventListener("DOMContentLoaded", () => {
     initContactForm()
     initScrollAnimations()
     updateCurrentYear()
+
+    // Restaurar iconos después de que todo esté cargado
+    setTimeout(() => {
+      restoreAllIcons()
+    }, 500)
 
     console.log("🌱 Agrolinx - Sitio web cargado exitosamente")
 
@@ -889,6 +1025,12 @@ document.addEventListener("DOMContentLoaded", () => {
     showNotification("Error cargando algunos componentes. Por favor recarga la página.", "error")
   }
 })
+
+// Restaurar iconos cuando la ventana se redimensiona o cambia
+window.addEventListener('resize', utils.debounce(restoreAllIcons, 250))
+
+// Restaurar iconos después de navegación
+window.addEventListener('hashchange', restoreAllIcons)
 
 // ========================================
 // ERROR HANDLING
