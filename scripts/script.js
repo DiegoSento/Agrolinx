@@ -405,9 +405,7 @@ function updateIndicators() {
   })
 }
 
-function updateProgressBar() {
-  // Función eliminada - ya no se necesita
-}
+
 
 function getCategoryLabel(category) {
   const labels = {

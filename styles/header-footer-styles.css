@@ -2,7 +2,7 @@
    VARIABLES CSS - Sistema de diseño optimizado
   ======================================== */
   :root {
-    /* Colores principales */
+    /* Colores principales - Paleta simplificada Agrolinx */
     --color-primary: #2e3a4b;
     --color-primary-dark: #1f2937;
     --color-primary-light: #4b5563;
@@ -10,17 +10,16 @@
     --color-secondary-dark: #e07420;
     --color-secondary-light: #f59e42;
     --color-accent: #8ab34f;
+    --color-accent-dark: #6b8f3a;
     --color-accent-light: #a5c76b;
-    --color-purple: #a855f7;
-    --color-purple-dark: #7c3aed;
   
-    /* Colores de estado */
-    --color-success: #22c55e;
-    --color-warning: #f59e0b;
-    --color-error: #ef4444;
-    --color-info: #3b82f6;
-    --color-whatsapp: #25d366;
-    --color-whatsapp-dark: #128c7e;
+    /* Colores funcionales - Basados en la paleta principal */
+    --color-success: #8ab34f;
+    --color-warning: #f08429;
+    --color-error: #2e3a4b;
+    --color-info: #2e3a4b;
+    --color-whatsapp: #8ab34f;
+    --color-whatsapp-dark: #6b8f3a;
   
     /* Escala de grises */
     --color-white: #ffffff;
@@ -823,18 +822,18 @@
   }
   
   .footer__product-icon--premex {
-    background-color: rgba(59, 130, 246, 0.2);
-    color: #3b82f6;
+    background-color: rgba(46, 58, 75, 0.2);
+    color: var(--color-primary);
   }
   
   .footer__product-icon--okuo {
-    background-color: rgba(34, 197, 94, 0.2);
-    color: #22c55e;
+    background-color: rgba(138, 179, 79, 0.2);
+    color: var(--color-accent);
   }
   
   .footer__product-icon--alura {
-    background-color: rgba(168, 85, 247, 0.2);
-    color: #a855f7;
+    background-color: rgba(240, 132, 41, 0.2);
+    color: var(--color-secondary);
   }
   
   .footer__product-info {
