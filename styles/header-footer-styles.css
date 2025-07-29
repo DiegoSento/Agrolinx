@@ -315,7 +315,7 @@
     width: auto;
     object-fit: contain;
     transition: all var(--transition-normal);
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
   }
   
   .header__brand-text {
