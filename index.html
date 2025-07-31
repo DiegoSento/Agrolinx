@@ -86,6 +86,10 @@
 
     <!-- SECCIÓN INICIO (HERO) -->
     <section id="inicio" class="hero">
+        <!-- Fondo con parallax -->
+        <div class="hero__parallax-bg" aria-hidden="true"></div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+
         <!-- Elementos de fondo animados -->
         <div class="hero__bg-pattern" aria-hidden="true"></div>
         <div class="hero__particles" aria-hidden="true">
@@ -193,7 +197,7 @@
         <div class="container">
             <div class="about__content">
                 <!-- Contenido de texto -->
-                <div class="about__text animate-slide-from-left">
+                <div class="about__text slide-left">
                     <div class="section-header">
                         <div class="badge badge--secondary animate-fade-in">
                             <i data-lucide="heart" class="badge__icon"></i>
@@ -250,7 +254,7 @@
                 </div>
 
                 <!-- Visual de la sección -->
-                <div class="about__visual animate-slide-from-right">
+                <div class="about__visual slide-right">
                     <div class="about__image-container">
                         <img src="/imag/ima9.gif" alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico"
                             class="about__image" loading="lazy">
@@ -264,8 +268,7 @@
 
                     <!-- Grid de características -->
                     <div class="feature-grid">
-                        <div class="feature-card feature-card--blue animate-slide-from-bottom"
-                            style="animation-delay: 0.2s;">
+                        <div class="feature-card feature-card--blue slide-down" style="animation-delay: 0.2s;">
                             <div class="feature-card__icon">
                                 <i data-lucide="users-2"></i>
                             </div>
@@ -275,8 +278,7 @@
                             </div>
                         </div>
 
-                        <div class="feature-card feature-card--green animate-slide-from-bottom"
-                            style="animation-delay: 0.4s;">
+                        <div class="feature-card feature-card--green slide-down" style="animation-delay: 0.4s;">
                             <div class="feature-card__icon">
                                 <i data-lucide="zap"></i>
                             </div>
@@ -299,7 +301,7 @@
     <section id="pilares" class="pillars">
         <div class="container">
             <!-- Header de la sección -->
-            <div class="section-header section-header--center animate-fade-in">
+            <div class="section-header section-header--center slide-down">
                 <!--<div class="badge badge--primary">
                     <i data-lucide="compass" class="badge__icon"></i>
                     Nuestros valores
@@ -314,7 +316,7 @@
             <!-- Grid de pilares -->
             <div class="pillars__grid">
                 <!-- Pilar 1: Innovación y tecnología -->
-                <div class="pillar-card pillar-card--blue animate-slide-from-left" style="animation-delay: 0.2s;">
+                <div class="pillar-card pillar-card--blue slide-left" style="animation-delay: 0.2s;">
                     <div class="pillar-card__header">
                         <div class="pillar-card__icon pillar-card__icon--blue">
                             <i data-lucide="cpu"></i>
@@ -361,7 +363,7 @@
                 </div>
 
                 <!-- Pilar 2: Acompañamiento cercano -->
-                <div class="pillar-card pillar-card--green animate-slide-from-bottom" style="animation-delay: 0.4s;">
+                <div class="pillar-card pillar-card--green slide-down" style="animation-delay: 0.4s;">
                     <div class="pillar-card__header">
                         <div class="pillar-card__icon pillar-card__icon--green">
                             <i data-lucide="users"></i>
@@ -408,7 +410,7 @@
                 </div>
 
                 <!-- Pilar 3: Compromiso y responsabilidad -->
-                <div class="pillar-card pillar-card--amber animate-slide-from-right" style="animation-delay: 0.6s;">
+                <div class="pillar-card pillar-card--amber slide-right" style="animation-delay: 0.6s;">
                     <div class="pillar-card__header">
                         <div class="pillar-card__icon pillar-card__icon--amber">
                             <i data-lucide="shield-check"></i>
@@ -486,7 +488,7 @@
     <section id="aliados" class="partners">
         <div class="container">
             <!-- Header de la sección -->
-            <div class="section-header section-header--center animate-fade-in">
+            <div class="section-header section-header--center slide-down">
                 <div class="badge badge--blue">
                     <i data-lucide="handshake" class="badge__icon"></i>
                     Alianzas globales
@@ -504,7 +506,7 @@
             <!-- Grid de socios -->
             <div class="partners__grid">
                 <!-- Socio 1: Premex -->
-                <div class="partner-card partner-card--orange animate-slide-from-left" style="animation-delay: 0.2s;">
+                <div class="partner-card partner-card--orange slide-left" style="animation-delay: 0.2s;">
                     <div class="partner-card__header">
                         <div class="partner-card__logo partner-card__logo--orange ">
                             <img src="/imag/partner2.webp" alt="Premex - Nutrición Animal"
@@ -575,7 +577,7 @@
                 </div>
 
                 <!-- Socio 2: Okuo -->
-                <div class="partner-card partner-card--green animate-slide-from-bottom" style="animation-delay: 0.4s;">
+                <div class="partner-card partner-card--green slide-down" style="animation-delay: 0.4s;">
                     <div class="partner-card__header">
                         <div class="partner-card__logo partner-card__logo--green">
                             <img src="/imag/partner1.webp" alt="Okuo - Bioseguridad" class="partner-card__logo-img">
@@ -649,7 +651,7 @@
                 </div>
 
                 <!-- Socio 3: Alura -->
-                <div class="partner-card partner-card--blue animate-slide-from-right" style="animation-delay: 0.6s;">
+                <div class="partner-card partner-card--blue slide-right" style="animation-delay: 0.6s;">
                     <div class="partner-card__header">
                         <div class="partner-card__logo partner-card__logo--blue">
                             <img src="/imag/partner3.webp" alt="Alura - Salud Animal" class="partner-card__logo-img">
@@ -854,7 +856,7 @@
 
             <div class="contact__content">
                 <!-- Información de contacto -->
-                <div class="contact__info animate-slide-from-left" style="animation-delay: 0.4s;">
+                <div class="contact__info slide-left" style="animation-delay: 0.4s;">
                     <h3 class="contact__info-title">
                         <i data-lucide="map-pin" class="contact__info-icon"></i>
                         Conecta con nosotros
@@ -862,7 +864,7 @@
 
                     <div class="contact__methods">
                         <!-- Método 1: Teléfono -->
-                        <div class="contact-method animate-slide-from-left" style="animation-delay: 0.6s;">
+                        <div class="contact-method slide-left" style="animation-delay: 0.6s;">
                             <div class="contact-method__icon contact-method__icon--primary">
                                 <i data-lucide="phone"></i>
                             </div>
@@ -877,7 +879,7 @@
                         </div>
 
                         <!-- Método 2: Email -->
-                        <div class="contact-method animate-slide-from-left" style="animation-delay: 0.8s;">
+                        <div class="contact-method slide-left" style="animation-delay: 0.8s;">
                             <div class="contact-method__icon contact-method__icon--primary">
                                 <i data-lucide="mail"></i>
                             </div>
@@ -893,8 +895,7 @@
                         </div>
 
                         <!-- Método 3: WhatsApp -->
-                        <div class="contact-method contact-method--whatsapp animate-slide-from-left"
-                            style="animation-delay: 1s;">
+                        <div class="contact-method contact-method--whatsapp slide-left" style="animation-delay: 1s;">
                             <div class="contact-method__icon contact-method__icon--whatsapp">
                                 <i data-lucide="message-circle"></i>
                             </div>
@@ -913,7 +914,7 @@
                         </div>
 
                         <!-- Método 4: Ubicación -->
-                        <div class="contact-method animate-slide-from-left" style="animation-delay: 1.2s;">
+                        <div class="contact-method slide-left" style="animation-delay: 1.2s;">
                             <div class="contact-method__icon contact-method__icon--location">
                                 <i data-lucide="map-pin"></i>
                             </div>
@@ -932,7 +933,7 @@
                 </div>
 
                 <!-- Formulario de contacto -->
-                <div class="contact__form-container animate-slide-from-right" style="animation-delay: 0.6s;">
+                <div class="contact__form-container slide-right" style="animation-delay: 0.6s;">
                     <div class="contact__form-header">
                         <h3 class="contact__form-title">
                             <i data-lucide="edit-3" class="contact__form-icon"></i>
@@ -945,7 +946,7 @@
 
                     <form class="contact-form" id="contactForm" novalidate>
                         <!-- Fila 1: Información personal -->
-                        <div class="form-row animate-slide-from-right" style="animation-delay: 0.8s;">
+                        <div class="form-row slide-right" style="animation-delay: 0.8s;">
                             <div class="form-group">
                                 <label for="name" class="form-label">
                                     <i data-lucide="user"></i>
@@ -967,7 +968,7 @@
                         </div>
 
                         <!-- Fila 2: Empresa -->
-                        <div class="form-group animate-slide-from-right" style="animation-delay: 1s;">
+                        <div class="form-group slide-right" style="animation-delay: 1s;">
                             <label for="company" class="form-label">
                                 <i data-lucide="building"></i>
                                 Empresa/Granja *
@@ -978,7 +979,7 @@
                         </div>
 
                         <!-- Fila 3: Contacto -->
-                        <div class="form-row animate-slide-from-right" style="animation-delay: 1.2s;">
+                        <div class="form-row slide-right" style="animation-delay: 1.2s;">
                             <div class="form-group">
                                 <label for="email" class="form-label">
                                     <i data-lucide="mail"></i>
@@ -1000,7 +1001,7 @@
                         </div>
 
                         <!-- Fila 4: Tipo de operación -->
-                        <div class="form-group animate-slide-from-right" style="animation-delay: 1.4s;">
+                        <div class="form-group slide-right" style="animation-delay: 1.4s;">
                             <label for="operation" class="form-label">
                                 <i data-lucide="factory"></i>
                                 Tipo de operación
@@ -1019,7 +1020,7 @@
                         </div>
 
                         <!-- Fila 5: Mensaje -->
-                        <div class="form-group animate-slide-from-right" style="animation-delay: 1.6s;">
+                        <div class="form-group slide-right" style="animation-delay: 1.6s;">
                             <label for="message" class="form-label">
                                 <i data-lucide="message-square"></i>
                                 Cuéntanos tu desafío
