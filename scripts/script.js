@@ -233,29 +233,7 @@ function initScrollProgress() {
     }, 10),
   )
 }
-// ========================================
-// LAZY LOADING - Imágenes
-// ========================================
-function initLazyLoading() {
-  const images = document.querySelectorAll('img[loading="lazy"]');
-  
-  if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src || img.src;
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
 
-    images.forEach(img => {
-      imageObserver.observe(img);
-    });
-  }
-}
 // ========================================
 // GALERÍA - COMPLETAMENTE NUEVA
 // ========================================
@@ -949,25 +927,23 @@ function showNotification(message, type = "info", duration = 5000) {
 // ========================================
 function initScrollAnimations() {
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -20px 0px",
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px",
   }
 
   const animationObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        // Delay más suave y progresivo
-        const delay = index * 150 + Math.random() * 100
         setTimeout(() => {
           entry.target.classList.add("is-visible")
-        }, delay)
+        }, index * 100)
         animationObserver.unobserve(entry.target)
       }
     })
   }, observerOptions)
 
   const animatedElements = document.querySelectorAll(
-    ".animate-on-scroll, .animate-slide-from-left, .animate-slide-from-right, .animate-slide-from-bottom, .slide-right, .slide-left, .slide-down",
+    ".animate-on-scroll, .animate-slide-from-left, .animate-slide-from-right, .animate-slide-from-bottom",
   )
 
   animatedElements.forEach((element) => {
@@ -1010,54 +986,6 @@ function restoreAllIcons() {
 }
 
 // ========================================
-// EFECTO PARALLAX
-// ========================================
-function initParallax() {
-  const parallaxBg = document.querySelector('.hero__parallax-bg')
-  if (!parallaxBg) return
-
-  // Verificar si el usuario prefiere motion reducido
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  if (prefersReducedMotion) return
-
-  let ticking = false
-  const heroSection = document.getElementById('inicio')
-  
-  function updateParallax() {
-    if (!heroSection) return
-    
-    const scrolled = window.pageYOffset
-    const heroRect = heroSection.getBoundingClientRect()
-    const heroHeight = heroSection.offsetHeight
-    
-    // Solo aplicar parallax cuando el hero esté visible
-    if (heroRect.bottom >= 0 && heroRect.top <= window.innerHeight) {
-      const parallaxSpeed = 0.3
-      const yPos = scrolled * parallaxSpeed
-      
-      parallaxBg.style.transform = `translate3d(0, ${yPos}px, 0) scale(1.1)`
-    }
-    
-    ticking = false
-  }
-
-  function requestTick() {
-    if (!ticking) {
-      requestAnimationFrame(updateParallax)
-      ticking = true
-    }
-  }
-
-  // Usar throttle para mejor rendimiento
-  window.addEventListener('scroll', utils.throttle(requestTick, 16))
-  
-  // Inicializar posición
-  updateParallax()
-  
-  console.log("✅ Efecto parallax inicializado")
-}
-
-// ========================================
 // INICIALIZACIÓN PRINCIPAL
 // ========================================
 document.addEventListener("DOMContentLoaded", () => {
@@ -1070,7 +998,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicializar componentes principales
     initHeader()
     initScrollProgress()
-    initParallax() // ✅ Efecto parallax
     initGallery() // ✅ Galería completamente nueva
     initScrollToTop()
     initContactForm()
