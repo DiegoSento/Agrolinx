@@ -8,7 +8,7 @@
 const GALLERY_IMAGES = [
   {
     id: 1,
-    src: "/imag/ima2.webp",
+    src: "/imag/granja4.webp",
     alt: "Granja avícola moderna en Venezuela - Tecnología Agrolinx",
     title: "Granja Avícola Moderna",
     description: "Instalaciones avícolas de última generación con tecnología Agrolinx",
@@ -16,7 +16,7 @@ const GALLERY_IMAGES = [
   },
   {
     id: 2,
-    src: "/imag/ima1.webp",
+    src: "/imag/granja6.webp",
     alt: "Granja avícola moderna",
     title: "Instalaciones Avícolas",
     description: "Sistemas de producción avícola optimizados",
@@ -24,7 +24,7 @@ const GALLERY_IMAGES = [
   },
   {
     id: 3,
-    src: "/imag/ima3.webp",
+    src: "/imag/aves4.webp",
     alt: "Acompañamiento técnico",
     title: "Acompañamiento Técnico",
     description: "Nuestro equipo brindando asesoría especializada",
@@ -32,7 +32,7 @@ const GALLERY_IMAGES = [
   },
   {
     id: 4,
-    src: "/imag/ima4.webp",
+    src: "/imag/operador1.webp",
     alt: "Granja porcina",
     title: "Instalaciones Porcinas",
     description: "Producción porcina con estándares internacionales",
@@ -40,7 +40,7 @@ const GALLERY_IMAGES = [
   },
   {
     id: 5,
-    src: "/imag/ima5.webp",
+    src: "/imag/granja1.webp",
     alt: "Planta de alimentos",
     title: "Planta de Alimentos",
     description: "Procesamiento de alimentos balanceados",
