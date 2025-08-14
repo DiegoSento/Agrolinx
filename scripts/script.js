@@ -48,7 +48,7 @@ const GALLERY_IMAGES = [
   },
   {
     id: 6,
-    src: "/imag/ima6.webp",
+    src: "/imag/a.webp",
     alt: "Laboratorio de calidad",
     title: "Control de Calidad",
     description: "Análisis y control de calidad de productos",
@@ -56,7 +56,7 @@ const GALLERY_IMAGES = [
   },
   {
     id: 7,
-    src: "/imag/ima11.webp",
+    src: "/imag/aa.webp",
     alt: "Equipo veterinario",
     title: "Equipo Veterinario",
     description: "Profesionales especializados en salud animal",
@@ -64,7 +64,7 @@ const GALLERY_IMAGES = [
   },
   {
     id: 8,
-    src: "/imag/ima10.webp",
+    src: "/imag/b.webp",
     alt: "Equipo Agrolinx en granja porcina - Acompañamiento técnico",
     title: "Equipo Técnico Agrolinx",
     description: "Nuestro equipo trabajando en campo",
