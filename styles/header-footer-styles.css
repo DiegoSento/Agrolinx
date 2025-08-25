@@ -574,7 +574,11 @@
      FOOTER OPTIMIZADO
     ======================================== */
   .footer {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    background: linear-gradient(135deg,
+    #1f2937 100%, #334155 60%, #2e3a4b 30%,#1e293b 0%
+   
+   
+);
     color: var(--color-white);
     padding: var(--spacing-20) 0 var(--spacing-8);
     position: relative;
@@ -588,8 +592,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(circle at 20% 20%, rgba(240, 132, 41, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(138, 179, 79, 0.1) 0%, transparent 50%);
     pointer-events: none;
   }
   
@@ -1272,6 +1274,7 @@
     transform: translateZ(0);
     backface-visibility: hidden;
   }
+  
   
   .header.scrolled,
   .scroll-to-top.visible {
