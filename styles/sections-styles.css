@@ -2405,9 +2405,12 @@ img {
 .contact {
   padding: var(--spacing-16) 0;
   background: linear-gradient(
-  135deg,
-  #1f2937 100%,#334155 60%,
-   #2e3a4b 30%, #1e293b 0%);
+    135deg,
+    #1f2937 0%,
+    #334155 30%,
+    #2e3a4b 60%,
+    #1e293b 100%
+  );
   color: var(--color-white);
   position: relative;
   overflow: hidden;
@@ -2421,6 +2424,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
   pointer-events: none;
 }
 
@@ -2488,7 +2492,6 @@ img {
 .contact-method:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateX(8px);
-  border-color: rgba(240, 132, 41, 0.3);
 }
 
 .contact-method--whatsapp:hover {
@@ -3265,4 +3268,145 @@ img {
 .pillar-card:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+/* ========================================
+     SECCIÓN LÍDERES
+   ======================================== */
+.leaders {
+  padding: var(--spacing-16) 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-gray-50) 0%,
+    var(--color-white) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.leaders::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f08429' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+}
+
+.leaders__grid {
+  display: grid;
+  gap: var(--spacing-8);
+  margin-top: var(--spacing-12);
+}
+
+@media (min-width: 768px) {
+  .leaders__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .leaders__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.leader-card {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-8);
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--color-gray-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.leader-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary) 0%,
+    var(--color-accent) 100%
+  );
+}
+
+.leader-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: var(--color-secondary);
+}
+
+.leader-card__avatar {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto var(--spacing-4);
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary) 0%,
+    var(--color-accent) 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 2rem;
+  transition: all var(--transition-normal);
+}
+
+.leader-card:hover .leader-card__avatar {
+  transform: scale(1.1);
+}
+
+.leader-card__content {
+  position: relative;
+  z-index: 1;
+}
+
+.leader-card__name {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-2);
+  display: block;
+}
+
+.leader-card__title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-4);
+  display: block;
+}
+
+.leader-card__description {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .leaders {
+    padding: var(--spacing-12) 0;
+  }
+  
+  .leader-card {
+    padding: var(--spacing-6);
+  }
+  
+  .leader-card__avatar {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
 }

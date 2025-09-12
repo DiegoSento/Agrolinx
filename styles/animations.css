@@ -273,6 +273,7 @@ img {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0px) rotate(0deg);
@@ -296,6 +297,7 @@ img {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   53%,
