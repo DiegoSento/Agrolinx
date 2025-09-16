@@ -984,7 +984,7 @@ img {
 .about__content {
   display: grid;
   gap: var(--spacing-16);
-  align-items: center;
+  align-items: start;
 }
 
 @media (min-width: 1024px) {
@@ -1047,6 +1047,13 @@ img {
 
 .section-description--white {
   color: rgba(255, 255, 255, 0.9);
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: var(--spacing-4);
 }
 
 .about__description p {
@@ -1134,6 +1141,9 @@ img {
 
 .about__visual {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .about__image-container {
