@@ -27,9 +27,26 @@ self.addEventListener('install', event => {
   
   event.waitUntil(
     caches.open(CACHE_NAMES.STATIC)
-      .then(cache => {
+      .then(async cache => {
         console.log('[SW] Precaching critical resources');
-        return cache.addAll(PRECACHE_URLS);
+        
+        // Precachear recursos uno por uno para mejor manejo de errores
+        const cachePromises = PRECACHE_URLS.map(async url => {
+          try {
+            const response = await fetch(url);
+            if (response.status === 200) {
+              await cache.put(url, response);
+              console.log(`[SW] Cached: ${url}`);
+            } else {
+              console.warn(`[SW] Failed to cache ${url}: ${response.status}`);
+            }
+          } catch (error) {
+            console.warn(`[SW] Error caching ${url}:`, error.message);
+          }
+        });
+        
+        await Promise.allSettled(cachePromises);
+        return true;
       })
       .then(() => {
         console.log('[SW] Installation complete');
@@ -131,21 +148,38 @@ async function cacheFirst(request, cacheName) {
     return cachedResponse;
   }
   
-  const networkResponse = await fetch(request);
-  const cache = await caches.open(cacheName);
-  cache.put(request, networkResponse.clone());
-  
-  return networkResponse;
+  try {
+    const networkResponse = await fetch(request);
+    
+    // Solo cachear si la respuesta es válida
+    if (networkResponse && networkResponse.status === 200) {
+      const cache = await caches.open(cacheName);
+      // Clonar ANTES de usar la respuesta
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    console.error('[SW] Cache First failed:', error);
+    throw error;
+  }
 }
 
 // Network First - Para páginas HTML
 async function networkFirst(request, cacheName) {
   try {
     const networkResponse = await fetch(request);
-    const cache = await caches.open(cacheName);
-    cache.put(request, networkResponse.clone());
+    
+    // Solo cachear respuestas exitosas
+    if (networkResponse && networkResponse.status === 200) {
+      const cache = await caches.open(cacheName);
+      // Clonar ANTES de retornar
+      cache.put(request, networkResponse.clone());
+    }
+    
     return networkResponse;
   } catch (error) {
+    console.log('[SW] Network failed, trying cache:', error.message);
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
@@ -158,13 +192,30 @@ async function networkFirst(request, cacheName) {
 async function staleWhileRevalidate(request, cacheName) {
   const cachedResponse = await caches.match(request);
   
-  const fetchPromise = fetch(request).then(networkResponse => {
-    const cache = caches.open(cacheName);
-    cache.then(c => c.put(request, networkResponse.clone()));
-    return networkResponse;
-  }).catch(() => cachedResponse);
+  // Actualizar cache en background
+  const fetchPromise = fetch(request)
+    .then(async networkResponse => {
+      if (networkResponse && networkResponse.status === 200) {
+        const cache = await caches.open(cacheName);
+        // Clonar para el cache
+        cache.put(request, networkResponse.clone());
+      }
+      return networkResponse;
+    })
+    .catch(error => {
+      console.log('[SW] Background fetch failed:', error.message);
+      return null;
+    });
   
-  return cachedResponse || fetchPromise;
+  // Si hay cache, devolverlo inmediatamente
+  if (cachedResponse) {
+    // Ejecutar fetch en background sin esperar
+    fetchPromise;
+    return cachedResponse;
+  }
+  
+  // Si no hay cache, esperar el fetch
+  return fetchPromise;
 }
 
 // ========================================
