@@ -8,15 +8,20 @@ const CACHE_NAMES = {
   PAGES: `agrolinx-pages-${CACHE_VERSION}`
 };
 
-// Recursos críticos para precache
+// Recursos críticos para precache - Solo recursos que realmente se usan
 const PRECACHE_URLS = [
-  '/',
-  '/styles/header-footer-styles.css',
-  '/styles/sections-styles.css',
-  '/scripts/critical-minimal.js',
-  '/scripts/module-loader.js',
-  '/imag/logodar.webp',
-  '/imag/icon.ico'
+  '/', // Página principal
+  '/styles/header-footer-styles.css', // CSS crítico
+  '/styles/sections-styles.css', // CSS crítico
+  '/imag/logodar.webp', // Logo principal
+  '/imag/icon.ico' // Favicon
+];
+
+// Recursos de segunda prioridad (se cargan después)
+const SECONDARY_CACHE_URLS = [
+  '/scripts/module-loader.js', // Se carga dinámicamente
+  '/scripts/gallery-module.js', // Módulo de galería
+  '/scripts/form-module.js' // Módulo de formulario
 ];
 
 // ========================================
@@ -26,35 +31,52 @@ self.addEventListener('install', event => {
   console.log('[SW] Installing Service Worker v1.0.0');
   
   event.waitUntil(
-    caches.open(CACHE_NAMES.STATIC)
-      .then(async cache => {
-        console.log('[SW] Precaching critical resources');
-        
-        // Precachear recursos uno por uno para mejor manejo de errores
-        const cachePromises = PRECACHE_URLS.map(async url => {
+    (async () => {
+      const cache = await caches.open(CACHE_NAMES.STATIC);
+      
+      // 1. Cachear recursos críticos PRIMERO (reduce cadenas críticas)
+      console.log('[SW] Caching critical resources first...');
+      const criticalPromises = PRECACHE_URLS.map(async url => {
+        try {
+          const response = await fetch(url);
+          if (response.status === 200) {
+            await cache.put(url, response);
+            console.log(`[SW] ✅ Critical cached: ${url}`);
+          } else {
+            console.warn(`[SW] ⚠️ Failed to cache critical ${url}: ${response.status}`);
+          }
+        } catch (error) {
+          console.warn(`[SW] ❌ Error caching critical ${url}:`, error.message);
+        }
+      });
+      
+      await Promise.allSettled(criticalPromises);
+      console.log('[SW] Critical resources cached');
+      
+      // 2. Cachear recursos secundarios en background (no bloquea)
+      setTimeout(async () => {
+        console.log('[SW] Caching secondary resources...');
+        const secondaryPromises = SECONDARY_CACHE_URLS.map(async url => {
           try {
             const response = await fetch(url);
             if (response.status === 200) {
               await cache.put(url, response);
-              console.log(`[SW] Cached: ${url}`);
-            } else {
-              console.warn(`[SW] Failed to cache ${url}: ${response.status}`);
+              console.log(`[SW] 📦 Secondary cached: ${url}`);
             }
           } catch (error) {
-            console.warn(`[SW] Error caching ${url}:`, error.message);
+            console.warn(`[SW] Secondary cache error for ${url}:`, error.message);
           }
         });
         
-        await Promise.allSettled(cachePromises);
-        return true;
-      })
-      .then(() => {
-        console.log('[SW] Installation complete');
-        return self.skipWaiting(); // Activar inmediatamente
-      })
-      .catch(error => {
-        console.error('[SW] Installation failed:', error);
-      })
+        await Promise.allSettled(secondaryPromises);
+        console.log('[SW] Secondary resources cached');
+      }, 1000); // Delay para no bloquear recursos críticos
+      
+      console.log('[SW] Installation complete');
+      return self.skipWaiting();
+    })().catch(error => {
+      console.error('[SW] Installation failed:', error);
+    })
   );
 });
 
