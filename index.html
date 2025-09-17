@@ -15,6 +15,62 @@
     <link rel="stylesheet" href="/styles/header-footer-styles.css">
     <link rel="stylesheet" href="/styles/sections-styles.css">
 
+    <!-- CSS inline para video WebM optimizado -->
+    <style>
+        /* Optimización específica para video WebM */
+        video.about__image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 1rem;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            transform: scale(0.98);
+            will-change: opacity, transform;
+            backface-visibility: hidden;
+        }
+
+        video.about__image[data-loaded="true"],
+        video.about__image:not([style*="opacity: 0"]) {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Hover effect optimizado */
+        .about__image-container:hover video.about__image {
+            transform: scale(1.02);
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 768px) {
+            video.about__image {
+                max-height: 300px;
+                object-fit: cover;
+            }
+        }
+
+        /* Optimización para conexiones lentas */
+        @media (prefers-reduced-motion: reduce) {
+            video.about__image {
+                animation: none;
+                transition: opacity 0.1s ease;
+            }
+        }
+
+        /* Placeholder de carga */
+        .about__image-container {
+            position: relative;
+            background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+                linear-gradient(-45deg, #f0f0f0 25%, transparent 25%);
+            background-size: 20px 20px;
+            border-radius: 1rem;
+        }
+
+        .about__image-container video {
+            background: transparent;
+        }
+    </style>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
@@ -23,6 +79,54 @@
 
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- JavaScript inline para optimización de video -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.querySelector('video.about__image');
+            if (video) {
+                // Optimizar carga del video
+                video.addEventListener('loadeddata', function () {
+                    this.style.opacity = '1';
+                    this.setAttribute('data-loaded', 'true');
+                });
+
+                // Fallback si el video no carga
+                video.addEventListener('error', function () {
+                    console.log('Video failed to load, showing fallback image');
+                    const fallbackImg = this.querySelector('img');
+                    if (fallbackImg) {
+                        fallbackImg.style.display = 'block';
+                        this.style.display = 'none';
+                    }
+                });
+
+                // Optimización para dispositivos móviles
+                if (window.innerWidth <= 768) {
+                    video.setAttribute('preload', 'metadata');
+                } else {
+                    video.setAttribute('preload', 'auto');
+                }
+
+                // Intersection Observer para carga lazy
+                if ('IntersectionObserver' in window) {
+                    const videoObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const video = entry.target;
+                                if (video.readyState >= 2) {
+                                    video.play().catch(e => console.log('Autoplay prevented:', e));
+                                }
+                                videoObserver.unobserve(video);
+                            }
+                        });
+                    }, { threshold: 0.25 });
+
+                    videoObserver.observe(video);
+                }
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -237,8 +341,17 @@
                 <!-- Visual de la sección -->
                 <div class="about__visual animate-slide-from-right">
                     <div class="about__image-container">
-                        <img src="/imag/ima9.gif" alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico"
-                            class="about__image" loading="lazy">
+                        <!-- Video WebM optimizado con autoplay -->
+                        <video class="about__image" autoplay muted loop playsinline loading="lazy" width="800"
+                            height="600" poster="/imag/ima9.webm" onloadeddata="this.style.opacity='1'"
+                            style="opacity: 0; transition: opacity 0.3s ease;">
+                            <source src="/imag/ima9.webm" type="video/webm">
+                           
+                            <!-- Fallback para navegadores que no soportan video -->
+                            <img src="/imag/ima9-fallback.webp"
+                                alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico" class="about__image"
+                                loading="lazy" style="width: 100%; height: auto; object-fit: cover;">
+                        </video>
                         <div class="about__image-overlay">
                             <div class="about__image-badge">
                                 <i data-lucide="users-2" class="about__image-badge-icon"></i>
@@ -798,14 +911,12 @@
                 </button>
                 <div class="gallery-lightbox__content">
                     <img class="gallery-lightbox__image" id="lightboxImage" src="/imag/agrolinx-logo.svg" alt="">
-                    <div class="gallery-lightbox__info">
 
-                        <div class="gallery-lightbox__meta">
-                            <span class="gallery-lightbox__category" id="lightboxCategory"></span>
-                        </div>
-                    </div>
+
+
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -1279,9 +1390,53 @@
         <i data-lucide="chevron-up"></i>
     </button>
 
-    <!-- Scripts -->
+    <!-- Scripts Optimizados - Carga Modular -->
+    <script>
+        // Registrar Service Worker para cache
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registrado'))
+                    .catch(error => console.log('SW falló:', error));
+            });
+        }
 
-    <script src="scripts/script.js"></script>
+        // JavaScript crítico ultra-optimizado inline (< 1KB)
+        (() => {
+            'use strict';
+            const t = (f, d) => { let i; return (...a) => { if (!i) { f(...a); i = 1; setTimeout(() => i = 0, d) } } };
+            const sp = document.getElementById('scrollProgress');
+            if (sp) {
+                const u = t(() => sp.style.width = Math.min((window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100) + '%', 16);
+                window.addEventListener('scroll', u, { passive: true });
+            }
+            document.addEventListener('click', e => {
+                const a = e.target.closest('a[href^="#"]');
+                if (a) { e.preventDefault(); const t = document.querySelector(a.getAttribute('href')); if (t) window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' }); }
+            });
+            const h = document.getElementById('header');
+            if (h) window.addEventListener('scroll', t(() => h.classList.toggle('scrolled', window.scrollY > 50), 16), { passive: true });
+            const nt = document.getElementById('nav-toggle'), n = document.getElementById('nav');
+            if (nt && n) {
+                nt.addEventListener('click', e => { e.stopPropagation(); const a = n.classList.toggle('active'); nt.setAttribute('aria-expanded', a); document.body.style.overflow = a ? 'hidden' : ''; });
+                document.addEventListener('click', e => { if (!e.target.closest('#header') && n.classList.contains('active')) { n.classList.remove('active'); nt.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; } });
+            }
+        })();
+
+        // Cargar módulos bajo demanda después de load
+        window.addEventListener('load', function () {
+            // Carga diferida de funcionalidades avanzadas
+            const loadAdvanced = () => {
+                const moduleLoader = document.createElement('script');
+                moduleLoader.src = 'scripts/module-loader.js';
+                moduleLoader.type = 'module';
+                document.head.appendChild(moduleLoader);
+            };
+
+            // Cargar después de un pequeño delay para no bloquear
+            setTimeout(loadAdvanced, 100);
+        });
+    </script>
 
 </body>
 
