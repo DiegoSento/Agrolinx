@@ -7,14 +7,11 @@
     <title>Agrolinx - Especialistas en Nutrición Animal </title>
     <meta name="description" content="Header y Footer optimizados para Agrolinx - Especialistas en Nutrición Animal">
     <link rel="icon" href="/imag/icon.ico" type="image/x-icon">
-    <!-- Preload only truly critical resources -->
-    <link rel="preload" href="/styles/header-footer-styles.css" as="style">
-    <link rel="preload" href="/styles/sections-styles.css" as="style">
-    <link rel="preload" href="/imag/logodar.webp" as="image">
+    <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         as="style">
 
-    <!-- Stylesheets críticos -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="/styles/header-footer-styles.css">
     <link rel="stylesheet" href="/styles/sections-styles.css">
 
@@ -77,19 +74,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Preload external scripts para reducir cadenas críticas -->
-    <link rel="preload" href="https://unpkg.com/lucide@latest/dist/umd/lucide.js" as="script">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" as="script">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-    <!-- Lucide Icons - Carga diferida -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
-
-    <!-- EmailJS - Carga diferida -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-        defer></script>
-
-    <!-- Module Loader - Carga diferida sin preload -->
-    <script src="/scripts/module-loader.js" type="module" defer></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- JavaScript inline para optimización de video -->
     <script>
@@ -359,9 +348,9 @@
                             <source src="/imag/ima9.webm" type="video/webm">
 
                             <!-- Fallback para navegadores que no soportan video -->
-                            <img src="/imag/ima9.webm" alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico"
-                                class="about__image" loading="lazy"
-                                style="width: 100%; height: auto; object-fit: cover;">
+                            <img src="/imag/ima9.webm"
+                                alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico" class="about__image"
+                                loading="lazy" style="width: 100%; height: auto; object-fit: cover;">
                         </video>
                         <div class="about__image-overlay">
                             <div class="about__image-badge">
@@ -1395,7 +1384,7 @@
             </div>
         </div>
     </footer>
-
+    
 
     <!-- Botón scroll  top -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba" title="Volver arriba">
@@ -1404,27 +1393,13 @@
 
     <!-- Scripts Optimizados - Carga Modular -->
     <script>
-        // Registrar Service Worker optimizado para mejor rendimiento
+        // Registrar Service Worker para cache
         if ('serviceWorker' in navigator) {
-            // Registrar inmediatamente sin esperar load para reducir cadenas críticas
-            navigator.serviceWorker.register('/sw.js', {
-                scope: '/',
-                updateViaCache: 'none' // Siempre verificar actualizaciones
-            })
-                .then(registration => {
-                    console.log('✅ SW registrado exitosamente');
-
-                    // Manejar actualizaciones del SW
-                    registration.addEventListener('updatefound', () => {
-                        const newWorker = registration.installing;
-                        newWorker.addEventListener('statechange', () => {
-                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                console.log('🔄 Nueva versión del SW disponible');
-                            }
-                        });
-                    });
-                })
-                .catch(error => console.error('❌ SW registration failed:', error));
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registrado'))
+                    .catch(error => console.log('SW falló:', error));
+            });
         }
 
         // JavaScript crítico ultra-optimizado inline (< 1KB)
@@ -1449,10 +1424,21 @@
             }
         })();
 
-        // Los módulos avanzados se cargan automáticamente con defer
-        console.log('🚀 JavaScript crítico cargado');
-    </script>
+        // Cargar módulos bajo demanda después de load
+        window.addEventListener('load', function () {
+            // Carga diferida de funcionalidades avanzadas
+            const loadAdvanced = () => {
+                const moduleLoader = document.createElement('script');
+                moduleLoader.src = 'scripts/module-loader.js';
+                moduleLoader.type = 'module';
+                document.head.appendChild(moduleLoader);
+            };
 
+            // Cargar después de un pequeño delay para no bloquear
+            setTimeout(loadAdvanced, 100);
+        });
+    </script>
+    
 
 </body>
 
