@@ -442,19 +442,15 @@ function initLightbox() {
   // Navegación
   if (lightboxPrev) {
     lightboxPrev.addEventListener("click", () => {
-      const newIndex = currentSlide - 1
-      if (newIndex >= 0) {
-        openLightbox(newIndex)
-      }
+      const newIndex = (currentSlide - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length
+      openLightbox(newIndex)
     })
   }
 
   if (lightboxNext) {
     lightboxNext.addEventListener("click", () => {
-      const newIndex = currentSlide + 1
-      if (newIndex < GALLERY_IMAGES.length) {
-        openLightbox(newIndex)
-      }
+      const newIndex = (currentSlide + 1) % GALLERY_IMAGES.length
+      openLightbox(newIndex)
     })
   }
 
@@ -467,16 +463,12 @@ function initLightbox() {
         closeLightbox()
         break
       case "ArrowLeft":
-        const prevIndex = currentSlide - 1
-        if (prevIndex >= 0) {
-          openLightbox(prevIndex)
-        }
+        const prevIndex = (currentSlide - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length
+        openLightbox(prevIndex)
         break
       case "ArrowRight":
-        const nextIndex = currentSlide + 1
-        if (nextIndex < GALLERY_IMAGES.length) {
-          openLightbox(nextIndex)
-        }
+        const nextIndex = (currentSlide + 1) % GALLERY_IMAGES.length
+        openLightbox(nextIndex)
         break
     }
   })
@@ -511,6 +503,10 @@ function openLightbox(index) {
   lightbox.classList.add("active")
   document.body.style.overflow = "hidden"
 
+  // Sincronizar el carrusel principal con el lightbox
+  updateCarouselPosition()
+  updateThumbnails()
+  updateIndicators()
   updateLightboxNavigation()
   preloadAdjacentImages(index)
 }
@@ -528,12 +524,13 @@ function updateLightboxNavigation() {
   const lightboxPrev = document.getElementById("lightboxPrev")
   const lightboxNext = document.getElementById("lightboxNext")
 
+  // Siempre mostrar los botones ya que la navegación es circular
   if (lightboxPrev) {
-    lightboxPrev.style.display = currentSlide > 0 ? "flex" : "none"
+    lightboxPrev.style.display = "flex"
   }
 
   if (lightboxNext) {
-    lightboxNext.style.display = currentSlide < GALLERY_IMAGES.length - 1 ? "flex" : "none"
+    lightboxNext.style.display = "flex"
   }
 }
 
@@ -577,16 +574,12 @@ function initTouchGestures(lightbox) {
       if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
         if (deltaX > 0) {
           // Swipe right = anterior
-          const prevIndex = currentSlide - 1
-          if (prevIndex >= 0) {
-            openLightbox(prevIndex)
-          }
+          const prevIndex = (currentSlide - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length
+          openLightbox(prevIndex)
         } else {
           // Swipe left = siguiente
-          const nextIndex = currentSlide + 1
-          if (nextIndex < GALLERY_IMAGES.length) {
-            openLightbox(nextIndex)
-          }
+          const nextIndex = (currentSlide + 1) % GALLERY_IMAGES.length
+          openLightbox(nextIndex)
         }
       }
 
