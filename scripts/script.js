@@ -405,8 +405,6 @@ function updateIndicators() {
   })
 }
 
-
-
 function getCategoryLabel(category) {
   const labels = {
     avicola: "Avícola",
@@ -637,9 +635,9 @@ function initScrollToTop() {
 // CONFIGURACIÓN EMAILJS
 // ========================================
 const EMAIL_CONFIG = {
-  serviceId: 'service_h2hvohe', // Reemplazar con tu Service ID real de EmailJS
-  templateId: 'template_t1491kb', // Reemplazar con tu Template ID real de EmailJS
-  publicKey: 'bNqMyJVanAEZPXISP' // Reemplazar con tu Public Key real de EmailJS
+  serviceId: "service_h2hvohe", // Reemplazar con tu Service ID real de EmailJS
+  templateId: "template_t1491kb", // Reemplazar con tu Template ID real de EmailJS
+  publicKey: "bNqMyJVanAEZPXISP", // Reemplazar con tu Public Key real de EmailJS
 }
 
 // ========================================
@@ -650,7 +648,7 @@ function initContactForm() {
   if (!contactForm) return
 
   // Inicializar EmailJS
-  if (typeof emailjs !== 'undefined') {
+  if (typeof emailjs !== "undefined") {
     emailjs.init(EMAIL_CONFIG.publicKey)
     console.log("✅ EmailJS inicializado correctamente")
   } else {
@@ -692,54 +690,52 @@ function initContactForm() {
       // Preparar datos del formulario
       const formData = new FormData(contactForm)
       const templateParams = {
-        from_name: formData.get('name'),
-        from_email: formData.get('email'),
-        phone: formData.get('phone'),
-        company: formData.get('company'),
-        position: formData.get('position') || 'No especificado',
-        operation: getOperationLabel(formData.get('operation')),
-        message: formData.get('message') || 'Sin mensaje adicional',
-        to_email: 'diego.barrera@sento.tech', // Email de destino
-        reply_to: formData.get('email'), // Para responder directamente al cliente
-        current_date: new Date().toLocaleDateString('es-VE', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit'
-        })
+        from_name: formData.get("name"),
+        from_email: formData.get("email"),
+        phone: formData.get("phone"),
+        company: formData.get("company"),
+        position: formData.get("position") || "No especificado",
+        operation: getOperationLabel(formData.get("operation")),
+        message: formData.get("message") || "Sin mensaje adicional",
+        to_email: "diego.barrera@sento.tech", // Email de destino
+        reply_to: formData.get("email"), // Para responder directamente al cliente
+        current_date: new Date().toLocaleDateString("es-VE", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        }),
       }
 
       // Enviar email usando EmailJS
-      if (typeof emailjs !== 'undefined') {
+      if (typeof emailjs !== "undefined") {
         console.log("📧 Enviando email con EmailJS...", templateParams)
 
-        const response = await emailjs.send(
-          EMAIL_CONFIG.serviceId,
-          EMAIL_CONFIG.templateId,
-          templateParams
-        )
+        const response = await emailjs.send(EMAIL_CONFIG.serviceId, EMAIL_CONFIG.templateId, templateParams)
 
         console.log("✅ Email enviado exitosamente:", response)
-        showNotification("¡Mensaje enviado exitosamente! Diego se pondrá en contacto contigo en las próximas 24 horas.", "success")
+        showNotification(
+          "¡Mensaje enviado exitosamente! Diego se pondrá en contacto contigo en las próximas 24 horas.",
+          "success",
+        )
         showContactSuccess()
         contactForm.reset()
       } else {
-        throw new Error('EmailJS no está disponible. Verifica la configuración.')
+        throw new Error("EmailJS no está disponible. Verifica la configuración.")
       }
-
     } catch (error) {
-      console.error('❌ Error enviando email:', error)
+      console.error("❌ Error enviando email:", error)
 
       let errorMessage = "Error al enviar el mensaje. "
 
       if (error.text) {
         // Error específico de EmailJS
-        if (error.text.includes('Invalid service ID')) {
+        if (error.text.includes("Invalid service ID")) {
           errorMessage += "Configuración de servicio incorrecta. "
-        } else if (error.text.includes('Invalid template ID')) {
+        } else if (error.text.includes("Invalid template ID")) {
           errorMessage += "Template no encontrado. "
-        } else if (error.text.includes('Invalid public key')) {
+        } else if (error.text.includes("Invalid public key")) {
           errorMessage += "Clave pública incorrecta. "
         } else {
           errorMessage += `Error: ${error.text} `
@@ -760,15 +756,15 @@ function initContactForm() {
 
 function getOperationLabel(operation) {
   const labels = {
-    'avicola-engorde': 'Avícola - Pollos de engorde',
-    'avicola-ponedoras': 'Avícola - Ponedoras',
-    'porcina': 'Porcina - Cría y engorde',
-    'planta-alimentos': 'Planta de alimentos',
-    'planta-beneficio': 'Planta de beneficio',
-    'distribuidor': 'Distribuidor',
-    'otro': 'Otro'
+    "avicola-engorde": "Avícola - Pollos de engorde",
+    "avicola-ponedoras": "Avícola - Ponedoras",
+    porcina: "Porcina - Cría y engorde",
+    "planta-alimentos": "Planta de alimentos",
+    "planta-beneficio": "Planta de beneficio",
+    distribuidor: "Distribuidor",
+    otro: "Otro",
   }
-  return labels[operation] || operation || 'No especificado'
+  return labels[operation] || operation || "No especificado"
 }
 
 function showContactSuccess() {
@@ -959,7 +955,7 @@ function updateCurrentYear() {
 // ========================================
 function initIcons() {
   // Función para inicializar iconos de Lucide
-  if (typeof lucide !== 'undefined') {
+  if (typeof lucide !== "undefined") {
     try {
       lucide.createIcons()
       console.log("✅ Iconos de Lucide inicializados correctamente")
@@ -1018,10 +1014,10 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 // Restaurar iconos cuando la ventana se redimensiona o cambia
-window.addEventListener('resize', utils.debounce(restoreAllIcons, 250))
+window.addEventListener("resize", utils.debounce(restoreAllIcons, 250))
 
 // Restaurar iconos después de navegación
-window.addEventListener('hashchange', restoreAllIcons)
+window.addEventListener("hashchange", restoreAllIcons)
 
 // ========================================
 // ERROR HANDLING
