@@ -1531,31 +1531,6 @@ address {
   transform: scale(1.02);
 }
 
-/* Optimizaciones específicas para video */
-.about__image[data-autoplay="true"] {
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-/* Fallback para cuando el video no carga */
-.about__image video {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Optimización para dispositivos móviles */
-@media (max-width: 768px) {
-  .about__image[data-autoplay="true"] {
-    transform: none !important;
-  }
-  
-  .about__image[data-autoplay="true"]:hover {
-    transform: none !important;
-  }
-}
-
 .about__image-overlay {
   position: absolute;
   bottom: 0;
