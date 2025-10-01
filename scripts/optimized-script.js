@@ -856,6 +856,70 @@ function updateCurrentYear() {
 }
 
 // ========================================
+// VIDEO OPTIMIZATION
+// ========================================
+function initVideoOptimization() {
+  const videos = document.querySelectorAll('video[data-autoplay="true"]')
+  
+  if (videos.length === 0) return
+
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target
+      
+      if (entry.isIntersecting) {
+        // Video entra en viewport
+        if (video.paused) {
+          video.play().catch((error) => {
+            console.log("Autoplay prevented:", error)
+            // Fallback: mostrar poster si autoplay falla
+            video.style.backgroundImage = `url(${video.poster})`
+          })
+        }
+      } else {
+        // Video sale del viewport - pausar para ahorrar recursos
+        if (!video.paused) {
+          video.pause()
+        }
+      }
+    })
+  }, {
+    threshold: 0.25, // Video debe estar 25% visible
+    rootMargin: "50px"
+  })
+
+  videos.forEach((video) => {
+    // Configurar video para mejor rendimiento
+    video.setAttribute('webkit-playsinline', 'true')
+    video.setAttribute('x5-playsinline', 'true')
+    
+    // Observar video para autoplay inteligente
+    videoObserver.observe(video)
+    
+    // Manejar errores de carga
+    video.addEventListener('error', (e) => {
+      console.error('Video error:', e)
+      // Mostrar imagen fallback
+      const fallbackImg = video.querySelector('img')
+      if (fallbackImg) {
+        fallbackImg.style.display = 'block'
+        video.style.display = 'none'
+      }
+    })
+
+    // Optimizar para dispositivos móviles
+    video.addEventListener('loadedmetadata', () => {
+      // Reducir calidad en conexiones lentas
+      if (navigator.connection && navigator.connection.effectiveType === 'slow-2g') {
+        video.preload = 'none'
+      }
+    })
+  })
+
+  console.log(`✅ Video optimization initialized for ${videos.length} videos`)
+}
+
+// ========================================
 // MAIN INITIALIZATION
 // ========================================
 document.addEventListener("DOMContentLoaded", () => {
@@ -869,6 +933,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initScrollToTop()
     initContactForm()
     initScrollAnimations()
+    initVideoOptimization()
     updateCurrentYear()
 
     console.log("🌱 Agrolinx - Website loaded successfully")

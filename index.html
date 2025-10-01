@@ -37,7 +37,7 @@
             <a href="#inicio" class="header__logo" aria-label="Agrolinx - Ir al inicio">
                 <div class="header__logo-container">
                     <img src="/imag/logodar.webp" alt="Agrolinx - Especialistas en Nutrición Animal"
-                        class="header__logo-img" width="120" height="60">
+                        class="header__logo-img" width="120" height="60" fetchpriority="high">
                 </div>
             </a>
 
@@ -292,10 +292,15 @@
                 <!-- Visual de la sección -->
                 <div class="about__visual animate-slide-from-right">
                     <div class="about__image-container">
-                        <!-- Video optimizado con lazy loading -->
-                        <video class="about__image" autoplay muted loop playsinline preload="metadata" width="800"
-                            height="600">
+                        <!-- Video optimizado con autoplay y lazy loading -->
+                        <video class="about__image" autoplay muted loop playsinline preload="none"
+                            poster="/imag/ima9-poster.webp" width="800" height="600" loading="lazy" fetchpriority="low"
+                            data-autoplay="true">
                             <source src="/imag/ima9.mp4" type="video/mp4">
+                            <!-- Fallback para navegadores que no soportan video -->
+                            <img src="/imag/ima9-poster.webp"
+                                alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico" class="about__image"
+                                loading="lazy" style="width: 100%; height: auto; object-fit: cover;">
                         </video>
                         <div class="about__image-overlay">
                             <div class="about__image-badge">
