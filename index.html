@@ -4,19 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrolinx - Especialistas en Nutrición Animal </title>
-    <meta name="description" content="Header y Footer optimizados para Agrolinx - Especialistas en Nutrición Animal">
+    <title>Agrolinx - Especialistas en Nutrición Animal</title>
+    <meta name="description" content="Empresa familiar comprometida con el futuro del sector pecuario en Venezuela. Soluciones especializadas en nutrición animal, bioseguridad y salud animal.">
     <link rel="icon" href="/imag/icon.ico" type="image/x-icon">
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        as="style">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles/header-footer-styles.css">
-    <link rel="stylesheet" href="styles/sections-styles.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    
+    <!-- Preload critical resources optimized -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="/imag/logodar.webp" as="image">
+    <link rel="preload" href="/imag/d.webp" as="image">
+    
+    <!-- Single optimized stylesheet -->
+    <link rel="stylesheet" href="styles/optimized-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -36,9 +35,8 @@
             <a href="#inicio" class="header__logo" aria-label="Agrolinx - Ir al inicio">
                 <div class="header__logo-container">
                     <img src="/imag/logodar.webp" alt="Agrolinx - Especialistas en Nutrición Animal"
-                        class="header__logo-img">
+                        class="header__logo-img" width="120" height="60">
                 </div>
-
             </a>
 
             <!-- Navegación principal -->
@@ -101,11 +99,9 @@
             <div class="hero__content">
                 <!-- Contenido de texto -->
                 <div class="hero__text animate-slide-from-left">
-
-
                     <h1 class="hero__title">
                         <span class="text-accent">Soluciones especializadas para la</span><br>
-                        <span class="text-accent">industria pecuaria en Venezuela
+                        <span class="text-accent">industria pecuaria en Venezuela</span>
                     </h1>
 
                     <p class="hero__description">
@@ -116,22 +112,20 @@
 
                     <div class="hero__stats">
                         <div class="hero__stat animate-bounce-in" style="animation-delay: 0.2s;">
-                            <div class="hero__stat-number">Aliados </div>
+                            <div class="hero__stat-number">Aliados</div>
                             <div class="hero__stat-label">globales</div>
                         </div>
                         <div class="hero__stat animate-bounce-in" style="animation-delay: 0.4s;">
                             <div class="hero__stat-number">Acompañamiento</div>
-                            <div class="hero__stat-label"> técnico local
-                            </div>
+                            <div class="hero__stat-label">técnico local</div>
                         </div>
                         <div class="hero__stat animate-bounce-in" style="animation-delay: 0.6s;">
                             <div class="hero__stat-number">Productos</div>
-                            <div class="hero__stat-label"> innovadores</div>
+                            <div class="hero__stat-label">innovadores</div>
                         </div>
                     </div>
 
                     <div class="hero__actions">
-
                         <a href="#contacto" class="btn btn--primary btn--large animate-slide-up"
                             style="animation-delay: 1s;">
                             <i data-lucide="phone" class="btn__icon btn__icon--left"></i>
@@ -144,7 +138,7 @@
                 <div class="hero__visual animate-slide-from-right">
                     <div class="hero__image-container">
                         <img src="/imag/d.webp" alt="Granja avícola moderna en Venezuela - Tecnología Agrolinx"
-                            class="hero__image" loading="eager">
+                            class="hero__image" loading="eager" width="800" height="600">
                         <div class="hero__image-overlay">
                             <div class="hero__image-info">
                                 <i data-lucide="map-pin" class="hero__image-icon"></i>
@@ -198,7 +192,6 @@
                         <div class="badge badge--secondary animate-fade-in">
                             <i data-lucide="heart" class="badge__icon"></i>
                             Nuestra historia
-
                         </div>
                         <h2 class="section-title animate-slide-up">
                             <br> Una familia comprometida con el
@@ -219,9 +212,6 @@
                             integrando tecnología, innovación y conocimiento para construir el agro del futuro.
                         </p>
 
-                        <!-- Valores clave -->
-
-
                         <!-- Quote destacado -->
                         <div class="quote-box animate-slide-up" style="animation-delay: 0.8s;">
                             <i data-lucide="quote" class="quote-box__icon"></i>
@@ -237,14 +227,12 @@
                 <!-- Visual de la sección -->
                 <div class="about__visual animate-slide-from-right">
                     <div class="about__image-container">
-                        <!-- Video WebM optimizado con autoplay -->
-                        <video class="about__image" autoplay muted loop playsinline loading="lazy" width="800"
-                            height="600" poster="/imag/ima9.webm" onloadeddata="this.style.opacity='1'"
-                            style="opacity: 0; transition: opacity 0.3s ease;">
+                        <!-- Video optimizado con lazy loading -->
+                        <video class="about__image" autoplay muted loop playsinline preload="metadata" width="800"
+                            height="600" >
                             <source src="/imag/ima9.webm" type="video/webm">
-
                             <!-- Fallback para navegadores que no soportan video -->
-                            <img src="/imag/ima9.webm" alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico"
+                            <img src="/imag/ima9-poster.jpg" alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico"
                                 class="about__image" loading="lazy"
                                 style="width: 100%; height: auto; object-fit: cover;">
                         </video>
@@ -278,11 +266,7 @@
                                 <p class="feature-card__subtitle">Marcas internacionales de vanguardia</p>
                             </div>
                         </div>
-
-
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -301,7 +285,6 @@
                     <br> Los pilares <span class="text-accent">que nos diferencia</span>
                 </h2>
                 <div class="section-divider animate-scale-in"></div>
-
             </div>
 
             <!-- Grid de pilares -->
@@ -433,7 +416,6 @@
                             </div>
                         </div>
 
-
                         <div class="pillar-card__quote">
                             <i data-lucide="quote" class="pillar-card__quote-icon"></i>
                             <p>"Entrega puntual garantizada"</p>
@@ -456,12 +438,11 @@
                         <i data-lucide="lightbulb"></i>
                     </div>
                     <div class="inspiration-banner__text">
-                        <h3 class="inspiration-banner__title animate-fade-in"" >¿Necesitas asesoría técnica especializada?</h3>
-                        <p class=" inspiration-banner__description">
+                        <h3 class="inspiration-banner__title animate-fade-in">¿Necesitas asesoría técnica especializada?</h3>
+                        <p class="inspiration-banner__description">
                             Cada día trabajamos para que el sector pecuario venezolano sea más fuerte, más eficiente y
-                            más
-                            sostenible. Nuestro equipo está listo para ayudarte.
-                            </p>
+                            más sostenible. Nuestro equipo está listo para ayudarte.
+                        </p>
                     </div>
                     <div class="inspiration-banner__action">
                         <a href="#contacto" class="btn btn--primary btn--large">
@@ -499,9 +480,9 @@
                 <!-- Socio 1: Premex -->
                 <div class="partner-card partner-card--orange animate-slide-from-left" style="animation-delay: 0.2s;">
                     <div class="partner-card__header">
-                        <div class="partner-card__logo partner-card__logo--orange ">
+                        <div class="partner-card__logo partner-card__logo--orange">
                             <img src="/imag/partner2.webp" alt="Premex - Nutrición Animal"
-                                class="partner-card__logo-img">
+                                class="partner-card__logo-img" loading="lazy">
                         </div>
                         <div class="partner-card__badges">
                             <div class="badge badge--orange">Nutrición Animal</div>
@@ -562,7 +543,6 @@
                                 <i data-lucide="external-link" class="btn__icon btn__icon--left"></i>
                                 Visitar sitio web
                             </a>
-
                         </div>
                     </div>
                 </div>
@@ -571,7 +551,7 @@
                 <div class="partner-card partner-card--green animate-slide-from-bottom" style="animation-delay: 0.4s;">
                     <div class="partner-card__header">
                         <div class="partner-card__logo partner-card__logo--green">
-                            <img src="/imag/partner1.webp" alt="Okuo - Bioseguridad" class="partner-card__logo-img">
+                            <img src="/imag/partner1.webp" alt="Okuo - Bioseguridad" class="partner-card__logo-img" loading="lazy">
                         </div>
                         <div class="partner-card__badges">
                             <div class="badge badge--success">Bioseguridad</div>
@@ -636,7 +616,6 @@
                                 <i data-lucide="external-link" class="btn__icon btn__icon--left"></i>
                                 Visitar sitio web
                             </a>
-
                         </div>
                     </div>
                 </div>
@@ -645,7 +624,7 @@
                 <div class="partner-card partner-card--blue animate-slide-from-right" style="animation-delay: 0.6s;">
                     <div class="partner-card__header">
                         <div class="partner-card__logo partner-card__logo--blue">
-                            <img src="/imag/partner3.webp" alt="Alura - Salud Animal" class="partner-card__logo-img">
+                            <img src="/imag/partner3.webp" alt="Alura - Salud Animal" class="partner-card__logo-img" loading="lazy">
                         </div>
                         <div class="partner-card__badges partner-card--blue">
                             <div class="badge badge--blue">Salud Animal</div>
@@ -654,13 +633,12 @@
                     </div>
 
                     <div class="partner-card__content">
-
                         <p class="partner-card__description">
                             Soluciones de salud animal que promueven una producción más rentable, saludable y
                             sostenible a través de probióticos y tecnología avanzada.
                         </p>
 
-                        <div class="partner-card__specialties ">
+                        <div class="partner-card__specialties">
                             <h4 class="partner-card__specialties-title">
                                 <i data-lucide="star" class="partner-card__specialties-icon"></i>
                                 Especialidades:
@@ -685,7 +663,7 @@
                             </div>
                         </div>
 
-                        <div class="partner-card__innovation ">
+                        <div class="partner-card__innovation">
                             <div class="innovation-badge">
                                 <i data-lucide="lightbulb" class="innovation-badge__icon"></i>
                                 <div class="innovation-badge__content">
@@ -706,7 +684,6 @@
                                 <i data-lucide="external-link" class="btn__icon btn__icon--left"></i>
                                 Visitar sitio web
                             </a>
-
                         </div>
                     </div>
                 </div>
@@ -719,8 +696,7 @@
                         <i data-lucide="globe"></i>
                     </div>
                     <div class="alliance-banner__text">
-                        <h3 class="alliance-banner__title">Nutrición, bioseguridad y salud animal, en un solo aliado
-                        </h3>
+                        <h3 class="alliance-banner__title">Nutrición, bioseguridad y salud animal, en un solo aliado</h3>
                         <p class="alliance-banner__description">
                             La combinación perfecta de tecnologías globales con conocimiento local
                         </p>
@@ -734,13 +710,13 @@
                             <div class="alliance-stat__number">60+</div>
                             <div class="alliance-stat__label">Países de presencia</div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- SECCIÓN GALERÍA COMPLETAMENTE NUEVA -->
+
+    <!-- SECCIÓN GALERÍA OPTIMIZADA -->
     <section id="galeria" class="gallery" aria-labelledby="galleryHeading">
         <div class="container">
             <!-- Header de la sección -->
@@ -752,16 +728,16 @@
                 <h2 class="section-title animate-slide-up" id="galleryHeading">
                     <br>Nuestro trabajo en <span class="text-accent">imágenes</span>
                 </h2>
-                 <p class="section-description animate-slide-up" style="animation-delay: 0.2s;">
+                <p class="section-description animate-slide-up" style="animation-delay: 0.2s;">
                     <strong>Nuestras soluciones</strong> integran innovación, tecnología y conocimiento a cada proyecto
+                </p>
             </div>
 
-            <!-- Carrusel Principal -->
+            <!-- Carrusel optimizado con lazy loading -->
             <div class="gallery-carousel" id="galleryCarousel">
-                <!-- Contenedor de imágenes -->
                 <div class="gallery-carousel__wrapper" tabindex="0" aria-label="Carrusel de galería: usa flechas para navegar" aria-roledescription="carousel" aria-controls="carouselTrack">
                     <div class="gallery-carousel__track" id="carouselTrack">
-                        <!-- Las imágenes se cargarán dinámicamente -->
+                        <!-- Las imágenes se cargarán dinámicamente con lazy loading optimizado -->
                     </div>
                 </div>
 
@@ -776,10 +752,8 @@
                 </button>
 
                 <!-- Información de la imagen -->
-                <div class="gallery-carousel__info" aria-live="polite">
+                <div class=>
                     <div class="gallery-carousel__meta">
-                        <span class="gallery-carousel__category" id="imageCategory">Categoría</span>
-                        <span class="gallery-carousel__counter" id="imageCounter">1 / 1</span>
                     </div>
                 </div>
 
@@ -985,11 +959,9 @@
                                     C.E. Europa, Piso 1 Ofic. 1-32<br>
                                     Maracay, Venezuela
                                 </address>
-
                             </div>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- Formulario de contacto -->
@@ -1142,28 +1114,9 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Mapa (placeholder) -->
-            <div class="contact__map animate-fade-in" style="animation-delay: 2.4s; display: none;" id="contactMap">
-                <div class="map-container">
-                    <div class="map-placeholder">
-                        <i data-lucide="map-pin" class="map-placeholder__icon"></i>
-                        <h4 class="map-placeholder__title">Nuestra ubicación</h4>
-                        <p class="map-placeholder__address">
-                            Av. Las Delicias, Urb. La Floresta<br>
-                            C.E. Europa, Piso 1 Ofic. 1-32<br>
-                            Maracay, Venezuela
-                        </p>
-                        <button class="btn btn--primary" id="openMapsBtn">
-                            <i data-lucide="external-link" class="btn__icon btn__icon--left"></i>
-                            Abrir en Google Maps
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
-    </main>
+
     <!-- FOOTER OPTIMIZADO -->
     <footer class="footer" role="contentinfo">
         <div class="container">
@@ -1174,7 +1127,7 @@
                     <div class="footer__brand">
                         <div class="footer__logo">
                             <img src="/imag/logodar.webp" alt="Agrolinx Logo" class="footer__logo-img" width="120"
-                                height="60">
+                                height="60" loading="lazy">
                         </div>
 
                         <p class="footer__description">
@@ -1263,7 +1216,6 @@
                 </div>
             </div>
 
-
             <!-- Línea divisoria -->
             <div class="footer__divider" role="separator"></div>
 
@@ -1285,21 +1237,18 @@
                         <span class="footer__flag" role="img" aria-label="Bandera de Venezuela">🇻🇪</span>
                         <span class="footer__badge-text">Empresa Venezolana</span>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Botón scroll  top -->
+    <!-- Botón scroll to top -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba" title="Volver arriba">
         <i data-lucide="chevron-up"></i>
     </button>
 
-    <!-- Scripts -->
-
-    <script src="scripts/script.js"></script>
+    <!-- Script optimizado -->
+    <script src="scripts/optimized-script.js"></script>
 
 </body>
 
