@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="styles/optimized-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Removed Lucide Icons script - using inline SVG instead -->
 
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -40,32 +39,33 @@
             </a>
 
             <!-- Navegación principal -->
+            <!-- Replaced all Lucide icons with inline SVG -->
             <nav class="header__nav" id="nav" role="navigation" aria-label="Navegación principal">
                 <a href="#inicio" class="header__nav-link" data-section="inicio">
-                    <i data-lucide="home" class="header__nav-icon"></i>
+                    <svg class="header__nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     <span>Inicio</span>
                 </a>
                 <a href="#nosotros" class="header__nav-link" data-section="nosotros">
-                    <i data-lucide="users" class="header__nav-icon"></i>
+                    <svg class="header__nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     <span>Nosotros</span>
                 </a>
                 <a href="#pilares" class="header__nav-link" data-section="pilares">
-                    <i data-lucide="target" class="header__nav-icon"></i>
+                    <svg class="header__nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
                     <span>Pilares</span>
                 </a>
                 <a href="#aliados" class="header__nav-link" data-section="aliados">
-                    <i data-lucide="handshake" class="header__nav-icon"></i>
+                    <svg class="header__nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
                     <span>Aliados</span>
                 </a>
                 <a href="#galeria" class="header__nav-link" data-section="galeria">
-                    <i data-lucide="image" class="header__nav-icon"></i>
+                    <svg class="header__nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
                     <span>Galería</span>
                 </a>
             </nav>
 
             <!-- Botón de contacto -->
             <a href="#contacto" class="btn btn--primary header__cta">
-                <i data-lucide="phone" class="btn__icon btn__icon--left"></i>
+                <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 Contáctanos
             </a>
 
@@ -128,7 +128,7 @@
                     <div class="hero__actions">
                         <a href="#contacto" class="btn btn--primary btn--large animate-slide-up"
                             style="animation-delay: 1s;">
-                            <i data-lucide="phone" class="btn__icon btn__icon--left"></i>
+                            <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             Hablemos de tu proyecto
                         </a>
                     </div>
@@ -141,7 +141,7 @@
                             class="hero__image" loading="eager" width="800" height="600">
                         <div class="hero__image-overlay">
                             <div class="hero__image-info">
-                                <i data-lucide="map-pin" class="hero__image-icon"></i>
+                                <svg class="hero__image-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6.4-8 12-8 12s-8-5.6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 <p>Agrolinx</p>
                             </div>
                         </div>
@@ -150,7 +150,7 @@
                     <!-- Estadísticas flotantes -->
                     <div class="floating-stat floating-stat--top animate-bounce-in" style="animation-delay: 1.2s;">
                         <div class="floating-stat__icon floating-stat__icon--success">
-                            <i data-lucide="trending-up"></i>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14l-7-7"/><path d="M12 5v14l7-7"/></svg>
                         </div>
                         <div class="floating-stat__content">
                             <p class="floating-stat__number">60+</p>
@@ -161,7 +161,7 @@
 
                     <div class="floating-stat floating-stat--bottom animate-bounce-in" style="animation-delay: 1.4s;">
                         <div class="floating-stat__icon floating-stat__icon--primary">
-                            <i data-lucide="award"></i>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z"/></svg>
                         </div>
                         <div class="floating-stat__content">
                             <p class="floating-stat__number">Desde 2018</p>
@@ -177,7 +177,7 @@
         <div class="hero__scroll-indicator animate-bounce" aria-hidden="true">
             <div class="scroll-indicator">
                 <span class="scroll-indicator__text">Descubre más</span>
-                <i data-lucide="chevron-down" class="scroll-indicator__icon"></i>
+                <svg class="scroll-indicator__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
         </div>
     </section>
@@ -190,7 +190,7 @@
                 <div class="about__text animate-slide-from-left">
                     <div class="section-header">
                         <div class="badge badge--secondary animate-fade-in">
-                            <i data-lucide="heart" class="badge__icon"></i>
+                            <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 20.78l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                             Nuestra historia
                         </div>
                         <h2 class="section-title animate-slide-up">
@@ -214,7 +214,7 @@
 
                         <!-- Quote destacado -->
                         <div class="quote-box animate-slide-up" style="animation-delay: 0.8s;">
-                            <i data-lucide="quote" class="quote-box__icon"></i>
+                            <svg class="quote-box__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z"/><path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z"/></svg>
                             <blockquote class="quote-box__text">
                                 "Nuestro compromiso es ofrecer productos de calidad internacional con el servicio
                                 personalizado y cercano orientado en resultados tangibles"
@@ -229,16 +229,16 @@
                     <div class="about__image-container">
                         <!-- Video optimizado con lazy loading -->
                         <video class="about__image" autoplay muted loop playsinline preload="metadata" width="800"
-                            height="600" >
+                            height="600" poster="/imag/ima9-poster.webp">
                             <source src="/imag/ima9.webm" type="video/webm">
                             <!-- Fallback para navegadores que no soportan video -->
-                            <img src="/imag/ima9-poster.jpg" alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico"
+                            <img src="/imag/ima9-poster.webp" alt="Equipo Agrolinx en granja porcina - Acompañamiento técnico"
                                 class="about__image" loading="lazy"
                                 style="width: 100%; height: auto; object-fit: cover;">
                         </video>
                         <div class="about__image-overlay">
                             <div class="about__image-badge">
-                                <i data-lucide="users-2" class="about__image-badge-icon"></i>
+                                <svg class="about__image-badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                                 <span>Equipo Agrolinx</span>
                             </div>
                         </div>
@@ -248,7 +248,7 @@
                         <div class="feature-card feature-card--blue animate-slide-from-bottom"
                             style="animation-delay: 0.2s;">
                             <div class="feature-card__icon">
-                                <i data-lucide="users-2"></i>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                             </div>
                             <div class="feature-card__content">
                                 <h4 class="feature-card__title">Empresa familiar</h4>
@@ -259,7 +259,7 @@
                         <div class="feature-card feature-card--green animate-slide-from-bottom"
                             style="animation-delay: 0.4s;">
                             <div class="feature-card__icon">
-                                <i data-lucide="zap"></i>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v13l-7-7"/><path d="M20 12l-7 7 7 7"/></svg>
                             </div>
                             <div class="feature-card__content">
                                 <h4 class="feature-card__title">Innovación</h4>
@@ -278,7 +278,7 @@
             <!-- Header de la sección -->
             <div class="section-header section-header--center animate-fade-in">
                 <div class="badge badge--primary">
-                    <i data-lucide="compass" class="badge__icon"></i>
+                    <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 17 22 7 12 2"></polygon><line x1="12" y1="12" x2="12" y2="21"></line></svg>
                     Nuestros valores
                 </div>
                 <h2 class="section-title animate-slide-up">
@@ -293,11 +293,11 @@
                 <div class="pillar-card pillar-card--blue animate-slide-from-left" style="animation-delay: 0.2s;">
                     <div class="pillar-card__header">
                         <div class="pillar-card__icon pillar-card__icon--blue">
-                            <i data-lucide="cpu"></i>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6z"/><path d="M7 15a6 6 0 0 0 0 10l3-3 3 3a6 6 0 0 0 0-10"></path></svg>
                         </div>
                         <h3 class="pillar-card__title">Innovación y tecnología</h3>
                         <div class="pillar-card__badge">
-                            <i data-lucide="trending-up"></i>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14l-7-7"/><path d="M20 12l-7 7 7 7"/></svg>
                             <span>Vanguardia</span>
                         </div>
                     </div>
@@ -309,27 +309,27 @@
 
                         <div class="pillar-card__features">
                             <div class="feature-item">
-                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <svg class="feature-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                                 <span>Productos de última generación</span>
                             </div>
                             <div class="feature-item">
-                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <svg class="feature-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 16.37a12 12 0 1 1-1.95-4.03 12 12 0 0 1 2.48 0z"></path><circle cx="12" cy="12" r="2"></circle></svg>
                                 <span>Formulaciones adaptadas al clima tropical</span>
                             </div>
                             <div class="feature-item">
-                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <svg class="feature-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10h10M7 14h10M10 18h4"></path><circle cx="12" cy="12" r="10"></circle></svg>
                                 <span>Investigación y desarrollo continuo</span>
                             </div>
                         </div>
 
                         <div class="pillar-card__quote">
-                            <i data-lucide="quote" class="pillar-card__quote-icon"></i>
+                            <svg class="pillar-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z"/><path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z"/></svg>
                             <p>"Productos internacionales, servicio local"</p>
                         </div>
 
                         <div class="pillar-card__action">
                             <a href="#contacto" class="btn btn--outline btn--blue">
-                                <i data-lucide="arrow-right" class="btn__icon btn__icon--left"></i>
+                                <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                 Conocer más
                             </a>
                         </div>
@@ -340,11 +340,11 @@
                 <div class="pillar-card pillar-card--green animate-slide-from-bottom" style="animation-delay: 0.4s;">
                     <div class="pillar-card__header">
                         <div class="pillar-card__icon pillar-card__icon--green">
-                            <i data-lucide="users"></i>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
                         <h3 class="pillar-card__title">Acompañamiento cercano</h3>
                         <div class="pillar-card__badge">
-                            <i data-lucide="heart"></i>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 20.78l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                             <span>Personalizado</span>
                         </div>
                     </div>
@@ -356,27 +356,27 @@
 
                         <div class="pillar-card__features">
                             <div class="feature-item">
-                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <svg class="feature-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                                 <span>Visitas técnicas programadas</span>
                             </div>
                             <div class="feature-item">
-                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <svg class="feature-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 16.37a12 12 0 1 1-1.95-4.03 12 12 0 0 1 2.48 0z"></path><circle cx="12" cy="12" r="2"></circle></svg>
                                 <span>Asesoría nutricional especializada</span>
                             </div>
                             <div class="feature-item">
-                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <svg class="feature-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10h10M7 14h10M10 18h4"></path><circle cx="12" cy="12" r="10"></circle></svg>
                                 <span>Monitoreo de resultados</span><br><br>
                             </div>
                         </div>
 
                         <div class="pillar-card__quote">
-                            <i data-lucide="quote" class="pillar-card__quote-icon"></i>
+                            <svg class="pillar-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z"/><path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z"/></svg>
                             <p>"Visitas técnicas regulares incluidas"</p>
                         </div>
 
                         <div class="pillar-card__action">
                             <a href="#contacto" class="btn btn--outline btn--green">
-                                <i data-lucide="phone" class="btn__icon btn__icon--left"></i>
+                                <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                                 Solicitar visita
                             </a>
                         </div>
@@ -387,11 +387,11 @@
                 <div class="pillar-card pillar-card--amber animate-slide-from-right" style="animation-delay: 0.6s;">
                     <div class="pillar-card__header">
                         <div class="pillar-card__icon pillar-card__icon--amber">
-                            <i data-lucide="shield-check"></i>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-6 8-10a8 8 0 0 0-16 0c0 4 8 10 8 10z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
                         </div>
                         <h3 class="pillar-card__title">Compromiso y responsabilidad</h3>
                         <div class="pillar-card__badge">
-                            <i data-lucide="award"></i>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z"/></svg>
                             <span>Garantizado</span>
                         </div>
                     </div>
@@ -403,27 +403,27 @@
 
                         <div class="pillar-card__features">
                             <div class="feature-item">
-                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <svg class="feature-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                                 <span>Garantía de calidad certificada</span>
                             </div>
                             <div class="feature-item">
-                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <svg class="feature-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 16.37a12 12 0 1 1-1.95-4.03 12 12 0 0 1 2.48 0z"></path><circle cx="12" cy="12" r="2"></circle></svg>
                                 <span>Entregas puntuales garantizadas</span>
                             </div>
                             <div class="feature-item">
-                                <i data-lucide="check-circle" class="feature-item__icon"></i>
+                                <svg class="feature-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10h10M7 14h10M10 18h4"></path><circle cx="12" cy="12" r="10"></circle></svg>
                                 <span>Seguimiento post-venta</span>
                             </div>
                         </div>
 
                         <div class="pillar-card__quote">
-                            <i data-lucide="quote" class="pillar-card__quote-icon"></i>
+                            <svg class="pillar-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z"/><path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z"/></svg>
                             <p>"Entrega puntual garantizada"</p>
                         </div>
 
                         <div class="pillar-card__action">
                             <a href="#contacto" class="btn btn--outline btn--amber">
-                                <i data-lucide="file-text" class="btn__icon btn__icon--left"></i>
+                                <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V9zM7 17a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0-4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0-4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm10-6l-5-5v3a1 1 0 0 1-1 1H7v2h8a1 1 0 0 1 1 1v3l5-5z"/></svg>
                                 Ver garantías
                             </a>
                         </div>
@@ -435,7 +435,7 @@
             <div class="inspiration-banner animate-slide-up" style="animation-delay: 0.8s;">
                 <div class="inspiration-banner__content">
                     <div class="inspiration-banner__icon">
-                        <i data-lucide="lightbulb"></i>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18.899A4.45 4.45 0 0 1 10.5 20c1.522 0 2.798-1.115 3.294-2.573"/></svg>
                     </div>
                     <div class="inspiration-banner__text">
                         <h3 class="inspiration-banner__title animate-fade-in">¿Necesitas asesoría técnica especializada?</h3>
@@ -446,9 +446,9 @@
                     </div>
                     <div class="inspiration-banner__action">
                         <a href="#contacto" class="btn btn--primary btn--large">
-                            <i data-lucide="phone" class="btn__icon btn__icon--left"></i>
+                            <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             Solicitar asesoría
-                            <i data-lucide="arrow-right" class="btn__icon btn__icon--right"></i>
+                            <svg class="btn__icon btn__icon--right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                     </div>
                 </div>
@@ -462,11 +462,11 @@
             <!-- Header de la sección -->
             <div class="section-header section-header--center animate-fade-in">
                 <div class="badge badge--blue">
-                    <i data-lucide="handshake" class="badge__icon"></i>
+                    <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
                     Alianzas globales
                 </div>
                 <h2 class="section-title animate-slide-up">
-                    <br> Nuestros <span class="text-accent">socios estratégicos</span>
+                    <br>Nuestros <span class="text-accent">socios estratégicos</span>
                 </h2>
                 <div class="section-divider animate-scale-in"></div>
                 <p class="section-description animate-slide-up" style="animation-delay: 0.2s;">
@@ -498,24 +498,24 @@
 
                         <div class="partner-card__specialties">
                             <h4 class="partner-card__specialties-title">
-                                <i data-lucide="star" class="partner-card__specialties-icon"></i>
+                                <svg class="partner-card__specialties-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 17 22 7 12 2"></polygon><line x1="12" y1="12" x2="12" y2="21"></line></svg>
                                 Especialidades:
                             </h4>
                             <div class="partner-card__tags">
                                 <span class="tag tag--orange">
-                                    <i data-lucide="package"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10V8a2 2 0 0 0-2-2h-5l-2-2H3a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h7l-2 2h3a2 2 0 0 0 2-2v-2"></path><path d="M7 17v5a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-5"></path></svg>
                                     Aditivos
                                 </span>
                                 <span class="tag tag--orange">
-                                    <i data-lucide="layers"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><path d="M12 12h.01M8 12h.01M16 12h.01"></path></svg>
                                     Premezclas
                                 </span>
                                 <span class="tag tag--orange">
-                                    <i data-lucide="zap"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v13l-7-7"></path><path d="M20 12l-7 7 7 7"></path></svg>
                                     Enzimas
                                 </span>
                                 <span class="tag tag--orange">
-                                    <i data-lucide="shield"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-6 8-10a8 8 0 0 0-16 0c0 4 8 10 8 10z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>
                                     Antioxidantes
                                 </span>
                             </div>
@@ -533,14 +533,14 @@
                         </div>
 
                         <div class="partner-card__quote">
-                            <i data-lucide="quote" class="partner-card__quote-icon"></i>
+                            <svg class="partner-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z"/><path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z"/></svg>
                             <p>"Líderes mundiales en nutrición animal especializada"</p>
                         </div>
 
                         <div class="partner-card__actions">
                             <a href="https://premex.co/" target="_blank" rel="noopener noreferrer"
                                 class="btn btn--outline btn--orange">
-                                <i data-lucide="external-link" class="btn__icon btn__icon--left"></i>
+                                <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"></path><path d="M18 3v1h3v1h-3z"></path><path d="M21 12v1a2 2 0 0 1-2 2h-3"></path></svg>
                                 Visitar sitio web
                             </a>
                         </div>
@@ -567,24 +567,24 @@
 
                         <div class="partner-card__specialties">
                             <h4 class="partner-card__specialties-title">
-                                <i data-lucide="star" class="partner-card__specialties-icon"></i>
+                                <svg class="partner-card__specialties-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 17 22 7 12 2"></polygon><line x1="12" y1="12" x2="12" y2="21"></line></svg>
                                 Especialidades:
                             </h4>
                             <div class="partner-card__tags">
                                 <span class="tag tag--green">
-                                    <i data-lucide="shield-check"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-6 8-10a8 8 0 0 0-16 0c0 4 8 10 8 10z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>
                                     Inhibidores
                                 </span>
                                 <span class="tag tag--green">
-                                    <i data-lucide="plus"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><path d="M12 12h.01M8 12h.01M16 12h.01"></path></svg>
                                     Aditivos
                                 </span>
                                 <span class="tag tag--green">
-                                    <i data-lucide="award"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"></circle><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z"></path></svg>
                                     Calidad
                                 </span>
                                 <span class="tag tag--green">
-                                    <i data-lucide="microscope"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8l-5-5 5-5 5 5"></path><path d="M12 3v7"></path></svg>
                                     Análisis
                                 </span>
                             </div>
@@ -592,28 +592,28 @@
 
                         <div class="partner-card__features">
                             <div class="feature-highlight">
-                                <i data-lucide="check-circle" class="feature-highlight__icon"></i>
+                                <svg class="feature-highlight__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                                 <span>Certificación HACCP</span>
                             </div>
                             <div class="feature-highlight">
-                                <i data-lucide="check-circle" class="feature-highlight__icon"></i>
+                                <svg class="feature-highlight__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10h10M7 14h10M10 18h4"></path><circle cx="12" cy="12" r="10"></circle></svg>
                                 <span>Laboratorio propio</span>
                             </div>
                             <div class="feature-highlight">
-                                <i data-lucide="check-circle" class="feature-highlight__icon"></i>
-                                <span>Soporte técnico 24/7</span>
-                            </div><br>
+                                <svg class="feature-highlight__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <span>Soporte técnico 24/7</span><br>
+                            </div>
                         </div>
 
                         <div class="partner-card__quote">
-                            <i data-lucide="quote" class="partner-card__quote-icon"></i>
+                            <svg class="partner-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z"/><path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z"/></svg>
                             <p>"Bioseguridad integral para la industria alimentaria"</p>
                         </div>
 
                         <div class="partner-card__actions">
                             <a href="https://okuo.bio/" target="_blank" rel="noopener noreferrer"
                                 class="btn btn--outline btn--green">
-                                <i data-lucide="external-link" class="btn__icon btn__icon--left"></i>
+                                <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"></path><path d="M18 3v1h3v1h-3z"></path><path d="M21 12v1a2 2 0 0 1-2 2h-3"></path></svg>
                                 Visitar sitio web
                             </a>
                         </div>
@@ -640,24 +640,24 @@
 
                         <div class="partner-card__specialties">
                             <h4 class="partner-card__specialties-title">
-                                <i data-lucide="star" class="partner-card__specialties-icon"></i>
+                                <svg class="partner-card__specialties-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 17 22 7 12 2"></polygon><line x1="12" y1="12" x2="12" y2="21"></line></svg>
                                 Especialidades:
                             </h4>
                             <div class="partner-card__tags">
                                 <span class="tag tag--blue">
-                                    <i data-lucide="heart"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-6 8-10a8 8 0 0 0-16 0c0 4 8 10 8 10z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>
                                     Probióticos
                                 </span>
                                 <span class="tag tag--blue">
-                                    <i data-lucide="shield"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-6 8-10a8 8 0 0 0-16 0c0 4 8 10 8 10z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>
                                     Inmunidad
                                 </span>
                                 <span class="tag tag--blue">
-                                    <i data-lucide="smile"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 20.78l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                                     Bienestar
                                 </span>
                                 <span class="tag tag--blue">
-                                    <i data-lucide="leaf"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.37 14.37a5.6 5.6 0 0 0 0-4.74L12 3.32l-4.37 6.31a5.6 5.6 0 0 0 0 4.74 5.6 5.6 0 0 0 0 4.74L12 20.68l4.37-6.31a5.6 5.6 0 0 0 0-4.74z"></path><line x1="12" y1="14" x2="12" y2="19"></line><line x1="12" y1="5" x2="12" y2="10"></line></svg>
                                     Sostenibilidad
                                 </span>
                             </div>
@@ -665,7 +665,7 @@
 
                         <div class="partner-card__innovation">
                             <div class="innovation-badge">
-                                <i data-lucide="lightbulb" class="innovation-badge__icon"></i>
+                                <svg class="innovation-badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18.899A4.45 4.45 0 0 1 10.5 20c1.522 0 2.798-1.115 3.294-2.573"></path></svg>
                                 <div class="innovation-badge__content">
                                     <span class="innovation-badge__title">Innovación</span>
                                     <span class="innovation-badge__desc">Investigación continua</span>
@@ -674,14 +674,14 @@
                         </div>
 
                         <div class="partner-card__quote">
-                            <i data-lucide="quote" class="partner-card__quote-icon"></i>
+                            <svg class="partner-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z"/><path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z"/></svg>
                             <p>"El futuro de la salud animal es probiótico"</p>
                         </div>
 
                         <div class="partner-card__actions">
                             <a href="https://latam.alura.bio/" target="_blank" rel="noopener noreferrer"
                                 class="btn btn--outline btn--blue">
-                                <i data-lucide="external-link" class="btn__icon btn__icon--left"></i>
+                                <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"></path><path d="M18 3v1h3v1h-3z"></path><path d="M21 12v1a2 2 0 0 1-2 2h-3"></path></svg>
                                 Visitar sitio web
                             </a>
                         </div>
@@ -693,7 +693,7 @@
             <div class="alliance-banner animate-slide-up" style="animation-delay: 0.8s;">
                 <div class="alliance-banner__content">
                     <div class="alliance-banner__icon">
-                        <i data-lucide="globe"></i>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9.09a3 3 0 0 1 4.21 0 3 3 0 0 0 4.21 0 7 7 0 1 1-8.42 0z"></path></svg>
                     </div>
                     <div class="alliance-banner__text">
                         <h3 class="alliance-banner__title">Nutrición, bioseguridad y salud animal, en un solo aliado</h3>
@@ -722,7 +722,7 @@
             <!-- Header de la sección -->
             <div class="section-header section-header--center animate-fade-in">
                 <div class="badge badge--accent">
-                    <i data-lucide="camera" class="badge__icon"></i>
+                    <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-.07a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h.07a1.65 1.65 0 0 0 1-1.51 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v.07a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-.07a1.65 1.65 0 0 0-1 1.51z"></path></svg>
                     Galería
                 </div>
                 <h2 class="section-title animate-slide-up" id="galleryHeading">
@@ -744,15 +744,15 @@
                 <!-- Controles de navegación -->
                 <button class="gallery-carousel__btn gallery-carousel__btn--prev" id="prevBtn"
                     aria-label="Imagen anterior" aria-controls="carouselTrack">
-                    <i data-lucide="chevron-left"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
                 </button>
                 <button class="gallery-carousel__btn gallery-carousel__btn--next" id="nextBtn"
                     aria-label="Imagen siguiente" aria-controls="carouselTrack">
-                    <i data-lucide="chevron-right"></i>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </button>
 
                 <!-- Información de la imagen -->
-                <div class=>
+                  <div class=>
                     <div class="gallery-carousel__meta">
                     </div>
                 </div>
@@ -773,14 +773,14 @@
         <div class="gallery-lightbox" id="galleryLightbox">
             <div class="gallery-lightbox__backdrop"></div>
             <div class="gallery-lightbox__container">
-                <button class="gallery-lightbox__close" id="lightboxClose">
-                    <i data-lucide="x"></i>
+                <button class="gallery-lightbox__close" id="lightboxClose" aria-label="Cerrar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </button>
-                <button class="gallery-lightbox__nav gallery-lightbox__nav--prev" id="lightboxPrev">
-                    <i data-lucide="chevron-left"></i>
+                <button class="gallery-lightbox__nav gallery-lightbox__nav--prev" id="lightboxPrev" aria-label="Imagen anterior">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
                 </button>
-                <button class="gallery-lightbox__nav gallery-lightbox__nav--next" id="lightboxNext">
-                    <i data-lucide="chevron-right"></i>
+                <button class="gallery-lightbox__nav gallery-lightbox__nav--next" id="lightboxNext" aria-label="Imagen siguiente">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </button>
                 <div class="gallery-lightbox__content">
                     <img class="gallery-lightbox__image" id="lightboxImage" src="/imag/agrolinx-logo.svg" alt="">
@@ -801,7 +801,7 @@
             <!-- Header de la sección -->
             <div class="section-header section-header--center animate-fade-in">
                 <div class="badge badge--primary">
-                    <i data-lucide="users-2" class="badge__icon"></i>
+                    <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     Nuestro equipo
                 </div>
                 
@@ -820,7 +820,7 @@
                 <div class="leader-card animate-slide-from-left" style="animation-delay: 0.2s;">
                     <div class="leader-card__avatar">
                         <div class="leader-card__avatar-bg">
-                            <i data-lucide="user" class="leader-card__avatar-icon"></i>
+                            <svg class="leader-card__avatar-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z"></path><circle cx="12" cy="10" r="4"></circle></svg>
                         </div>
                     </div>
                     <div class="leader-card__content">
@@ -836,7 +836,7 @@
                 <div class="leader-card animate-slide-from-bottom" style="animation-delay: 0.4s;">
                     <div class="leader-card__avatar">
                         <div class="leader-card__avatar-bg">
-                            <i data-lucide="user" class="leader-card__avatar-icon"></i>
+                            <svg class="leader-card__avatar-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z"></path><circle cx="12" cy="10" r="4"></circle></svg>
                         </div>
                     </div>
                     <div class="leader-card__content">
@@ -852,7 +852,7 @@
                 <div class="leader-card animate-slide-from-right" style="animation-delay: 0.6s;">
                     <div class="leader-card__avatar">
                         <div class="leader-card__avatar-bg">
-                            <i data-lucide="user" class="leader-card__avatar-icon"></i>
+                            <svg class="leader-card__avatar-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z"></path><circle cx="12" cy="10" r="4"></circle></svg>
                         </div>
                     </div>
                     <div class="leader-card__content">
@@ -873,7 +873,7 @@
             <!-- Header de la sección -->
             <div class="section-header section-header--center section-header--white animate-fade-in">
                 <div class="badge badge--success">
-                    <i data-lucide="phone" class="badge__icon"></i>
+                    <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     Conversemos
                 </div>
                 <h2 class="section-title section-title--white animate-slide-up">
@@ -891,7 +891,7 @@
                 <!-- Información de contacto -->
                 <div class="contact__info animate-slide-from-left" style="animation-delay: 0.4s;">
                     <h3 class="contact__info-title">
-                        <i data-lucide="map-pin" class="contact__info-icon"></i>
+                        <svg class="contact__info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6.4-8 12-8 12s-8-5.6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         Conecta con nosotros
                     </h3>
 
@@ -899,13 +899,13 @@
                         <!-- Método 1: Teléfono -->
                         <div class="contact-method animate-slide-from-left" style="animation-delay: 0.6s;">
                             <div class="contact-method__icon contact-method__icon--primary">
-                                <i data-lucide="phone"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             </div>
                             <div class="contact-method__content">
                                 <h4 class="contact-method__title">Teléfono directo</h4>
                                 <a href="tel:+584145906535" class="contact-method__value">+58 (414) 5906535</a>
                                 <p class="contact-method__note">
-                                    <i data-lucide="clock"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"></circle><path d="M12 6v6l4 2"></path></svg>
                                     Lun - Vie: 8:00 AM - 6:00 PM
                                 </p>
                             </div>
@@ -914,14 +914,14 @@
                         <!-- Método 2: Email -->
                         <div class="contact-method animate-slide-from-left" style="animation-delay: 0.8s;">
                             <div class="contact-method__icon contact-method__icon--primary">
-                                <i data-lucide="mail"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                             </div>
                             <div class="contact-method__content">
                                 <h4 class="contact-method__title">Email corporativo</h4>
                                 <a href="mailto:master@agrolinxve.com"
                                     class="contact-method__value">master@agrolinxve.com</a>
                                 <p class="contact-method__note">
-                                    <i data-lucide="timer"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"></circle><path d="M12 6v6l4 2"></path></svg>
                                     Respuesta en 24 horas
                                 </p>
                             </div>
@@ -931,17 +931,17 @@
                         <div class="contact-method contact-method--whatsapp animate-slide-from-left"
                             style="animation-delay: 1s;">
                             <div class="contact-method__icon contact-method__icon--whatsapp">
-                                <i data-lucide="message-circle"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20z"></path><path d="M8 12.084c.706-.177 1.414-.366 2.048-.565a3.686 3.686 0 0 0 .744-1.634 3.686 3.686 0 0 0-.697-2.276 3.686 3.686 0 0 0-1.722-1.454"></path><path d="M15.952 13.3c-.33.72-1.146 1.447-2.064 1.528a3.686 3.686 0 0 0-1.713 1.454 3.686 3.686 0 0 0-.698 2.277c.078.45.248.88.533 1.232"></path><path d="M12 15.652a3.686 3.686 0 0 0-1.722-1.454 3.686 3.686 0 0 0-.697-2.276"></path><path d="M12 18.77a3.686 3.686 0 0 0 1.722-1.454 3.686 3.686 0 0 0 .697-2.277"></path><path d="M12 12.286a3.686 3.686 0 0 0 1.722 1.454 3.686 3.686 0 0 0 .697 2.277"></path><path d="M10.15 7.48a.5.5 0 0 0-.75-.2a7.91 7.91 0 0 1 3.58 2.34a.5.5 0 0 0 .75.2a7.91 7.91 0 0 0-3.58-2.34z"></path><path d="M13.9 7.28a.5.5 0 0 0-.75-.2a7.91 7.91 0 0 0-3.58 2.34a.5.5 0 0 0 .75.2a7.91 7.91 0 0 1 3.58-2.34z"></path></svg>
                             </div>
                             <div class="contact-method__content">
                                 <h4 class="contact-method__title">WhatsApp Business</h4>
                                 <p class="contact-method__note">
-                                    <i data-lucide="zap"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v13l-7-7"></path><path d="M20 12l-7 7 7 7"></path></svg>
                                     Atención inmediata
                                 </p>
                                 <a href="https://wa.me/+584145906535" target="_blank" rel="noopener noreferrer"
                                     class="btn btn--whatsapp btn--small">
-                                    <i data-lucide="message-circle" class="btn__icon btn__icon--left"></i>
+                                    <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                                     Escribir ahora
                                 </a>
                             </div>
@@ -950,7 +950,7 @@
                         <!-- Método 4: Ubicación -->
                         <div class="contact-method animate-slide-from-left" style="animation-delay: 1.2s;">
                             <div class="contact-method__icon contact-method__icon--location">
-                                <i data-lucide="map-pin"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6.4-8 12-8 12s-8-5.6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             </div>
                             <div class="contact-method__content">
                                 <h4 class="contact-method__title">Nuestra oficina</h4>
@@ -968,7 +968,7 @@
                 <div class="contact__form-container animate-slide-from-right" style="animation-delay: 0.6s;">
                     <div class="contact__form-header">
                         <h3 class="contact__form-title">
-                            <i data-lucide="edit-3" class="contact__form-icon"></i>
+                            <svg class="contact__form-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V9zM7 17a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0-4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0-4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm10-6l-5-5v3a1 1 0 0 1-1 1H7v2h8a1 1 0 0 1 1 1v3l5-5z"/></svg>
                             Cuéntanos sobre tu proyecto
                         </h3>
                         <p class="contact__form-subtitle">
@@ -981,7 +981,7 @@
                         <div class="form-row animate-slide-from-right" style="animation-delay: 0.8s;">
                             <div class="form-group">
                                 <label for="name" class="form-label">
-                                    <i data-lucide="user"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z"></path><circle cx="12" cy="10" r="4"></circle></svg>
                                     Nombre completo *
                                 </label>
                                 <input type="text" id="name" name="name" class="form-input"
@@ -990,7 +990,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="position" class="form-label">
-                                    <i data-lucide="briefcase"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                                     Cargo
                                 </label>
                                 <input type="text" id="position" name="position" class="form-input"
@@ -1002,7 +1002,7 @@
                         <!-- Fila 2: Empresa -->
                         <div class="form-group animate-slide-from-right" style="animation-delay: 1s;">
                             <label for="company" class="form-label">
-                                <i data-lucide="building"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 3-3-3H2"></path><path d="M22 3v4H2V3a2 2 0 0 1 2-2h5.5a1 1 0 0 1 1 1v2a1 1 0 0 0 1 1H18a2 2 0 0 1 2 2z"></path></svg>
                                 Empresa/Granja *
                             </label>
                             <input type="text" id="company" name="company" class="form-input"
@@ -1014,7 +1014,7 @@
                         <div class="form-row animate-slide-from-right" style="animation-delay: 1.2s;">
                             <div class="form-group">
                                 <label for="email" class="form-label">
-                                    <i data-lucide="mail"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                                     Email *
                                 </label>
                                 <input type="email" id="email" name="email" class="form-input"
@@ -1023,7 +1023,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="phone" class="form-label">
-                                    <i data-lucide="phone"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                                     Teléfono *
                                 </label>
                                 <input type="tel" id="phone" name="phone" class="form-input" placeholder="+584145906535"
@@ -1035,7 +1035,7 @@
                         <!-- Fila 4: Tipo de operación -->
                         <div class="form-group animate-slide-from-right" style="animation-delay: 1.4s;">
                             <label for="operation" class="form-label">
-                                <i data-lucide="factory"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 3-3-3H2"></path><path d="M22 3v4H2V3a2 2 0 0 1 2-2h5.5a1 1 0 0 1 1 1v2a1 1 0 0 0 1 1H18a2 2 0 0 1 2 2z"></path></svg>
                                 Tipo de operación
                             </label>
                             <select id="operation" name="operation" class="form-select">
@@ -1054,7 +1054,7 @@
                         <!-- Fila 5: Mensaje -->
                         <div class="form-group animate-slide-from-right" style="animation-delay: 1.6s;">
                             <label for="message" class="form-label">
-                                <i data-lucide="message-square"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2z"></path></svg>
                                 Cuéntanos tu desafío
                             </label>
                             <textarea id="message" name="message" class="form-textarea" rows="4"
@@ -1068,7 +1068,7 @@
                             <label class="form-checkbox">
                                 <input type="checkbox" id="terms" name="terms" required>
                                 <span class="form-checkbox__checkmark">
-                                    <i data-lucide="check"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 </span>
                                 <span class="form-checkbox__text">
                                     Acepto los <a href="#" class="form-link">términos y condiciones</a> y
@@ -1081,7 +1081,7 @@
                         <!-- Botón de envío -->
                         <div class="form-group animate-slide-from-right" style="animation-delay: 2s;">
                             <button type="submit" class="btn btn--primary btn--full btn--large" id="submitBtn">
-                                <i data-lucide="send" class="btn__icon btn__icon--left"></i>
+                                <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                                 <span id="submitText">Enviar consulta</span>
                                 <div class="btn__loading" id="submitLoading">
                                     <div class="loading-spinner"></div>
@@ -1091,7 +1091,7 @@
 
                         <!-- Nota informativa -->
                         <p class="form-note animate-fade-in" style="animation-delay: 2.2s;">
-                            <i data-lucide="info"></i>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12.01" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
                             * Campos obligatorios. Nos pondremos en contacto contigo en las próximas 24 horas.
                             Tu información está protegida y no será compartida con terceros.
                         </p>
@@ -1100,7 +1100,7 @@
                     <!-- Mensaje de éxito -->
                     <div class="contact__success" id="contactSuccess" style="display: none;">
                         <div class="success-animation">
-                            <i data-lucide="check-circle" class="success-icon"></i>
+                            <svg class="success-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 16 8 12"></polyline></svg>
                         </div>
                         <h3 class="success-title">¡Mensaje enviado exitosamente!</h3>
                         <p class="success-message">
@@ -1108,7 +1108,7 @@
                             contigo en las próximas 24 horas para discutir cómo podemos ayudarte.
                         </p>
                         <button class="btn btn--outline" id="sendAnotherBtn">
-                            <i data-lucide="plus" class="btn__icon btn__icon--left"></i>
+                            <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                             Enviar otra consulta
                         </button>
                     </div>
@@ -1135,7 +1135,7 @@
                         </p>
 
                         <div class="footer__slogan">
-                            <i data-lucide="quote" class="footer__slogan-icon"></i>
+                            <svg class="footer__slogan-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z"/><path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z"/></svg>
                             <p>"Creemos en el agro. Creamos futuro."</p>
                         </div>
                     </div>
@@ -1144,32 +1144,32 @@
                 <!-- Columna 2: Enlaces rápidos -->
                 <div class="footer__column">
                     <h4 class="footer__title">
-                        <i data-lucide="navigation" class="footer__title-icon"></i>
+                        <svg class="footer__title-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 17 22 7 12 2"></polygon><line x1="12" y1="12" x2="12" y2="21"></line></svg>
                         Enlaces rápidos
                     </h4>
                     <nav class="footer__nav" role="navigation" aria-label="Enlaces del footer">
                         <a href="#inicio" class="footer__link">
-                            <i data-lucide="home" class="footer__link-icon"></i>
+                            <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                             Inicio
                         </a>
                         <a href="#nosotros" class="footer__link">
-                            <i data-lucide="users" class="footer__link-icon"></i>
+                            <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                             Nosotros
                         </a>
                         <a href="#pilares" class="footer__link">
-                            <i data-lucide="target" class="footer__link-icon"></i>
+                            <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
                             Pilares
                         </a>
                         <a href="#aliados" class="footer__link">
-                            <i data-lucide="handshake" class="footer__link-icon"></i>
+                            <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
                             Aliados
                         </a>
                         <a href="#galeria" class="footer__link">
-                            <i data-lucide="image" class="footer__link-icon"></i>
+                            <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
                             Galería
                         </a>
                         <a href="#contacto" class="footer__link">
-                            <i data-lucide="phone" class="footer__link-icon"></i>
+                            <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             Contacto
                         </a>
                     </nav>
@@ -1178,13 +1178,13 @@
                 <!-- Columna 3: Nuestros productos -->
                 <div class="footer__column">
                     <h4 class="footer__title">
-                        <i data-lucide="package" class="footer__title-icon"></i>
+                        <svg class="footer__title-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10V8a2 2 0 0 0-2-2h-5l-2-2H3a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h7l-2 2h3a2 2 0 0 0 2-2v-2"></path><path d="M7 17v5a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-5"></path></svg>
                         Nuestras soluciones
                     </h4>
                     <div class="footer__products">
                         <div class="footer__product">
                             <div class="footer__product-icon footer__product-icon--premex">
-                                <i data-lucide="package"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><path d="M12 12h.01M8 12h.01M16 12h.01"></path></svg>
                             </div>
                             <div class="footer__product-info">
                                 <span class="footer__product-name">Premex</span>
@@ -1194,7 +1194,7 @@
                         </div>
                         <div class="footer__product">
                             <div class="footer__product-icon footer__product-icon--okuo">
-                                <i data-lucide="shield-check"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-6 8-10a8 8 0 0 0-16 0c0 4 8 10 8 10z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>
                             </div>
                             <div class="footer__product-info">
                                 <span class="footer__product-name">Okuo</span>
@@ -1204,7 +1204,7 @@
                         </div>
                         <div class="footer__product">
                             <div class="footer__product-icon footer__product-icon--alura">
-                                <i data-lucide="heart"></i>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 20.78l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                             </div>
                             <div class="footer__product-info">
                                 <span class="footer__product-name">Alura</span>
@@ -1244,7 +1244,7 @@
 
     <!-- Botón scroll to top -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba" title="Volver arriba">
-        <i data-lucide="chevron-up"></i>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
     </button>
 
     <!-- Script optimizado -->

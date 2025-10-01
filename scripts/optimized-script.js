@@ -76,9 +76,6 @@ const GALLERY_IMAGES = [
 let currentSlide = 0
 let isLightboxOpen = false
 
-// Declare lucide variable
-const lucide = window.lucide || {}
-
 // ========================================
 // UTILITIES
 // ========================================
@@ -570,7 +567,8 @@ function initScrollToTop() {
     scrollToTopBtn = document.createElement("button")
     scrollToTopBtn.id = "scrollToTop"
     scrollToTopBtn.className = "scroll-to-top"
-    scrollToTopBtn.innerHTML = '<i data-lucide="chevron-up"></i>'
+    scrollToTopBtn.innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>'
     scrollToTopBtn.setAttribute("aria-label", "Back to top")
     scrollToTopBtn.setAttribute("title", "Back to top")
     document.body.appendChild(scrollToTopBtn)
@@ -797,6 +795,16 @@ function showNotification(message, type = "info", duration = 5000) {
     info: "var(--color-primary)",
   }
 
+  const icons = {
+    success:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>',
+    error:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>',
+    warning:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>',
+    info: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>',
+  }
+
   notification.style.cssText = `
     position: fixed;
     top: 20px;
@@ -814,7 +822,7 @@ function showNotification(message, type = "info", duration = 5000) {
 
   notification.innerHTML = `
     <div style="display: flex; align-items: center; gap: 0.5rem;">
-      <i data-lucide="${type === "success" ? "check-circle" : type === "error" ? "x-circle" : "info"}"></i>
+      ${icons[type] || icons.info}
       <span>${message}</span>
     </div>
   `
@@ -835,11 +843,6 @@ function showNotification(message, type = "info", duration = 5000) {
       }
     }, 300)
   }, duration)
-
-  // Initialize icons for notification
-  if (typeof lucide !== "undefined") {
-    lucide.createIcons()
-  }
 }
 
 // ========================================
@@ -853,36 +856,11 @@ function updateCurrentYear() {
 }
 
 // ========================================
-// ICONS INITIALIZATION
-// ========================================
-function initIcons() {
-  if (typeof lucide !== "undefined") {
-    try {
-      lucide.createIcons()
-      console.log("✅ Lucide icons initialized correctly")
-    } catch (error) {
-      console.error("❌ Error initializing icons:", error)
-    }
-  } else {
-    console.warn("⚠️ Lucide is not available")
-  }
-}
-
-function restoreAllIcons() {
-  setTimeout(() => {
-    initIcons()
-  }, 100)
-}
-
-// ========================================
 // MAIN INITIALIZATION
 // ========================================
 document.addEventListener("DOMContentLoaded", () => {
   try {
     console.log("🚀 Starting Agrolinx...")
-
-    // Initialize icons first
-    initIcons()
 
     // Initialize main components
     initHeader()
@@ -892,11 +870,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initContactForm()
     initScrollAnimations()
     updateCurrentYear()
-
-    // Restore icons after everything is loaded
-    setTimeout(() => {
-      restoreAllIcons()
-    }, 500)
 
     console.log("🌱 Agrolinx - Website loaded successfully")
 
@@ -912,10 +885,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showNotification("Error cargando algunos componentes. Por favor recarga la página.", "error")
   }
 })
-
-// Restore icons on window events
-window.addEventListener("resize", utils.debounce(restoreAllIcons, 250))
-window.addEventListener("hashchange", restoreAllIcons)
 
 // ========================================
 // ERROR HANDLING
