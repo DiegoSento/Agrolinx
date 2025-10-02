@@ -856,6 +856,40 @@ function updateCurrentYear() {
 }
 
 // ========================================
+// IMAGE ERROR HANDLING
+// ========================================
+function initImageErrorHandling() {
+  const images = document.querySelectorAll('img')
+  
+  images.forEach((img) => {
+    img.addEventListener('error', function() {
+      console.warn(`Failed to load image: ${this.src}`)
+      
+      // Agregar clase de error para styling
+      this.classList.add('image-error')
+      
+      // Ocultar imagen rota
+      this.style.opacity = '0.5'
+      this.style.filter = 'grayscale(100%)'
+      
+      // Retry logic para imágenes críticas
+      if (this.fetchPriority === 'high' || this.loading === 'eager') {
+        setTimeout(() => {
+          if (this.classList.contains('image-error')) {
+            const originalSrc = this.src
+            this.src = ''
+            this.src = originalSrc
+            console.log(`Retrying critical image: ${originalSrc}`)
+          }
+        }, 3000)
+      }
+    })
+  })
+  
+  console.log(`✅ Image error handling initialized for ${images.length} images`)
+}
+
+// ========================================
 // MAIN INITIALIZATION
 // ========================================
 document.addEventListener("DOMContentLoaded", () => {
@@ -869,6 +903,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initScrollToTop()
     initContactForm()
     initScrollAnimations()
+    initImageErrorHandling()
     updateCurrentYear()
 
     console.log("🌱 Agrolinx - Website loaded successfully")

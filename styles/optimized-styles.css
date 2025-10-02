@@ -150,6 +150,39 @@ address {
 /* ========================================
        UTILIDADES GENERALES
       ======================================== */
+
+/* Manejo de errores de imágenes */
+.image-error {
+  opacity: 0.5 !important;
+  filter: grayscale(100%) !important;
+  transition: all var(--transition-normal);
+}
+
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-gray-100);
+  border-radius: var(--border-radius-lg);
+  min-height: 200px;
+  color: var(--color-gray-500);
+  font-size: var(--font-size-sm);
+  border: 2px dashed var(--color-gray-300);
+}
+
+.image-placeholder__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2);
+  text-align: center;
+}
+
+.image-placeholder__content i {
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.5;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
