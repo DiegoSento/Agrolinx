@@ -11,17 +11,22 @@
 
     <!-- Optimized preload strategy - only critical resources -->
     <link rel="preload" href="styles/optimized-styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        as="style">
     <link rel="preload" href="/imag/logodar.webp" as="image" fetchpriority="high">
     <link rel="preload" href="/imag/d.webp" as="image" fetchpriority="high">
 
     <!-- Stylesheets with optimized loading -->
     <link rel="stylesheet" href="styles/optimized-styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
 
-    <!-- EmailJS loaded asynchronously to improve initial page load -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" async></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -44,7 +49,8 @@
             <nav class="header__nav" id="nav" role="navigation" aria-label="Navegación principal">
                 <a href="#inicio" class="header__nav-link" data-section="inicio">
                     <svg class="header__nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
                         <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                         <polyline points="9 22 9 12 15 12 15 22" />
                     </svg>
@@ -52,7 +58,8 @@
                 </a>
                 <a href="#nosotros" class="header__nav-link" data-section="nosotros">
                     <svg class="header__nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
                         <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
                         <circle cx="9" cy="7" r="4" />
                         <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
@@ -62,7 +69,8 @@
                 </a>
                 <a href="#pilares" class="header__nav-link" data-section="pilares">
                     <svg class="header__nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
                         <circle cx="12" cy="12" r="10" />
                         <circle cx="12" cy="12" r="6" />
                         <circle cx="12" cy="12" r="2" />
@@ -71,7 +79,8 @@
                 </a>
                 <a href="#aliados" class="header__nav-link" data-section="aliados">
                     <svg class="header__nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
                         <path d="m11 17 2 2a1 1 0 1 0 3-3" />
                         <path
                             d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
@@ -83,7 +92,8 @@
                 </a>
                 <a href="#galeria" class="header__nav-link" data-section="galeria">
                     <svg class="header__nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
                         <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
                         <circle cx="9" cy="9" r="2" />
                         <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
@@ -95,7 +105,8 @@
             <!-- Botón de contacto -->
             <a href="#contacto" class="btn btn--primary header__cta">
                 <svg class="btn__icon btn__icon--left" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
                     <path
                         d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
@@ -224,16 +235,7 @@
             </div>
         </div>
 
-        <!-- Scroll indicator -->
-        <div class="hero__scroll-indicator animate-bounce" aria-hidden="true">
-            <div class="scroll-indicator">
-                <span class="scroll-indicator__text">Descubre más</span>
-                <svg class="scroll-indicator__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            </div>
-        </div>
+
     </section>
 
     <!-- SECCIÓN NOSOTROS -->
@@ -245,7 +247,8 @@
                     <div class="section-header">
                         <div class="badge badge--secondary animate-fade-in">
                             <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path
                                     d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 20.78l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                             </svg>
@@ -273,7 +276,8 @@
                         <!-- Quote destacado -->
                         <div class="quote-box animate-slide-up" style="animation-delay: 0.8s;">
                             <svg class="quote-box__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path
                                     d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z" />
                                 <path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z" />
@@ -354,7 +358,8 @@
             <div class="section-header section-header--center animate-fade-in">
                 <div class="badge badge--primary">
                     <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
                         <polygon points="12 2 2 7 12 17 22 7 12 2"></polygon>
                         <line x1="12" y1="12" x2="12" y2="21"></line>
                     </svg>
@@ -420,13 +425,14 @@
                                     <path d="M7 10h10M7 14h10M10 18h4"></path>
                                     <circle cx="12" cy="12" r="10"></circle>
                                 </svg>
-                                <span>Investigación y desarrollo continuo</span>
+                                <span>Investigación y desarrollo continuo</span><br><br>
                             </div>
                         </div>
 
                         <div class="pillar-card__quote">
                             <svg class="pillar-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path
                                     d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z" />
                                 <path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z" />
@@ -508,7 +514,8 @@
 
                         <div class="pillar-card__quote">
                             <svg class="pillar-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path
                                     d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z" />
                                 <path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z" />
@@ -584,11 +591,12 @@
                                 </svg>
                                 <span>Seguimiento post-venta</span>
                             </div>
-                        </div>
+                        </div><br>
 
                         <div class="pillar-card__quote">
                             <svg class="pillar-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path
                                     d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z" />
                                 <path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z" />
@@ -657,7 +665,8 @@
             <div class="section-header section-header--center animate-fade-in">
                 <div class="badge badge--blue">
                     <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
                         <path d="m11 17 2 2a1 1 0 1 0 3-3" />
                         <path
                             d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
@@ -711,7 +720,8 @@
                             <div class="partner-card__tags">
                                 <span class="tag tag--orange">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path
                                             d="M21 10V8a2 2 0 0 0-2-2h-5l-2-2H3a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h7l-2 2h3a2 2 0 0 0 2-2v-2">
                                         </path>
@@ -721,7 +731,8 @@
                                 </span>
                                 <span class="tag tag--orange">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
                                         <path d="M12 12h.01M8 12h.01M16 12h.01"></path>
                                     </svg>
@@ -729,7 +740,8 @@
                                 </span>
                                 <span class="tag tag--orange">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path d="M12 2v13l-7-7"></path>
                                         <path d="M20 12l-7 7 7 7"></path>
                                     </svg>
@@ -737,7 +749,8 @@
                                 </span>
                                 <span class="tag tag--orange">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path d="M12 22s8-6 8-10a8 8 0 0 0-16 0c0 4 8 10 8 10z"></path>
                                         <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
                                     </svg>
@@ -754,12 +767,13 @@
                             <div class="partner-stat">
                                 <div class="partner-stat__number">500+</div>
                                 <div class="partner-stat__label">Productos</div>
-                            </div>
+                            </div><br>
                         </div>
 
                         <div class="partner-card__quote">
                             <svg class="partner-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path
                                     d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z" />
                                 <path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z" />
@@ -815,7 +829,8 @@
                             <div class="partner-card__tags">
                                 <span class="tag tag--green">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path d="M12 22s8-6 8-10a8 8 0 0 0-16 0c0 4 8 10 8 10z"></path>
                                         <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
                                     </svg>
@@ -823,7 +838,8 @@
                                 </span>
                                 <span class="tag tag--green">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
                                         <path d="M12 12h.01M8 12h.01M16 12h.01"></path>
                                     </svg>
@@ -831,7 +847,8 @@
                                 </span>
                                 <span class="tag tag--green">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <circle cx="12" cy="8" r="5"></circle>
                                         <path
                                             d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z">
@@ -841,7 +858,8 @@
                                 </span>
                                 <span class="tag tag--green">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path d="M12 21v-8l-5-5 5-5 5 5"></path>
                                         <path d="M12 3v7"></path>
                                     </svg>
@@ -870,19 +888,21 @@
                                 <span>Laboratorio propio</span>
                             </div>
                             <div class="feature-highlight">
-                                <svg class="feature-highlight__icon" width="16" height="16" viewBox="0 0 24 24"
+                                <svg class="feature-highlight__icon" width="16" height="16" viewBox="2 5 20 20"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" aria-hidden="true">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                    <rect width="20" height="14" x="2" y="3" rx="2" ry="2" />
+                                    <line x1="8" y1="21" x2="16" y2="21" />
+                                    <line x1="12" y1="17" x2="12" y2="21" />
                                 </svg>
-                                <span>Soporte técnico 24/7</span><br>
-                            </div>
+                                <span>Plataforma de analítica especializada en seguridad del alimento</span><br>
+                            </div><br>
                         </div>
 
                         <div class="partner-card__quote">
                             <svg class="partner-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path
                                     d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z" />
                                 <path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z" />
@@ -938,7 +958,8 @@
                             <div class="partner-card__tags">
                                 <span class="tag tag--blue">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path d="M12 22s8-6 8-10a8 8 0 0 0-16 0c0 4 8 10 8 10z"></path>
                                         <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
                                     </svg>
@@ -946,7 +967,8 @@
                                 </span>
                                 <span class="tag tag--blue">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path d="M12 22s8-6 8-10a8 8 0 0 0-16 0c0 4 8 10 8 10z"></path>
                                         <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
                                     </svg>
@@ -954,7 +976,8 @@
                                 </span>
                                 <span class="tag tag--blue">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path
                                             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 20.78l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                                         </path>
@@ -963,7 +986,8 @@
                                 </span>
                                 <span class="tag tag--blue">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path
                                             d="M16.37 14.37a5.6 5.6 0 0 0 0-4.74L12 3.32l-4.37 6.31a5.6 5.6 0 0 0 0 4.74 5.6 5.6 0 0 0 0 4.74L12 20.68l4.37-6.31a5.6 5.6 0 0 0 0-4.74z">
                                         </path>
@@ -986,12 +1010,13 @@
                                     <span class="innovation-badge__title">Innovación</span>
                                     <span class="innovation-badge__desc">Investigación continua</span>
                                 </div>
-                            </div><br><br>
+                            </div><br><br><br>
                         </div>
 
                         <div class="partner-card__quote">
                             <svg class="partner-card__quote-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path
                                     d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z" />
                                 <path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z" />
@@ -1055,7 +1080,8 @@
             <div class="section-header section-header--center animate-fade-in">
                 <div class="badge badge--accent">
                     <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
                         <circle cx="12" cy="12" r="3"></circle>
                         <path
                             d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-.07a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h.07a1.65 1.65 0 0 0 1-1.51 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v.07a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-.07a1.65 1.65 0 0 0-1 1.51z">
@@ -1160,7 +1186,8 @@
             <div class="section-header section-header--center animate-fade-in">
                 <div class="badge badge--primary">
                     <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                         <circle cx="9" cy="7" r="4" />
                         <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -1186,7 +1213,8 @@
                     <div class="leader-card__avatar">
                         <div class="leader-card__avatar-bg">
                             <svg class="leader-card__avatar-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z">
                                 </path>
                                 <circle cx="12" cy="10" r="4"></circle>
@@ -1208,7 +1236,8 @@
                     <div class="leader-card__avatar">
                         <div class="leader-card__avatar-bg">
                             <svg class="leader-card__avatar-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z">
                                 </path>
                                 <circle cx="12" cy="10" r="4"></circle>
@@ -1217,7 +1246,7 @@
                     </div>
                     <div class="leader-card__content">
                         <h3 class="leader-card__name">Santiago Suárez</h3>
-                        <p class="leader-card__title">Director Técnico</p>
+                        <p class="leader-card__title">Director de Operaciones</p>
                         <p class="leader-card__description">
                             Ingeniero químico especializado en productos agroquímicos e industriales
                         </p>
@@ -1229,7 +1258,8 @@
                     <div class="leader-card__avatar">
                         <div class="leader-card__avatar-bg">
                             <svg class="leader-card__avatar-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z">
                                 </path>
                                 <circle cx="12" cy="10" r="4"></circle>
@@ -1255,7 +1285,8 @@
             <div class="section-header section-header--center section-header--white animate-fade-in">
                 <div class="badge badge--success">
                     <svg class="badge__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
                         <path
                             d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                     </svg>
@@ -1277,7 +1308,8 @@
                 <div class="contact__info animate-slide-from-left" style="animation-delay: 0.4s;">
                     <h3 class="contact__info-title">
                         <svg class="contact__info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
                             <path d="M20 10c0 6.4-8 12-8 12s-8-5.6-8-12a8 8 0 0 1 16 0z" />
                             <circle cx="12" cy="10" r="3" />
                         </svg>
@@ -1299,7 +1331,8 @@
                                 <a href="tel:+584145906535" class="contact-method__value">+58 (414) 5906535</a>
                                 <p class="contact-method__note">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <circle cx="12" cy="13" r="8"></circle>
                                         <path d="M12 6v6l4 2"></path>
                                     </svg>
@@ -1321,11 +1354,12 @@
                             </div>
                             <div class="contact-method__content">
                                 <h4 class="contact-method__title">Email corporativo</h4>
-                                <a href="mailto:master@agrolinxve.com"
-                                    class="contact-method__value">master@agrolinxve.com</a>
+                                <a href="mailto:master@agrolinxve.co"
+                                    class="contact-method__value">master@agrolinxve.co</a>
                                 <p class="contact-method__note">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <circle cx="12" cy="13" r="8"></circle>
                                         <path d="M12 6v6l4 2"></path>
                                     </svg>
@@ -1365,7 +1399,8 @@
                                 <h4 class="contact-method__title">WhatsApp Business</h4>
                                 <p class="contact-method__note">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path d="M12 5v14l-7-7"></path>
                                         <path d="M20 12l-7 7 7 7"></path>
                                     </svg>
@@ -1410,7 +1445,8 @@
                     <div class="contact__form-header">
                         <h3 class="contact__form-title">
                             <svg class="contact__form-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path
                                     d="M13 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V9zM7 17a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0-4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0-4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm10-6l-5-5v3a1 1 0 0 1-1 1H7v2h8a1 1 0 0 1 1 1v3l5-5z" />
                             </svg>
@@ -1427,8 +1463,10 @@
                             <div class="form-group">
                                 <label for="name" class="form-label">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z">
                                         </path>
                                         <circle cx="12" cy="10" r="4"></circle>
                                     </svg>
@@ -1441,7 +1479,8 @@
                             <div class="form-group">
                                 <label for="position" class="form-label">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                         <circle cx="9" cy="7" r="4" />
                                         <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -1477,7 +1516,8 @@
                             <div class="form-group">
                                 <label for="email" class="form-label">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path
                                             d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
                                         </path>
@@ -1492,7 +1532,8 @@
                             <div class="form-group">
                                 <label for="phone" class="form-label">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <path
                                             d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                                     </svg>
@@ -1550,13 +1591,14 @@
                                 <input type="checkbox" id="terms" name="terms" required>
                                 <span class="form-checkbox__checkmark">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
                                         <polyline points="20 6 9 17 4 12"></polyline>
                                     </svg>
                                 </span>
                                 <span class="form-checkbox__text">
-                                    Acepto los <a href="#" class="form-link">términos y condiciones</a> y
-                                    <a href="#" class="form-link">política de privacidad</a>
+                                    Acepto los <a href="terminos-servicio.html" class="form-link" target="_blank">términos y condiciones</a> y
+                                    <a href="politica-privacidad.html" class="form-link" target="_blank">política de privacidad</a>
                                 </span>
                             </label>
                             <div class="form-error" id="terms-error"></div>
@@ -1595,7 +1637,8 @@
                     <div class="contact__success" id="contactSuccess" style="display: none;">
                         <div class="success-animation">
                             <svg class="success-icon" width="56" height="56" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <polyline points="16 12 12 16 8 12"></polyline>
                             </svg>
@@ -1639,7 +1682,8 @@
 
                         <div class="footer__slogan">
                             <svg class="footer__slogan-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path
                                     d="M17 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1l-3 3a3 3 0 0 0 0 4.24l6 6a3 3 0 0 0 4.24 0l6-6a3 3 0 0 0 0-4.24L17 6z" />
                                 <path d="M3 8.6c.7-.2 1.4-.4 2.1-.5l.8-.1V4a2 2 0 0 0-2-2H3l3 3z" />
@@ -1653,7 +1697,8 @@
                 <div class="footer__column">
                     <h4 class="footer__title">
                         <svg class="footer__title-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
                             <polygon points="12 2 2 7 12 17 22 7 12 2"></polygon>
                             <line x1="12" y1="12" x2="12" y2="21"></line>
                         </svg>
@@ -1662,7 +1707,8 @@
                     <nav class="footer__nav" role="navigation" aria-label="Enlaces del footer">
                         <a href="#inicio" class="footer__link">
                             <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                                 <polyline points="9 22 9 12 15 12 15 22" />
                             </svg>
@@ -1670,7 +1716,8 @@
                         </a>
                         <a href="#nosotros" class="footer__link">
                             <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                 <circle cx="9" cy="7" r="4" />
                                 <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -1680,7 +1727,8 @@
                         </a>
                         <a href="#pilares" class="footer__link">
                             <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <circle cx="12" cy="12" r="6"></circle>
                                 <circle cx="12" cy="12" r="2"></circle>
@@ -1689,7 +1737,8 @@
                         </a>
                         <a href="#aliados" class="footer__link">
                             <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path d="m11 17 2 2a1 1 0 1 0 3-3" />
                                 <path
                                     d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
@@ -1701,7 +1750,8 @@
                         </a>
                         <a href="#galeria" class="footer__link">
                             <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
                                 <circle cx="9" cy="9" r="2" />
                                 <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
@@ -1710,7 +1760,8 @@
                         </a>
                         <a href="#contacto" class="footer__link">
                             <svg class="footer__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
                                 <path
                                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                             </svg>
@@ -1723,7 +1774,8 @@
                 <div class="footer__column">
                     <h4 class="footer__title">
                         <svg class="footer__title-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
                             <path
                                 d="M21 10V8a2 2 0 0 0-2-2h-5l-2-2H3a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h7l-2 2h3a2 2 0 0 0 2-2v-2">
                             </path>
@@ -1789,9 +1841,9 @@
                         © <span id="currentYear">2025</span> Agrolinx. Todos los derechos reservados.
                     </p>
                     <div class="footer__legal">
-                        <a href="#" class="footer__legal-link">Política de Privacidad</a>
+                        <a href="politica-privacidad.html" class="footer__legal-link">Política de Privacidad</a>
                         <span class="footer__separator" aria-hidden="true">•</span>
-                        <a href="#" class="footer__legal-link">Términos de Servicio</a>
+                        <a href="terminos-servicio.html" class="footer__legal-link">Términos de Servicio</a>
                     </div>
                 </div>
 

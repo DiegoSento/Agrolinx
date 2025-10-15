@@ -751,6 +751,45 @@ function initScrollAnimations() {
 }
 
 // ========================================
+// EMAILJS CONFIGURATION
+// ========================================
+const EMAIL_CONFIG = {
+  serviceId: 'service_h2hvohe',
+  templateId: 'template_t1491kb',
+  publicKey: 'bNqMyJVanAEZPXISP'
+}
+
+// Initialize EmailJS
+function initEmailJS() {
+  // Esperar a que EmailJS esté disponible
+  const checkEmailJS = () => {
+    if (typeof emailjs !== 'undefined') {
+      emailjs.init(EMAIL_CONFIG.publicKey)
+      console.log('✅ EmailJS inicializado correctamente')
+      return true
+    }
+    return false
+  }
+
+  // Intentar inicializar inmediatamente
+  if (!checkEmailJS()) {
+    // Si no está disponible, esperar hasta 5 segundos
+    let attempts = 0
+    const maxAttempts = 50 // 5 segundos (50 * 100ms)
+
+    const interval = setInterval(() => {
+      attempts++
+      if (checkEmailJS() || attempts >= maxAttempts) {
+        clearInterval(interval)
+        if (attempts >= maxAttempts) {
+          console.error('❌ EmailJS no se pudo cargar después de 5 segundos')
+        }
+      }
+    }, 100)
+  }
+}
+
+// ========================================
 // CONTACT FORM - Optimized with better validation
 // ========================================
 function initContactForm() {
@@ -802,14 +841,54 @@ function initContactForm() {
       const data = Object.fromEntries(formData.entries())
       data.operationLabel = getOperationLabel(data.operation)
 
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      // Preparar parámetros para EmailJS
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        phone: data.phone,
+        company: data.company,
+        operation: data.operationLabel,
+        message: data.message,
+        to_email: 'badiego47@gmail.com'
+      }
 
-      showContactSuccess()
-      showNotification("¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.", "success")
-      contactForm.reset()
+      console.log('📧 Enviando email con EmailJS...', templateParams)
+
+      // Enviar email usando EmailJS
+      if (typeof emailjs !== 'undefined') {
+        const response = await emailjs.send(
+          'service_h2hvohe',
+          'template_t1491kb',
+          templateParams,
+          'bNqMyJVanAEZPXISP'
+        )
+
+        console.log('✅ Email enviado exitosamente:', response)
+        showContactSuccess()
+        showNotification("¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.", "success")
+        contactForm.reset()
+      } else {
+        throw new Error('EmailJS no está disponible')
+      }
     } catch (error) {
       console.error("Error sending form:", error)
-      showNotification("Error enviando el mensaje. Por favor intenta nuevamente.", "error")
+
+      let errorMessage = "Error enviando el mensaje. "
+      if (error.text) {
+        if (error.text.includes('Invalid service ID')) {
+          errorMessage += "Configuración de servicio incorrecta."
+        } else if (error.text.includes('Invalid template ID')) {
+          errorMessage += "Template de email no encontrado."
+        } else if (error.text.includes('Invalid public key')) {
+          errorMessage += "Clave pública incorrecta."
+        } else {
+          errorMessage += "Por favor intenta nuevamente."
+        }
+      } else {
+        errorMessage += "Por favor intenta nuevamente."
+      }
+
+      showNotification(errorMessage, "error")
     } finally {
       // Reset button state
       if (submitBtn && submitText && submitLoading) {
@@ -1020,6 +1099,7 @@ function initializeApp() {
     initScrollProgress()
     initGallery()
     initScrollToTop()
+    initEmailJS()
     initContactForm()
     initScrollAnimations()
     initImageErrorHandling()
